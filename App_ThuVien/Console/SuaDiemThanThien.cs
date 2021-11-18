@@ -40,7 +40,8 @@ namespace App_ThuVien.Console
         }
         void changed_val(string r , string t , string m , string h)
         {
-            dt.Clear();
+            dt = new DataTable();
+            create_tb();
             DataRow dr = null;
             dr = dt.NewRow();
             dr["ravao"] = r; // "5";
@@ -48,31 +49,60 @@ namespace App_ThuVien.Console
             dr["matsach"] = m;// "3";
             dr["husach"] = h;// "10";
             dt.Rows.Add(dr);
-            val_tt = string.Format("{0},{1},{2},{3}", dr["ravao"].ToString(), dr["thanhtoan"].ToString(),
+            val_tt = string.Format("{0},{1},{2},{3},", dr["ravao"].ToString(), dr["thanhtoan"].ToString(),
                 dr["matsach"].ToString(), dr["husach"].ToString());
             Setting_sys.set_src_file("DiemThanThien.txt", val_tt);
         }
+         string term = "";
+                int count = 0;
        public  DataTable DT_DiemThanThien()
         {
-            Setting_sys.mess(Setting_sys.getting_src_file("DiemThanThien.txt"));
 
-            if (Setting_sys.getting_src_file("DiemThanThien.txt") == null)
+            if (Setting_sys.getting_src_file("DiemThanThien.txt").Length > 0)
             {
-                Setting_sys.mess(Setting_sys.getting_src_file("DiemThanThien.txt"));
+               
+                foreach(char i in Setting_sys.getting_src_file("DiemThanThien.txt"))
+                {
+                    if(i == ',')
+                    {
+                    //    Setting_sys.mess(count.ToString());
+                        if(count == 0)
+                        {
+                            ravao = term;
+                        }else if(count == 1)
+                        {
+                            thanhtoan = term;
+                        }
+                        else if (count == 2)
+                        {
+                            matsach = term;
+                        }
+                        else if (count == 3)
+                        {
+                            husach = term;
+                        }
+                        term = null;
+                        count++;
+                    }
+                    else
+                    {
+                        term += i.ToString();
+                    }
+                }
+               // Setting_sys.mess(string.Format("{0},{1},{2},{3}", ravao, thanhtoan, matsach, husach));
+                changed_val(ravao, thanhtoan, matsach, husach);
+                return dt;
             }
             else
             {
                 changed_val("5", "15", "4", "10");
                 return dt;
             }
-            return null;
         }
         private void SuaDiemThanThien_Load(object sender, EventArgs e)
         {
-            create_tb();
             gc_diemthanthien.DataSource =  DT_DiemThanThien();
             set_val();
-            Setting_sys.mess(ravao);
         }
 
         private void gv_diemthanthien_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)

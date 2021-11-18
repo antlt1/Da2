@@ -35,9 +35,9 @@ namespace App_ThuVien.Console
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.fluentDesignFormContainer1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gc_diemthanthien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_diemthanthien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
@@ -98,6 +98,18 @@ namespace App_ThuVien.Console
             this.gridColumn3.VisibleIndex = 2;
             this.gridColumn3.Width = 112;
             // 
+            // gridColumn4
+            // 
+            this.gridColumn4.AppearanceHeader.BackColor = System.Drawing.Color.Red;
+            this.gridColumn4.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn4.Caption = "Mất Sách";
+            this.gridColumn4.FieldName = "matsach";
+            this.gridColumn4.MinWidth = 30;
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 3;
+            this.gridColumn4.Width = 112;
+            // 
             // fluentDesignFormContainer1
             // 
             this.fluentDesignFormContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -115,18 +127,6 @@ namespace App_ThuVien.Console
             this.fluentDesignFormControl1.TabIndex = 3;
             this.fluentDesignFormControl1.TabStop = false;
             // 
-            // gridColumn4
-            // 
-            this.gridColumn4.AppearanceHeader.BackColor = System.Drawing.Color.Red;
-            this.gridColumn4.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn4.Caption = "Mất Sách";
-            this.gridColumn4.FieldName = "matsach";
-            this.gridColumn4.MinWidth = 30;
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 3;
-            this.gridColumn4.Width = 112;
-            // 
             // SuaDiemThanThien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -141,7 +141,7 @@ namespace App_ThuVien.Console
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.IconOptions.ShowIcon = false;
             this.Name = "SuaDiemThanThien";
-            this.Text = "Sửa Điểm Thân Thiện";
+            this.Text = "     Sửa Điểm Thân Thiện";
             this.Load += new System.EventHandler(this.SuaDiemThanThien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gc_diemthanthien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_diemthanthien)).EndInit();
