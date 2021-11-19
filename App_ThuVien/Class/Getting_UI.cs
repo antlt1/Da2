@@ -46,7 +46,7 @@ namespace Test_Sqlite.Class
         {
            string   s1 =   "datasource=https://databases-auth.000webhost.com,port:3306,username=id15353028_admin,password=Antlt1182000@gmail.com,database=id15353028_db_qltv_anz",
                     s2 = "Server=localhost;Database=thuvien;port=;User Id=root;password=",
-                    s3 = "Server=http://26.9.216.208;Database=thuvien;port=;User Id=root;password=";
+                    s3 = "datasource=26.9.216.208:8080;Database=thuvien;port=;User Id=root;password=";
 
             string str = s2,str1=s1;
             MySqlConnection conn = new MySqlConnection(s3);
