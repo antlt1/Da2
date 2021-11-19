@@ -94,6 +94,7 @@ namespace App_ThuVien.BarCode
 
         private void ControlBarCode_FormClosed(object sender, FormClosedEventArgs e)
         {
+            stream.Stop();
             this.Close();
         }
 

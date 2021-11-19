@@ -3,6 +3,7 @@ using App_ThuVien.Console;
 using App_ThuVien.Form;
 using App_ThuVien.Report;
 using DevExpress.XtraEditors;
+using DevExpress.XtraTabbedMdi;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -123,21 +124,26 @@ namespace App_ThuVien
        public List<string> list_frm = new List<string>();
         void act_frm(XtraForm frm, string text_frm, string name_frm)
         {
-            if (list_frm.IndexOf(name_frm) < 0)
+            if(check_exit(frm) == false)
             {
                 frm.MdiParent = this;
                 frm.Text = text_frm;
                 frm.Show();
                 list_frm.Add(name_frm);
             }
-            else
+
+        }
+        bool check_exit(XtraForm form)
+        {
+            foreach(var child in MdiChildren)
             {
-                foreach (var i in MdiChildren)
+                if(form.Name == child.Name)
                 {
-                    if(i.Name == name_frm)
-                    mdi_fr.Pages[i].MdiChild.Activate();
+                    child.Activate();
+                    return true;
                 }
             }
+            return false;
         }
         // các act thanh left bar
         //act Sách
@@ -174,8 +180,15 @@ namespace App_ThuVien
         // act nhân viên
         private void left_bar_nv_Click(object sender, EventArgs e)
         {
-            //var frm = new ();
-            //act_frm(frm, "", "");
+            if (G_U.gand_admin(id_user_name) == true)
+            {
+                var frm = new Frm_NhanVien();
+                act_frm(frm, "Quản lý nhân viên", "Frm_NhanVien");
+            }
+            else
+            {
+                Setting_sys.mess("Bạn không có quyền chỉnh sửa thông tin này !");
+            }
         }
         // sự kiện chọn icon account trên thanh nav bar
         private void bar_list_ListItemClick(object sender, DevExpress.XtraBars.ListItemClickEventArgs e)
@@ -185,11 +198,8 @@ namespace App_ThuVien
             {
                 if (list_tb.IndexOf("Inf_User") < 0)
                 {
-                    Inf_User f1 = new Inf_User();
-                    f1.MdiParent = this;
-                    f1.Text = "Thông Tin Cá Nhân";
-                    f1.Show();
-                    list_tb.Add("Inf_User");
+                    var frm = new Inf_User();
+                    act_frm(frm, "Thông Tin Cá Nhân", "Inf_User");
                 }
                 else
                 {
@@ -324,15 +334,22 @@ namespace App_ThuVien
 
         private void sửaĐiểmThânThiệnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(G_U.gand_admin(id_user_name) == true)
-            {
-                var frm_diemthanthien = new App_ThuVien.Console.SuaDiemThanThien();
-                frm_diemthanthien.Show();
-            }
-            else
-            {
-                Setting_sys.mess("Bạn không có quyền chỉnh sửa thông tin này !");
-            }
+            var frm_diemthanthien = new App_ThuVien.Console.SuaDiemThanThien();
+            frm_diemthanthien.Show();
+        }
+
+        private void FrmThuVien_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //if (XtraMessageBox.Show("Bạn có chắc thoát ?", "Hệ thống", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            //{
+            //    Environment.Exit(0);
+            //}
+            //    e.Cancel = true;
+        }
+
+        private void mdi_fr_PageRemoved(object sender, DevExpress.XtraTabbedMdi.MdiTabPageEventArgs e)
+        {
+           
         }
     }
 }

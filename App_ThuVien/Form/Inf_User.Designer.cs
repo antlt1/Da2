@@ -39,19 +39,24 @@
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
+            this.txt_hoten = new System.Windows.Forms.TextBox();
+            this.txt_sdt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txt_email = new System.Windows.Forms.TextBox();
+            this.txt_address = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lb_tenchucvu = new System.Windows.Forms.Label();
+            this.lb_changer_password = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // fluentDesignFormContainer1
@@ -84,8 +89,9 @@
             // 
             this.toolbarFormControl1.Location = new System.Drawing.Point(0, 0);
             this.toolbarFormControl1.Manager = this.toolbarFormManager1;
+            this.toolbarFormControl1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.toolbarFormControl1.Name = "toolbarFormControl1";
-            this.toolbarFormControl1.Size = new System.Drawing.Size(803, 53);
+            this.toolbarFormControl1.Size = new System.Drawing.Size(625, 41);
             this.toolbarFormControl1.TabIndex = 1;
             this.toolbarFormControl1.TabStop = false;
             this.toolbarFormControl1.ToolbarForm = this;
@@ -102,111 +108,183 @@
             // 
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(0, 53);
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 41);
             this.barDockControlTop.Manager = this.toolbarFormManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(803, 0);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.barDockControlTop.Size = new System.Drawing.Size(625, 0);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 476);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 401);
             this.barDockControlBottom.Manager = this.toolbarFormManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(803, 0);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.barDockControlBottom.Size = new System.Drawing.Size(625, 0);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 53);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 41);
             this.barDockControlLeft.Manager = this.toolbarFormManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 423);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 360);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(803, 53);
+            this.barDockControlRight.Location = new System.Drawing.Point(625, 41);
             this.barDockControlRight.Manager = this.toolbarFormManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 423);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 360);
             // 
             // panelControl1
             // 
-            this.panelControl1.Controls.Add(this.tableLayoutPanel1);
+            this.panelControl1.Controls.Add(this.lb_changer_password);
+            this.panelControl1.Controls.Add(this.lb_tenchucvu);
+            this.panelControl1.Controls.Add(this.label6);
+            this.panelControl1.Controls.Add(this.txt_email);
+            this.panelControl1.Controls.Add(this.txt_address);
+            this.panelControl1.Controls.Add(this.label4);
+            this.panelControl1.Controls.Add(this.label5);
+            this.panelControl1.Controls.Add(this.txt_sdt);
+            this.panelControl1.Controls.Add(this.txt_hoten);
+            this.panelControl1.Controls.Add(this.label3);
+            this.panelControl1.Controls.Add(this.label2);
             this.panelControl1.Controls.Add(this.label1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl1.Location = new System.Drawing.Point(0, 53);
+            this.panelControl1.Location = new System.Drawing.Point(0, 41);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(803, 423);
+            this.panelControl1.Size = new System.Drawing.Size(625, 360);
             this.panelControl1.TabIndex = 2;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.88045F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 68.11955F));
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.textBox1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textBox2, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 52);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 5;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 43.75F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 56.25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 252F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(803, 371);
-            this.tableLayoutPanel1.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Location = new System.Drawing.Point(37, 60);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 19);
+            this.label2.Size = new System.Drawing.Size(84, 17);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Họ và Tên";
+            this.label2.Text = "Họ và Tên : ";
+            // 
+            // txt_hoten
+            // 
+            this.txt_hoten.Location = new System.Drawing.Point(143, 57);
+            this.txt_hoten.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txt_hoten.Name = "txt_hoten";
+            this.txt_hoten.Size = new System.Drawing.Size(270, 23);
+            this.txt_hoten.TabIndex = 3;
+            this.txt_hoten.DoubleClick += new System.EventHandler(this.txt_hoten_DoubleClick);
+            this.txt_hoten.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_hoten_KeyDown);
+            // 
+            // txt_sdt
+            // 
+            this.txt_sdt.Location = new System.Drawing.Point(143, 93);
+            this.txt_sdt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txt_sdt.Name = "txt_sdt";
+            this.txt_sdt.Size = new System.Drawing.Size(270, 23);
+            this.txt_sdt.TabIndex = 4;
+            this.txt_sdt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_hoten_KeyDown);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 56);
+            this.label3.Location = new System.Drawing.Point(37, 96);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 19);
+            this.label3.Size = new System.Drawing.Size(105, 17);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Số Điện Thoại";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(3, 27);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(234, 27);
-            this.textBox1.TabIndex = 3;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(3, 85);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(234, 27);
-            this.textBox2.TabIndex = 4;
+            this.label3.Text = "Số Điện Thoại : ";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 13F);
-            this.label1.Location = new System.Drawing.Point(12, 18);
+            this.label1.Location = new System.Drawing.Point(9, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(255, 31);
+            this.label1.Size = new System.Drawing.Size(215, 27);
             this.label1.TabIndex = 0;
             this.label1.Text = "Thông Tin Tài Khoản";
             // 
+            // txt_email
+            // 
+            this.txt_email.Location = new System.Drawing.Point(143, 156);
+            this.txt_email.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txt_email.Name = "txt_email";
+            this.txt_email.Size = new System.Drawing.Size(270, 23);
+            this.txt_email.TabIndex = 8;
+            this.txt_email.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_hoten_KeyDown);
+            // 
+            // txt_address
+            // 
+            this.txt_address.Location = new System.Drawing.Point(143, 123);
+            this.txt_address.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txt_address.Name = "txt_address";
+            this.txt_address.Size = new System.Drawing.Size(270, 23);
+            this.txt_address.TabIndex = 7;
+            this.txt_address.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_hoten_KeyDown);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(37, 159);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 17);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Email : ";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(37, 126);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(61, 17);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Địa chỉ : ";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(440, 25);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(70, 17);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Chức vụ :";
+            // 
+            // lb_tenchucvu
+            // 
+            this.lb_tenchucvu.AutoSize = true;
+            this.lb_tenchucvu.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.lb_tenchucvu.Location = new System.Drawing.Point(514, 25);
+            this.lb_tenchucvu.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_tenchucvu.Name = "lb_tenchucvu";
+            this.lb_tenchucvu.Size = new System.Drawing.Size(32, 17);
+            this.lb_tenchucvu.TabIndex = 10;
+            this.lb_tenchucvu.Text = "null";
+            // 
+            // lb_changer_password
+            // 
+            this.lb_changer_password.AutoSize = true;
+            this.lb_changer_password.Location = new System.Drawing.Point(37, 202);
+            this.lb_changer_password.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_changer_password.Name = "lb_changer_password";
+            this.lb_changer_password.Size = new System.Drawing.Size(101, 17);
+            this.lb_changer_password.TabIndex = 11;
+            this.lb_changer_password.Text = "Đổi mật khẩu ?";
+            // 
             // Inf_User
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(803, 476);
+            this.ClientSize = new System.Drawing.Size(625, 401);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
@@ -214,11 +292,13 @@
             this.Controls.Add(this.barDockControlTop);
             this.Controls.Add(this.toolbarFormControl1);
             this.IconOptions.ShowIcon = false;
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Inf_User";
             this.Text = "Inf_User";
             this.ToolbarFormControl = this.toolbarFormControl1;
+            this.Load += new System.EventHandler(this.Inf_User_Load);
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormControl1)).EndInit();
@@ -226,8 +306,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -245,11 +323,17 @@
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraEditors.PanelControl panelControl1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_hoten;
+        private System.Windows.Forms.TextBox txt_sdt;
+        private System.Windows.Forms.Label lb_tenchucvu;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txt_email;
+        private System.Windows.Forms.TextBox txt_address;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lb_changer_password;
     }
 }

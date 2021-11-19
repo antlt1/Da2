@@ -193,5 +193,12 @@ namespace Test_Sqlite.Class
             diem++;
             return diem.ToString();
         }
+        // get val string
+       public string get_data_sqlite(string str)
+        {
+            SQLiteConnection conn=  connect_sqlite();
+            sqlite_cmd = new SQLiteCommand(str, conn);
+            return sqlite_cmd.ExecuteScalar().ToString();
+        }
     }
 }

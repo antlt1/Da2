@@ -56,7 +56,7 @@
             this.toolbarFormControl1.Location = new System.Drawing.Point(0, 0);
             this.toolbarFormControl1.Manager = this.toolbarFormManager1;
             this.toolbarFormControl1.Name = "toolbarFormControl1";
-            this.toolbarFormControl1.Size = new System.Drawing.Size(376, 53);
+            this.toolbarFormControl1.Size = new System.Drawing.Size(376, 41);
             this.toolbarFormControl1.TabIndex = 6;
             this.toolbarFormControl1.TabStop = false;
             this.toolbarFormControl1.ToolbarForm = this;
@@ -85,7 +85,7 @@
             // 
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(0, 53);
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 41);
             this.barDockControlTop.Manager = this.toolbarFormManager1;
             this.barDockControlTop.Size = new System.Drawing.Size(376, 0);
             // 
@@ -101,17 +101,17 @@
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 53);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 41);
             this.barDockControlLeft.Manager = this.toolbarFormManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 12);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 24);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(376, 53);
+            this.barDockControlRight.Location = new System.Drawing.Point(376, 41);
             this.barDockControlRight.Manager = this.toolbarFormManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 12);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 24);
             // 
             // repositoryItemGridLookUpEdit1
             // 
@@ -150,7 +150,7 @@
             this.lTheLoai.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lTheLoai.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.lTheLoai.Size = new System.Drawing.Size(284, 28);
+            this.lTheLoai.Size = new System.Drawing.Size(284, 22);
             this.lTheLoai.TabIndex = 9;
             // 
             // btn_create
@@ -194,7 +194,7 @@
             this.Name = "PickTheLoai";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Chọn Thể Loại";
+            this.Text = "    Chọn Thể Loại";
             this.ToolbarFormControl = this.toolbarFormControl1;
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(215)))), ((int)(((byte)(216)))));
             this.Load += new System.EventHandler(this.PickTheLoai_Load);

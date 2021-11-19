@@ -1,0 +1,8 @@
+  if (G_U.gand_admin(id_user_name) == true)
+            {
+
+            }
+            else
+            {
+                Setting_sys.mess("Bạn không có quyền chỉnh sửa thông tin này !");
+            }

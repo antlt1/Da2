@@ -30,8 +30,8 @@ namespace App_ThuVien.BarCode
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
             this.tabFormContentContainer1 = new DevExpress.XtraBars.TabFormContentContainer();
             this.tabFormPage1 = new DevExpress.XtraBars.TabFormPage();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
@@ -46,9 +46,9 @@ namespace App_ThuVien.BarCode
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.cbx_thietbi = new System.Windows.Forms.ComboBox();
             this.pn_droidcam = new DevExpress.XtraEditors.PanelControl();
+            this.btn_connect = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txt_link = new DevExpress.XtraEditors.TextEdit();
-            this.btn_connect = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_qr)).BeginInit();
@@ -75,8 +75,9 @@ namespace App_ThuVien.BarCode
             // 
             this.fluentDesignFormControl1.FluentDesignForm = this;
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
+            this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(729, 30);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(562, 41);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             // 
@@ -85,9 +86,10 @@ namespace App_ThuVien.BarCode
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.thiếtBịToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 30);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 41);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(729, 33);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(562, 28);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -97,28 +99,29 @@ namespace App_ThuVien.BarCode
             this.droidCamToolStripMenuItem,
             this.thiếtBịVậtLýToolStripMenuItem});
             this.thiếtBịToolStripMenuItem.Name = "thiếtBịToolStripMenuItem";
-            this.thiếtBịToolStripMenuItem.Size = new System.Drawing.Size(127, 29);
+            this.thiếtBịToolStripMenuItem.Size = new System.Drawing.Size(105, 24);
             this.thiếtBịToolStripMenuItem.Text = "Kết Nối Cam";
             // 
             // droidCamToolStripMenuItem
             // 
             this.droidCamToolStripMenuItem.Name = "droidCamToolStripMenuItem";
-            this.droidCamToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.droidCamToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
             this.droidCamToolStripMenuItem.Text = "DroidCam";
             this.droidCamToolStripMenuItem.Click += new System.EventHandler(this.droidCamToolStripMenuItem_Click);
             // 
             // thiếtBịVậtLýToolStripMenuItem
             // 
             this.thiếtBịVậtLýToolStripMenuItem.Name = "thiếtBịVậtLýToolStripMenuItem";
-            this.thiếtBịVậtLýToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.thiếtBịVậtLýToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
             this.thiếtBịVậtLýToolStripMenuItem.Text = "Thiết bị vật lý";
             this.thiếtBịVậtLýToolStripMenuItem.Click += new System.EventHandler(this.thiếtBịVậtLýToolStripMenuItem_Click);
             // 
             // pic_qr
             // 
-            this.pic_qr.Location = new System.Drawing.Point(12, 105);
+            this.pic_qr.Location = new System.Drawing.Point(0, 107);
+            this.pic_qr.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pic_qr.Name = "pic_qr";
-            this.pic_qr.Size = new System.Drawing.Size(346, 256);
+            this.pic_qr.Size = new System.Drawing.Size(269, 205);
             this.pic_qr.TabIndex = 4;
             this.pic_qr.TabStop = false;
             // 
@@ -129,11 +132,12 @@ namespace App_ThuVien.BarCode
             this.ThoiGianVao});
             this.list_user.HideSelection = false;
             this.list_user.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem3,
-            listViewItem4});
-            this.list_user.Location = new System.Drawing.Point(364, 105);
+            listViewItem1,
+            listViewItem2});
+            this.list_user.Location = new System.Drawing.Point(271, 107);
+            this.list_user.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.list_user.Name = "list_user";
-            this.list_user.Size = new System.Drawing.Size(365, 256);
+            this.list_user.Size = new System.Drawing.Size(285, 205);
             this.list_user.TabIndex = 5;
             this.list_user.UseCompatibleStateImageBehavior = false;
             // 
@@ -152,9 +156,10 @@ namespace App_ThuVien.BarCode
             // cbx_thietbi
             // 
             this.cbx_thietbi.FormattingEnabled = true;
-            this.cbx_thietbi.Location = new System.Drawing.Point(596, 66);
+            this.cbx_thietbi.Location = new System.Drawing.Point(464, 56);
+            this.cbx_thietbi.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cbx_thietbi.Name = "cbx_thietbi";
-            this.cbx_thietbi.Size = new System.Drawing.Size(121, 27);
+            this.cbx_thietbi.Size = new System.Drawing.Size(95, 24);
             this.cbx_thietbi.TabIndex = 6;
             // 
             // pn_droidcam
@@ -162,41 +167,45 @@ namespace App_ThuVien.BarCode
             this.pn_droidcam.Controls.Add(this.btn_connect);
             this.pn_droidcam.Controls.Add(this.labelControl1);
             this.pn_droidcam.Controls.Add(this.txt_link);
-            this.pn_droidcam.Location = new System.Drawing.Point(12, 66);
+            this.pn_droidcam.Location = new System.Drawing.Point(0, 72);
+            this.pn_droidcam.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pn_droidcam.Name = "pn_droidcam";
-            this.pn_droidcam.Size = new System.Drawing.Size(633, 34);
+            this.pn_droidcam.Size = new System.Drawing.Size(556, 29);
             this.pn_droidcam.TabIndex = 7;
+            // 
+            // btn_connect
+            // 
+            this.btn_connect.Location = new System.Drawing.Point(334, 4);
+            this.btn_connect.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btn_connect.Name = "btn_connect";
+            this.btn_connect.Size = new System.Drawing.Size(87, 23);
+            this.btn_connect.TabIndex = 11;
+            this.btn_connect.Text = "Kết nối";
+            this.btn_connect.Click += new System.EventHandler(this.btn_connect_Click);
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(11, 8);
+            this.labelControl1.Location = new System.Drawing.Point(9, 7);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(117, 19);
+            this.labelControl1.Size = new System.Drawing.Size(92, 16);
             this.labelControl1.TabIndex = 10;
             this.labelControl1.Text = "Droid Cam link :";
             // 
             // txt_link
             // 
             this.txt_link.EditValue = "http://192.168.1.5:4747/video";
-            this.txt_link.Location = new System.Drawing.Point(134, 4);
+            this.txt_link.Location = new System.Drawing.Point(105, 4);
+            this.txt_link.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txt_link.Name = "txt_link";
-            this.txt_link.Size = new System.Drawing.Size(289, 28);
+            this.txt_link.Size = new System.Drawing.Size(225, 22);
             this.txt_link.TabIndex = 9;
-            // 
-            // btn_connect
-            // 
-            this.btn_connect.Location = new System.Drawing.Point(429, 5);
-            this.btn_connect.Name = "btn_connect";
-            this.btn_connect.Size = new System.Drawing.Size(112, 27);
-            this.btn_connect.TabIndex = 11;
-            this.btn_connect.Text = "Kết nối";
-            this.btn_connect.Click += new System.EventHandler(this.btn_connect_Click);
             // 
             // ControlBarCode
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(729, 373);
+            this.ClientSize = new System.Drawing.Size(562, 314);
             this.Controls.Add(this.pn_droidcam);
             this.Controls.Add(this.cbx_thietbi);
             this.Controls.Add(this.list_user);
@@ -205,6 +214,7 @@ namespace App_ThuVien.BarCode
             this.Controls.Add(this.fluentDesignFormControl1);
             this.FluentDesignFormControl = this.fluentDesignFormControl1;
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "ControlBarCode";
             this.Text = "Quét";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ControlBarCode_FormClosed);

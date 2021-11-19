@@ -292,6 +292,12 @@
     <Compile Include="Form\Frm_muon.Designer.cs">
       <DependentUpon>Frm_muon.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\Frm_NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Frm_NhanVien.Designer.cs">
+      <DependentUpon>Frm_NhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\Frm_QlKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -461,6 +467,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Frm_muon.resx">
       <DependentUpon>Frm_muon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Frm_NhanVien.resx">
+      <DependentUpon>Frm_NhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Frm_QlKhachHang.resx">
       <DependentUpon>Frm_QlKhachHang.cs</DependentUpon>

@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Test_Sqlite.Class;
 using System.IO;
+using App_ThuVien.Class;
 
 namespace App_ThuVien.BarCode
 {
@@ -57,8 +58,18 @@ namespace App_ThuVien.BarCode
             dr["thoigian"] = DateTime.Now.ToShortDateString();
             dt.Rows.Add(dr);
             // cộng điểm thân thiện
-
-            G_U.ex_cmd(string.Format("update khachhang set diemthanthien = {0} where id_taikhoan = {1}"));
+            string diemthanthien = G_U.mysqli_ex_data(
+                string.Format("select diem_thanthien from bandoc where id_taikhoan = {0}",str)), diemcong = "";
+            foreach (char i in Setting_sys.getting_src_file("DiemThanThien.txt"))
+            {
+                if ( i == ',')
+                {
+                    break;
+                }
+                diemcong += i.ToString();
+            }
+            int t = int.Parse(diemcong) + int.Parse(diemthanthien);
+            G_U.ex_cmd(string.Format("update khachhang set diemthanthien = {0} where id_taikhoan = {1}",t,str));
             return dt;
         }
         List<string> list_kh = new List<string>();
