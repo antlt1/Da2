@@ -18383,9 +18383,9 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
     </member>
     <member name="P:DevExpress.XtraPrinting.ImageBrick.UseImageResolution">
       <summary>
-        <para>Gets or sets whether to use the original image DPI (dots per inch) value when the image is rendered in a document.</para>
+        <para>Specifies whether the original or default image DPI (dots per inch) value should be taken into account when rendering the image in a document.</para>
       </summary>
-      <value>true, to use the image resolution; otherwise false.</value>
+      <value>true to use the original image resolution; otherwise false.</value>
     </member>
     <member name="P:DevExpress.XtraPrinting.ImageBrick.XlsxFormatString">
       <summary>
@@ -20751,7 +20751,7 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
     </member>
     <member name="P:DevExpress.XtraPrinting.PdfExportOptions.ShowPrintDialogOnOpen">
       <summary>
-        <para>Gets or sets whether to display the Print dialog when a PDF file is opened.</para>
+        <para>Gets or sets a value indicating whether the Print dialog should be displayed when a PDF file is opened in an appropriate application.</para>
       </summary>
       <value>true, to show the Print dialog on open; otherwise, false.</value>
     </member>

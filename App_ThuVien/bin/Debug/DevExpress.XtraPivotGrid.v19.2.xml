@@ -6206,7 +6206,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
       <summary>
         <para>Gets or sets whether or not the Excel-style filter pupop shows NULL values from a current field.</para>
       </summary>
-      <value>A <see cref="T:DevExpress.Utils.DefaultBoolean"/> value that specifies whether or not the Excel-style filter popup shows NULL values from a current field.</value>
+      <value>A <see cref="T:DevExpress.Utils.DefaultBoolean"/> value that specifies whether or not the Excel-style filter pupop shows NULL values from a current field.</value>
     </member>
     <member name="P:DevExpress.XtraPivotGrid.PivotGridFieldOptionsFilter.PopupExcelFilterTextFilters">
       <summary>
