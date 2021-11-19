@@ -5998,12 +5998,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.False.</value>
       </summary>
       <value></value>
     </member>
-    <member name="P:DevExpress.XtraEditors.Controls.ChangingEventArgs.IsTextChanging">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
     <member name="P:DevExpress.XtraEditors.Controls.ChangingEventArgs.NewValue">
       <summary>
         <para>Gets or sets the value which is about to be assigned to the editor. Setting the NewValue property is not supported if the editor uses masked input (<see cref="P:DevExpress.XtraEditors.Repository.RepositoryItemTextEdit.Mask"/>).</para>
@@ -7788,7 +7782,7 @@ A specific version of the addressed image is automatically chosen based on the a
       <summary>
         <para>Gets or sets the item&#39;s display text.</para>
       </summary>
-      <value>The string that specifies the item&#39;s display text.</value>
+      <value>The string identifying the item&#39;s display text.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.Controls.ImageComboBoxItem.ImageIndex">
       <summary>
@@ -9539,22 +9533,6 @@ A specific version of the addressed image is automatically chosen based on the a
       <param name="description">A value that specifies the item&#39;s display text.  This value is assigned to the <see cref="P:DevExpress.XtraEditors.Controls.RadioGroupItem.Description"/> property.</param>
       <param name="enabled">A Boolean value that specifies whether the item is enabled. This value is assigned to the <see cref="P:DevExpress.XtraEditors.Controls.RadioGroupItem.Enabled"/> property.</param>
       <param name="tag">An Object that contains custom data. This value is assigned to the <see cref="P:DevExpress.XtraEditors.Controls.RadioGroupItem.Tag"/> property.</param>
-    </member>
-    <member name="M:DevExpress.XtraEditors.Controls.RadioGroupItem.#ctor(System.Object,System.String,System.Boolean,System.Object,System.String)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraEditors.Controls.RadioGroupItem"/> class with specified settings.</para>
-      </summary>
-      <param name="value"></param>
-      <param name="description"></param>
-      <param name="enabled"></param>
-      <param name="tag"></param>
-      <param name="accessibleName"></param>
-    </member>
-    <member name="P:DevExpress.XtraEditors.Controls.RadioGroupItem.AccessibleName">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraEditors.Controls.RadioGroupItem.Changed">
       <summary>
@@ -23308,7 +23286,7 @@ In bound mode, this method populates the item collection before returning it.</p
       <summary>
         <para>Gets or sets the alignment of item images.</para>
       </summary>
-      <value>The <see cref="T:DevExpress.Utils.HorzAlignment"/> value that specifies the alignment of item images.</value>
+      <value>The <see cref="T:DevExpress.Utils.HorzAlignment"/> value specifying the alignment of item images.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox.IsFilterLookUp">
       <summary>

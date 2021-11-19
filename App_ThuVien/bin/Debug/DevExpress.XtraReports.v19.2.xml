@@ -1619,11 +1619,6 @@
         <para></para>
       </summary>
     </member>
-    <member name="F:DevExpress.XtraReports.Localization.ReportStringId.Cmd_FindControl">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
     <member name="F:DevExpress.XtraReports.Localization.ReportStringId.Cmd_FitBoundsToContainer">
       <summary>
         <para>&quot;Fit Bounds to Container&quot;</para>
@@ -1672,11 +1667,6 @@
     <member name="F:DevExpress.XtraReports.Localization.ReportStringId.Cmd_InsertVerticalBand">
       <summary>
         <para>&quot;Insert &amp;Vertical Band&quot;</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraReports.Localization.ReportStringId.Cmd_LabelsConvertToTable">
-      <summary>
-        <para></para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraReports.Localization.ReportStringId.Cmd_PageFooter">
@@ -2147,26 +2137,6 @@
     <member name="F:DevExpress.XtraReports.Localization.ReportStringId.ExpressionEditor_ItemInfo_Variables_RowCount_Description">
       <summary>
         <para>&quot;Returns the total amount of data rows in a data source.&quot;</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraReports.Localization.ReportStringId.FilterEditor_EnterValue_TextStyle">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraReports.Localization.ReportStringId.FilterEditor_EnterValue_VisualStyle">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraReports.Localization.ReportStringId.FilterEditor_SelectParameter_TextStyle">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraReports.Localization.ReportStringId.FilterEditor_SelectParameter_VisualStyle">
-      <summary>
-        <para></para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraReports.Localization.ReportStringId.FindForm_Msg_FinishedSearching">
@@ -10709,7 +10679,7 @@
     </member>
     <member name="P:DevExpress.XtraReports.UI.GetValueEventArgs.Row">
       <summary>
-        <para>Provides access to a data row whose data can be used to calculate a calculated field&#39;s custom value in the <see cref="E:DevExpress.XtraReports.UI.CalculatedField.GetValue"/> event handler.</para>
+        <para>Provides access to a data row whose data can be used in calculating a custom value for a calculated field in the <see cref="E:DevExpress.XtraReports.UI.CalculatedField.GetValue"/> event handler.</para>
       </summary>
       <value>A <see cref="T:System.Object"/> representing a data row.</value>
     </member>
@@ -11444,130 +11414,6 @@
         <para>Contains classes that implement the functionality of the Pivot Grid control in DevExpress Reports.</para>
       </summary>
     </member>
-    <member name="T:DevExpress.XtraReports.UI.PivotGrid.DataSourceColumnBinding">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.XtraReports.UI.PivotGrid.DataSourceColumnBinding.#ctor">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.UI.PivotGrid.DataSourceColumnBinding"/> class.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.XtraReports.UI.PivotGrid.DataSourceColumnBinding.#ctor(System.String)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.UI.PivotGrid.DataSourceColumnBinding"/> class with specified settings.</para>
-      </summary>
-      <param name="columnName"></param>
-    </member>
-    <member name="M:DevExpress.XtraReports.UI.PivotGrid.DataSourceColumnBinding.#ctor(System.String,DevExpress.XtraPivotGrid.PivotGroupInterval)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.UI.PivotGrid.DataSourceColumnBinding"/> class with specified settings.</para>
-      </summary>
-      <param name="columnName"></param>
-      <param name="groupInterval"></param>
-    </member>
-    <member name="M:DevExpress.XtraReports.UI.PivotGrid.DataSourceColumnBinding.#ctor(System.String,DevExpress.XtraPivotGrid.PivotGroupInterval,System.Int32)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.UI.PivotGrid.DataSourceColumnBinding"/> class with specified settings.</para>
-      </summary>
-      <param name="columnName"></param>
-      <param name="groupInterval"></param>
-      <param name="groupIntervalNumericRange"></param>
-    </member>
-    <member name="T:DevExpress.XtraReports.UI.PivotGrid.DifferenceBinding">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.XtraReports.UI.PivotGrid.DifferenceBinding.#ctor">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.UI.PivotGrid.DifferenceBinding"/> class.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.XtraReports.UI.PivotGrid.DifferenceBinding.#ctor(DevExpress.XtraPivotGrid.DataBindingBase,DevExpress.XtraPivotGrid.CalculationPartitioningCriteria,DevExpress.XtraPivotGrid.CalculationDirection,DevExpress.XtraPivotGrid.DifferenceTarget,DevExpress.XtraPivotGrid.DifferenceType)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.UI.PivotGrid.DifferenceBinding"/> class with specified settings.</para>
-      </summary>
-      <param name="source"></param>
-      <param name="mode"></param>
-      <param name="direction"></param>
-      <param name="target"></param>
-      <param name="type"></param>
-    </member>
-    <member name="M:DevExpress.XtraReports.UI.PivotGrid.DifferenceBinding.#ctor(DevExpress.XtraPivotGrid.DataBindingBase,DevExpress.XtraPivotGrid.CalculationPartitioningCriteria,DevExpress.XtraPivotGrid.DifferenceTarget,DevExpress.XtraPivotGrid.DifferenceType)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.UI.PivotGrid.DifferenceBinding"/> class with specified settings.</para>
-      </summary>
-      <param name="source"></param>
-      <param name="mode"></param>
-      <param name="target"></param>
-      <param name="type"></param>
-    </member>
-    <member name="T:DevExpress.XtraReports.UI.PivotGrid.ExpressionDataBinding">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.XtraReports.UI.PivotGrid.ExpressionDataBinding.#ctor">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.UI.PivotGrid.ExpressionDataBinding"/> class.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.XtraReports.UI.PivotGrid.ExpressionDataBinding.#ctor(System.String)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.UI.PivotGrid.ExpressionDataBinding"/> class with specified settings.</para>
-      </summary>
-      <param name="expression"></param>
-    </member>
-    <member name="T:DevExpress.XtraReports.UI.PivotGrid.MovingCalculationBinding">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.XtraReports.UI.PivotGrid.MovingCalculationBinding.#ctor">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.UI.PivotGrid.MovingCalculationBinding"/> class.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.XtraReports.UI.PivotGrid.MovingCalculationBinding.#ctor(DevExpress.XtraPivotGrid.DataBindingBase,DevExpress.XtraPivotGrid.CalculationPartitioningCriteria,DevExpress.Data.PivotGrid.PivotSummaryType,System.Int32,System.Int32)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.UI.PivotGrid.MovingCalculationBinding"/> class with specified settings.</para>
-      </summary>
-      <param name="source"></param>
-      <param name="mode"></param>
-      <param name="summaryType"></param>
-      <param name="prevCount"></param>
-      <param name="nextCount"></param>
-    </member>
-    <member name="M:DevExpress.XtraReports.UI.PivotGrid.MovingCalculationBinding.#ctor(DevExpress.XtraPivotGrid.DataBindingBase,DevExpress.XtraPivotGrid.CalculationPartitioningCriteria,DevExpress.XtraPivotGrid.CalculationDirection,DevExpress.Data.PivotGrid.PivotSummaryType,System.Int32,System.Int32)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.UI.PivotGrid.MovingCalculationBinding"/> class with specified settings.</para>
-      </summary>
-      <param name="source"></param>
-      <param name="mode"></param>
-      <param name="direction"></param>
-      <param name="summaryType"></param>
-      <param name="prevCount"></param>
-      <param name="nextCount"></param>
-    </member>
-    <member name="T:DevExpress.XtraReports.UI.PivotGrid.PercentOfTotalBinding">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.XtraReports.UI.PivotGrid.PercentOfTotalBinding.#ctor">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.UI.PivotGrid.PercentOfTotalBinding"/> class.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.XtraReports.UI.PivotGrid.PercentOfTotalBinding.#ctor(DevExpress.XtraPivotGrid.DataBindingBase,DevExpress.XtraPivotGrid.CalculationPartitioningCriteria)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.UI.PivotGrid.PercentOfTotalBinding"/> class with specified settings.</para>
-      </summary>
-      <param name="source"></param>
-      <param name="mode"></param>
-    </member>
     <member name="T:DevExpress.XtraReports.UI.PivotGrid.PivotCustomColumnWidthEventArgs">
       <summary>
         <para>Provides data for the <see cref="E:DevExpress.XtraReports.UI.XRPivotGrid.CustomColumnWidth"/> event.</para>
@@ -11658,77 +11504,6 @@
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.UI.PivotGrid.PivotFieldValueEventArgs"/> class with the specified pivot grid field.</para>
       </summary>
       <param name="field">An <see cref="T:DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField"/> object.</param>
-    </member>
-    <member name="T:DevExpress.XtraReports.UI.PivotGrid.RankBinding">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.XtraReports.UI.PivotGrid.RankBinding.#ctor">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.UI.PivotGrid.RankBinding"/> class.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.XtraReports.UI.PivotGrid.RankBinding.#ctor(DevExpress.XtraPivotGrid.DataBindingBase,DevExpress.XtraPivotGrid.CalculationPartitioningCriteria,DevExpress.XtraPivotGrid.RankType,DevExpress.XtraPivotGrid.PivotSortOrder)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.UI.PivotGrid.RankBinding"/> class with specified settings.</para>
-      </summary>
-      <param name="source"></param>
-      <param name="mode"></param>
-      <param name="rankType"></param>
-      <param name="order"></param>
-    </member>
-    <member name="T:DevExpress.XtraReports.UI.PivotGrid.RunningTotalBinding">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.XtraReports.UI.PivotGrid.RunningTotalBinding.#ctor">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.UI.PivotGrid.RunningTotalBinding"/> class.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.XtraReports.UI.PivotGrid.RunningTotalBinding.#ctor(DevExpress.XtraPivotGrid.DataBindingBase,DevExpress.XtraPivotGrid.CalculationPartitioningCriteria,DevExpress.Data.PivotGrid.PivotSummaryType)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.UI.PivotGrid.RunningTotalBinding"/> class with specified settings.</para>
-      </summary>
-      <param name="source"></param>
-      <param name="mode"></param>
-      <param name="summaryType"></param>
-    </member>
-    <member name="M:DevExpress.XtraReports.UI.PivotGrid.RunningTotalBinding.#ctor(DevExpress.XtraPivotGrid.DataBindingBase,DevExpress.XtraPivotGrid.CalculationPartitioningCriteria,DevExpress.XtraPivotGrid.CalculationDirection,DevExpress.Data.PivotGrid.PivotSummaryType)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.UI.PivotGrid.RunningTotalBinding"/> class with specified settings.</para>
-      </summary>
-      <param name="source"></param>
-      <param name="mode"></param>
-      <param name="direction"></param>
-      <param name="summaryType"></param>
-    </member>
-    <member name="T:DevExpress.XtraReports.UI.PivotGrid.WindowExpressionBinding">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.XtraReports.UI.PivotGrid.WindowExpressionBinding.#ctor">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.UI.PivotGrid.WindowExpressionBinding"/> class.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.XtraReports.UI.PivotGrid.WindowExpressionBinding.#ctor(System.String,DevExpress.XtraPivotGrid.CalculationPartitioningCriteria)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.UI.PivotGrid.WindowExpressionBinding"/> class with specified settings.</para>
-      </summary>
-      <param name="expression"></param>
-      <param name="mode"></param>
-    </member>
-    <member name="M:DevExpress.XtraReports.UI.PivotGrid.WindowExpressionBinding.#ctor(System.String,DevExpress.XtraPivotGrid.CalculationPartitioningCriteria,DevExpress.XtraPivotGrid.CalculationDirection)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.UI.PivotGrid.WindowExpressionBinding"/> class with specified settings.</para>
-      </summary>
-      <param name="expression"></param>
-      <param name="mode"></param>
-      <param name="direction"></param>
     </member>
     <member name="T:DevExpress.XtraReports.UI.PivotGrid.XRPivotGridAppearances">
       <summary>
@@ -12018,24 +11793,6 @@
         <para>Gets or sets whether the field is shown in Prefilter.</para>
       </summary>
       <value>true if the field is shown in Prefilter; otherwise, false.</value>
-    </member>
-    <member name="T:DevExpress.XtraReports.UI.PivotGrid.XRPivotGridOptionsData">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.XtraReports.UI.PivotGrid.XRPivotGridOptionsData.#ctor(DevExpress.XtraPivotGrid.Data.PivotGridData,System.EventHandler)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.UI.PivotGrid.XRPivotGridOptionsData"/> class with specified settings.</para>
-      </summary>
-      <param name="data"></param>
-      <param name="optionsChanged"></param>
-    </member>
-    <member name="P:DevExpress.XtraReports.UI.PivotGrid.XRPivotGridOptionsData.DataProcessingEngine">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
     </member>
     <member name="T:DevExpress.XtraReports.UI.PivotGrid.XRPivotGridOptionsPrint">
       <summary>
@@ -13141,7 +12898,7 @@
     </member>
     <member name="T:DevExpress.XtraReports.UI.SubreportBase">
       <summary>
-        <para>The base class for the <see cref="T:DevExpress.XtraReports.UI.XRSubreport"/> class.</para>
+        <para>The base for subreport classes.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraReports.UI.SubreportBase.Bookmark">
@@ -13158,9 +12915,9 @@
     </member>
     <member name="P:DevExpress.XtraReports.UI.SubreportBase.BoundsF">
       <summary>
-        <para>Gets or sets the control&#39;s size and position within the parent element.</para>
+        <para></para>
       </summary>
-      <value>The control&#39;s size and position within the parent element.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraReports.UI.SubreportBase.CanPublish">
       <summary>
@@ -13192,9 +12949,9 @@
     </member>
     <member name="P:DevExpress.XtraReports.UI.SubreportBase.GenerateOwnPages">
       <summary>
-        <para>Gets or sets whether the referenced report is printed on separate pages and uses its own page settings.</para>
+        <para>Gets or sets if the subreport generates its own pages.</para>
       </summary>
-      <value>true if the referenced report is printed on separate pages and uses its own page settings; false if the referenced report uses the main report&#39;s pages and page settings.</value>
+      <value>true to generate subreport pages; false to use base report page settings</value>
     </member>
     <member name="E:DevExpress.XtraReports.UI.SubreportBase.HtmlItemCreated">
       <summary>
@@ -13264,9 +13021,9 @@
     </member>
     <member name="P:DevExpress.XtraReports.UI.SubreportBase.ReportSource">
       <summary>
-        <para>Gets or sets an XtraReport class instance. The instance&#39;s content is included in the main report.</para>
+        <para>Specifies an <see cref="T:DevExpress.XtraReports.UI.XtraReport"/> object to be included as a subreport.</para>
       </summary>
-      <value>An XtraReport class instance.</value>
+      <value>An <see cref="T:DevExpress.XtraReports.UI.XtraReport"/> object to be included.</value>
     </member>
     <member name="P:DevExpress.XtraReports.UI.SubreportBase.Scripts">
       <summary>
@@ -16252,6 +16009,11 @@
         <para>A control&#39;s parameter that enables you to pass values outside the control&#39;s data source.</para>
       </summary>
     </member>
+    <member name="M:DevExpress.XtraReports.UI.XRControlParameter.#ctor">
+      <summary>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.UI.XRControlParameter"/> class with the default settings.</para>
+      </summary>
+    </member>
     <member name="M:DevExpress.XtraReports.UI.XRControlParameter.#ctor(System.String,DevExpress.XtraReports.Parameters.Parameter)">
       <summary>
         <para>Initializes a new instance of the <see cref="T:DevExpress.XtraReports.UI.XRControlParameter"/> class with the specified settings.</para>
@@ -18538,9 +18300,9 @@
     </member>
     <member name="P:DevExpress.XtraReports.UI.XRPictureBox.UseImageResolution">
       <summary>
-        <para>Gets or sets whether to use the original image DPI (dots per inch) value when the image is rendered in a report.</para>
+        <para>For internal use.</para>
       </summary>
-      <value>true, to use the original image resolution; otherwise, false.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraReports.UI.XRPictureBox.WordWrap">
       <summary>
@@ -19933,7 +19695,7 @@
     </member>
     <member name="T:DevExpress.XtraReports.UI.XRSubreport">
       <summary>
-        <para>A control that is used to include a report&#39;s content in another report.</para>
+        <para>A Subreport control that is used to embed other reports in an <see cref="T:DevExpress.XtraReports.UI.XtraReport"/>.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraReports.UI.XRSubreport.#ctor">
@@ -19955,7 +19717,7 @@
     </member>
     <member name="M:DevExpress.XtraReports.UI.XRSubreport.ApplyParameterBindings">
       <summary>
-        <para>Sets the referenced report&#39;s parameters listed in the <see cref="P:DevExpress.XtraReports.UI.XRSubreport.ParameterBindings"/> collection to the current values of fields or parameters that they are bound to.</para>
+        <para>Applies subreport parameter bindings assigned to the <see cref="P:DevExpress.XtraReports.UI.XRSubreport.ParameterBindings"/> collection.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraReports.UI.XRSubreport.BackColor">
@@ -19966,9 +19728,9 @@
     </member>
     <member name="P:DevExpress.XtraReports.UI.XRSubreport.BookmarkParent">
       <summary>
-        <para>Specifies the main report&#39;s control whose bookmark is parent to the referenced report&#39;s bookmarks.</para>
+        <para>Specifies the report control whose bookmark is the parent for subreport bookmarks.</para>
       </summary>
-      <value>Tthe control whose bookmark is parent to the referenced report&#39;s bookmarks.</value>
+      <value>An <see cref="T:DevExpress.XtraReports.UI.XRControl"/> object that specifies the control whose bookmark is the parent for subreport bookmarks.</value>
     </member>
     <member name="P:DevExpress.XtraReports.UI.XRSubreport.BorderColor">
       <summary>
@@ -20014,7 +19776,7 @@
     </member>
     <member name="M:DevExpress.XtraReports.UI.XRSubreport.FillParameterBindings">
       <summary>
-        <para>Populates the <see cref="P:DevExpress.XtraReports.UI.XRSubreport.ParameterBindings"/> collection with records for the referenced report&#39;s parameters that are not listed in this collection.</para>
+        <para>Fills the <see cref="P:DevExpress.XtraReports.UI.XRSubreport.ParameterBindings"/> collection.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraReports.UI.XRSubreport.Font">
@@ -20043,9 +19805,9 @@
     </member>
     <member name="P:DevExpress.XtraReports.UI.XRSubreport.ParameterBindings">
       <summary>
-        <para>Provides access to a collection of subreport parameter bindings where you can bind the referenced report&#39;s parameters to the master report&#39;s fields or parameters.</para>
+        <para>Provides access to the collection of subreport parameter bindings, which allow you to bind a subreport&#39;s parameter value to a master report&#39;s data field.</para>
       </summary>
-      <value>A subreport parameter bindings collection.</value>
+      <value>A <see cref="T:DevExpress.XtraReports.UI.ParameterBindingCollection"/> object, specifying the collection of subreport parameter bindings.</value>
     </member>
     <member name="P:DevExpress.XtraReports.UI.XRSubreport.ParentStyleUsing">
       <summary>
@@ -20055,20 +19817,20 @@
     </member>
     <member name="M:DevExpress.XtraReports.UI.XRSubreport.RemoveUnusedParameterBindings">
       <summary>
-        <para>Removes the subreport parameter bindings where the specified parameter does not exist in the referenced report from the <see cref="P:DevExpress.XtraReports.UI.XRSubreport.ParameterBindings"/> collection.</para>
+        <para>Removes inappropriate subreport parameter bindings from the <see cref="P:DevExpress.XtraReports.UI.XRSubreport.ParameterBindings"/> collection.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraReports.UI.XRSubreport.ReportSourceRowCount">
       <summary>
-        <para>Returns the number of rows in the referenced report&#39;s data source.</para>
+        <para>Returns a row count in a data source of a report included in a subreport.</para>
       </summary>
-      <value>The number of rows in the referenced report&#39;s data source.</value>
+      <value>A row count in a data source of a report included in a subreport.</value>
     </member>
     <member name="P:DevExpress.XtraReports.UI.XRSubreport.ReportSourceUrl">
       <summary>
-        <para>Gets or sets a URL or path that specifies a report&#39;s location. The report content is included in the main report.</para>
+        <para>Specifies an URL of a report definition file, to be included as a subreport.</para>
       </summary>
-      <value>A URL or path that specifies a report&#39;s location.</value>
+      <value>A <see cref="T:System.String"/> value, specifying the path to the REPX file (including the name of the file).</value>
     </member>
     <member name="P:DevExpress.XtraReports.UI.XRSubreport.StylePriority">
       <summary>

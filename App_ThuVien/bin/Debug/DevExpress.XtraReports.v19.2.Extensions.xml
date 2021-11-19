@@ -1750,11 +1750,6 @@
         <para>Enables/disables the selected control(s) to decrease their height to fit their content. This command is available in the ribbon&#39;s Text contextual tab.</para>
       </summary>
     </member>
-    <member name="F:DevExpress.XtraReports.UserDesigner.ReportCommand.LabelsConvertToTable">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
     <member name="F:DevExpress.XtraReports.UserDesigner.ReportCommand.LabelWordWrap">
       <summary>
         <para>Enables/disables the selected control(s) to wrap their text if it does not fit a line. This command is available in the ribbon&#39;s Text contextual tab.</para>
@@ -3514,9 +3509,9 @@
     </member>
     <member name="M:DevExpress.XtraReports.UserDesigner.XRDesignPanel.RemoveCommandHandler(DevExpress.XtraReports.UserDesigner.ICommandHandler)">
       <summary>
-        <para>Removes the specified command handler.</para>
+        <para>Removes the specified command handler for one or several of the report commands.</para>
       </summary>
-      <param name="handler">The command handler to be removed.</param>
+      <param name="handler">An object which implements the <see cref="T:DevExpress.XtraReports.UserDesigner.ICommandHandler"/> interface, representing the command handler to be removed.</param>
     </member>
     <member name="M:DevExpress.XtraReports.UserDesigner.XRDesignPanel.RemoveService(System.Type)">
       <summary>

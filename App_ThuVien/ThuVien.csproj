@@ -244,6 +244,12 @@
     <Compile Include="Console\View_InKhachHang.Designer.cs">
       <DependentUpon>View_InKhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="Database\Choose_Database.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Database\Choose_Database.Designer.cs">
+      <DependentUpon>Choose_Database.cs</DependentUpon>
+    </Compile>
     <Compile Include="Design\btn_style_1.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -431,6 +437,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Console\View_InKhachHang.resx">
       <DependentUpon>View_InKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Database\Choose_Database.resx">
+      <DependentUpon>Choose_Database.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Design\btn_style_1.resx">
       <DependentUpon>btn_style_1.cs</DependentUpon>

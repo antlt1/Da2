@@ -1139,12 +1139,6 @@ If this parameter has a value (it&#39;s not null or an empty string) the val par
       </summary>
       <returns>A String value that is the column&#39;s description.</returns>
     </member>
-    <member name="M:DevExpress.XtraGrid.Columns.GridColumn.GetHeaderBestWidth">
-      <summary>
-        <para></para>
-      </summary>
-      <returns></returns>
-    </member>
     <member name="M:DevExpress.XtraGrid.Columns.GridColumn.GetTextCaption">
       <summary>
         <para>Returns the non formatted column caption.</para>
@@ -7697,13 +7691,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
       </summary>
       <param name="column">A <see cref="T:DevExpress.XtraGrid.Columns.GridColumn"/> object identifying the cell within the focused row.</param>
       <returns>An <see cref="T:DevExpress.XtraEditors.DXErrorProvider.ErrorType"/> value that specifies the type of error.</returns>
-    </member>
-    <member name="M:DevExpress.XtraGrid.Views.Base.ColumnView.GetColumnHeaderBestWidth(DevExpress.XtraGrid.Columns.GridColumn)">
-      <summary>
-        <para></para>
-      </summary>
-      <param name="column"></param>
-      <returns></returns>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Base.ColumnView.GetDataRow(System.Int32)">
       <summary>

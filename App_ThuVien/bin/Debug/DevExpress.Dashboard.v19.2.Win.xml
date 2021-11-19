@@ -4,11 +4,6 @@
     <name>DevExpress.Dashboard.v19.2.Win</name>
   </assembly>
   <members>
-    <member name="N:DevExpress.DashboardCommon.DataSourceWizard">
-      <summary>
-        <para>Contains classes that provide functionality to the Data Source wizard page presenters.</para>
-      </summary>
-    </member>
     <member name="T:DevExpress.DashboardCommon.DataSourceWizard.ChooseExtractFieldsPage`1">
       <summary>
         <para>Provides a presenter to the Select Data Fields page of the Data Source wizard (Extract Data Source).</para>
@@ -251,9 +246,9 @@
     </member>
     <member name="M:DevExpress.DashboardCommon.DataSourceWizard.DashboardChooseDataSourceNamePage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IChooseDataSourceNamePageView,DevExpress.DataAccess.Wizard.Services.IDataSourceNameCreationService,DevExpress.DataAccess.Wizard.Services.IConnectionStorageService,DevExpress.DataAccess.Wizard.Services.IJsonConnectionStorageService,DevExpress.DataAccess.Wizard.Services.DataSourceTypes)">
       <summary>
-        <para>Initializes a new instance of the  class.</para>
+        <para></para>
       </summary>
-      <param name="view">A page view.</param>
+      <param name="view"></param>
       <param name="dataSourceNameCreator"></param>
       <param name="connectionStorageService"></param>
       <param name="jsonConnectionStorageService"></param>
@@ -277,7 +272,7 @@
     </member>
     <member name="M:DevExpress.DashboardCommon.DataSourceWizard.DashboardChooseDataSourceTypePage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IChooseDataSourceTypePageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Wizard.Services.IConnectionStorageService,DevExpress.DataAccess.Wizard.Services.IJsonConnectionStorageService,DevExpress.Entity.ProjectModel.ISolutionTypesProvider,DevExpress.DataAccess.Wizard.SqlWizardOptions)">
       <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.DashboardCommon.DataSourceWizard.DashboardChooseDataSourceTypePage`1"/> class.</para>
+        <para></para>
       </summary>
       <param name="view"></param>
       <param name="context"></param>
@@ -1710,7 +1705,7 @@
     </member>
     <member name="E:DevExpress.DashboardWin.DashboardDesigner.FilterElementDefaultValues">
       <summary>
-        <para>Use <see cref="E:DevExpress.DashboardWin.DashboardDesigner.MasterFilterDefaultValues"/> instead.</para>
+        <para>Provides the capability to apply default filtering to filter elements.</para>
       </summary>
     </member>
     <member name="M:DevExpress.DashboardWin.DashboardDesigner.GetAvailableDrillDownValues(System.String)">
@@ -2480,7 +2475,7 @@
     </member>
     <member name="E:DevExpress.DashboardWin.DashboardDesigner.SingleFilterDefaultValue">
       <summary>
-        <para>Use <see cref="E:DevExpress.DashboardWin.DashboardDesigner.MasterFilterDefaultValues"/> instead.</para>
+        <para>Allows you to specify a default filter value for the Single Master Filter.</para>
       </summary>
     </member>
     <member name="M:DevExpress.DashboardWin.DashboardDesigner.UpdateDashboardItemCaption(System.String)">
@@ -4472,7 +4467,7 @@
     </member>
     <member name="E:DevExpress.DashboardWin.DashboardViewer.FilterElementDefaultValues">
       <summary>
-        <para>Use <see cref="E:DevExpress.DashboardWin.DashboardViewer.MasterFilterDefaultValues"/> instead.</para>
+        <para>Provides the capability to apply default filtering to filter elements.</para>
       </summary>
     </member>
     <member name="M:DevExpress.DashboardWin.DashboardViewer.GetAvailableDrillDownValues(System.String)">
@@ -4883,7 +4878,7 @@
     </member>
     <member name="E:DevExpress.DashboardWin.DashboardViewer.RangeFilterDefaultValue">
       <summary>
-        <para>Allows you to specify the default selected range in the Range Filter dashboard item.</para>
+        <para>Provides the capability to specify the default selected range in the Range Filter dashboard item.</para>
       </summary>
     </member>
     <member name="M:DevExpress.DashboardWin.DashboardViewer.ReloadData">
@@ -5191,7 +5186,7 @@
     </member>
     <member name="E:DevExpress.DashboardWin.DashboardViewer.SingleFilterDefaultValue">
       <summary>
-        <para>Use <see cref="E:DevExpress.DashboardWin.DashboardViewer.MasterFilterDefaultValues"/> instead.</para>
+        <para>Allows you to specify a default filter value for the Single Master Filter.</para>
       </summary>
     </member>
     <member name="M:DevExpress.DashboardWin.DashboardViewer.UpdateDashboardItemCaption(System.String)">
@@ -5751,10 +5746,10 @@
     </member>
     <member name="T:DevExpress.DashboardWin.ExcelDataSourceBeforeFillEventHandler">
       <summary>
-        <para>A method that will handle the <see cref="E:DevExpress.DashboardWin.DashboardDesigner.AsyncExcelDataSourceBeforeFill"/> and <see cref="E:DevExpress.DashboardWin.DashboardViewer.AsyncExcelDataSourceBeforeFill"/> events.</para>
+        <para></para>
       </summary>
-      <param name="sender">The event source.</param>
-      <param name="e">A <see cref="T:DevExpress.DashboardWin.ExcelDataSourceBeforeFillEventArgs"/> object that contains event data.</param>
+      <param name="sender"></param>
+      <param name="e"></param>
     </member>
     <member name="T:DevExpress.DashboardWin.ExtractDataSourceUIHelper">
       <summary>
@@ -14700,6 +14695,23 @@ Click &#39;Yes&#39; to load data as is. If you save the current dashboard, you c
       </summary>
       <param name="sender">The event source.</param>
       <param name="e">A <see cref="T:DevExpress.DashboardWin.SetInitialDashboardStateEventArgs"/> object that contains event data.</param>
+    </member>
+    <member name="T:DevExpress.DashboardWin.TaskHelper`1">
+      <summary>
+        <para></para>
+      </summary>
+    </member>
+    <member name="M:DevExpress.DashboardWin.TaskHelper`1.#ctor(DevExpress.DashboardWin.DashboardViewer)">
+      <summary>
+        <para></para>
+      </summary>
+      <param name="viewer"></param>
+    </member>
+    <member name="P:DevExpress.DashboardWin.TaskHelper`1.EmptyTask">
+      <summary>
+        <para></para>
+      </summary>
+      <value></value>
     </member>
     <member name="T:DevExpress.DashboardWin.TreemapPrintingOptions">
       <summary>
