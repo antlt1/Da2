@@ -33,8 +33,8 @@ namespace Test_Sqlite
             }
             else
             {
-                // Application.Run(new App_ThuVien.Form.Frm_Loaisach());
-                Application.Run(new FrmThuVien());
+             //   Application.Run(new App_ThuVien.Console.In_PhieuPhat());
+               Application.Run(new FrmThuVien());
             }
         }
     }

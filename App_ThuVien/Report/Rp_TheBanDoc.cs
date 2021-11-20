@@ -19,10 +19,11 @@ namespace App_ThuVien.Report
         {
 
         }
-        public void add_Val(string hovaten , string diachi)
+        public void add_Val(string hovaten , string diachi, string mabandoc)
         {
             lb_hovaten.Text = hovaten;
              lb_diachi.Text = diachi;
+            barcode.Text = mabandoc;
             lb_ngaytao.Text = DateTime.Now.ToShortDateString();
             //   barcode.pro
         }

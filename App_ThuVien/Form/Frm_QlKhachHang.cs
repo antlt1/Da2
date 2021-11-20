@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraEditors;
+﻿using App_ThuVien.Class;
+using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -89,7 +90,15 @@ namespace App_ThuVien.Form
         }
         private void btn_print_Click(object sender, EventArgs e)
         {
-            XtraMessageBox.Show(gvkhachhang.GetRowCellValue(gvkhachhang.FocusedRowHandle, "id_TaiKhoan").ToString());
+           string pm = gvkhachhang.GetRowCellValue(gvkhachhang.FocusedRowHandle, "id_TaiKhoan").ToString();
+            string hoten = G_U.mysqli_ex_data(string.Format("select bandoc.hoten from bandoc where bandoc.id_TaiKhoan = {0}",pm)), 
+                   diachi = G_U.mysqli_ex_data(string.Format("select bandoc.diachi from bandoc where bandoc.id_TaiKhoan = {0}", pm)), 
+                   id_bandoc = G_U.mysqli_ex_data(string.Format("select bandoc.id_taikhoan from bandoc where bandoc.id_TaiKhoan = {0}", pm));
+            id_bandoc = G_U.creater_fex(string.Format("select id_taikhoan from bandoc where id_taikhoan = {0}", id_bandoc), "BD");
+            Setting_sys.mess(id_bandoc);
+            var fr = new App_ThuVien.Console.View_InKhachHang();
+            fr.add_Val(hoten, diachi, id_bandoc);
+            fr.Show();
         }
 
         private void gvkhachhang_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
@@ -97,6 +106,11 @@ namespace App_ThuVien.Form
             G_U.ex_cmd(string.Format("update bandoc set  {0} = '{1}' where id_taikhoan = {2} ", e.Column.FieldName, e.Value,
             gvkhachhang.GetRowCellValue(e.RowHandle, "id_TaiKhoan")));
             loading_data();
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

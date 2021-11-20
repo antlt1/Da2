@@ -29,18 +29,18 @@ namespace App_ThuVien.Console // creater by : アン
             {
                 try
                 {
+                    string id_bandoc = G_U.creater_id("id_taikhoan", "bandoc");
                     str = string.Format("insert into bandoc values ({0},'{1}',{2},'{3}',0,0,0,'bt')",
-                  G_U.creater_id("id_taikhoan", "bandoc"), txtHovaTen.Text, txtSDT.Text, txtDiaChi.Text);
-                    txtDiaChi.Text = str;
+                    id_bandoc , txtHovaTen.Text, txtSDT.Text, txtDiaChi.Text);
+                 //   txtDiaChi.Text = str;
                     G_U.ex_cmd(str);
                     App_ThuVien.Form.Frm_QlKhachHang.time_add = false;
                     if (DialogResult.Yes == XtraMessageBox.Show("Đã tạo bạn đọc thành công ! \nBạn có muốn in thẻ bạn đọc không ?", "Hệ Thống", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                     {
                         var fr = new App_ThuVien.Console.View_InKhachHang();
-                        fr.add_Val(txtHovaTen.Text, txtDiaChi.Text);
+                        fr.add_Val(txtHovaTen.Text, txtDiaChi.Text,id_bandoc);
                         fr.Show();
                     }
-
                 }
                 catch (Exception ex)
                 {

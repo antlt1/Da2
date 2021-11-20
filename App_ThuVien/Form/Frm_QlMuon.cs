@@ -87,9 +87,17 @@ namespace App_ThuVien.Form
                 }
             }
         }
+        // sự  kiện tô màu báo sách quá hạn trả
+        void quahan(DevExpress.XtraGrid.Views.Grid.RowStyleEventArgs e)
+        {
+          //  gvmuon.Appearance.BackColor = Color.Red;
+          //gvmuon.Columns.
+          //  e.Appearance.BackColor = Color.Red;
+        }
         // sự kiện  onload 
         private void Frm_QlMuon_Load(object sender, EventArgs e)
         {
+            
             check_ngaymuon("");
             ex_data_user();
             ex_data_muon("");
@@ -107,11 +115,35 @@ namespace App_ThuVien.Form
         public static bool check_get_time;
         App_ThuVien.Console.Pick_Lich fr1 = new App_ThuVien.Console.Pick_Lich();
         int ii = 0;
+       public  int get_diem()
+        {
+
+            string diem = Setting_sys.getting_src_file("DiemThanThien.txt");
+            string src = "";
+            int count = 0;
+            foreach (char i in diem)
+            {
+                if (i == ',')
+                {
+                    if (count == 2)
+                    {
+                        return int.Parse(src);
+                    }
+                    src = null;
+                    count++;
+                }
+                else
+                {
+                    src += i.ToString();
+                }
+               
+            }
+            return 0;
+        }
         private void timer1_Tick(object sender, EventArgs e)
         {
             if(check_time == true)
             {
-                
                 if (status_char_choose == 't') // Trả 
                 {
                     check_time = false;
@@ -125,6 +157,11 @@ namespace App_ThuVien.Form
                            string.Format("select soluong from sach where id_sach = {0}",ma_sach_t))) + 1;
                         G_U.ex_cmd(string.Format("update sach set soluong = {0} where id_sach = {1}",soluong,ma_sach_t));
                         Setting_sys.mess("Đã trả thành công !");
+                        // cộng điẻm thân thiện vÀ sô lần mượn
+                        string id_ngmuon = G_U.mysqli_ex_data(string.Format("SELECT id_ngmuon FROM phieu_muonsach WHERE id_muonsach = {0}", ma_pm));
+                        int diem_thanthien = int.Parse(G_U.mysqli_ex_data(string.Format("select diem_thanthien from bandoc where id_taikhoan = {0}", id_ngmuon))) + get_diem();
+                        string so_lan_muon = G_U.mysqli_ex_data(string.Format("select solanmuon from bandoc where id_taikhoan = {0}", id_ngmuon));
+                        G_U.ex_cmd(string.Format("update bandoc set diem_thanthien = {0} , solanmuon = {1} where id_taikhoan = {2}", diem_thanthien, int.Parse(so_lan_muon)+1 ,id_ngmuon));
                         status_char_choose = ' ';
                         Frm_QlMuon_Load(sender, e);
                     }
@@ -154,9 +191,15 @@ namespace App_ThuVien.Form
            
         }
         string ma_pm, ma_sach_t;
+
+        private void gvmuon_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
+        {
+           // e.Colum
+        }
+
         private void gvmuon_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
-            string ma_pm = gvmuon.GetRowCellValue(e.RowHandle, "Mã phiếu mượn").ToString();
+            ma_pm = gvmuon.GetRowCellValue(e.RowHandle, "Mã phiếu mượn").ToString();
             id_tt_pm = G_U.mysqli_ex_data(string.Format("select id_tt_muonsach from phieu_muonsach where id_muonsach = {0}", ma_pm)).ToString();
             if (e.Column.FieldName == "masach")
             {

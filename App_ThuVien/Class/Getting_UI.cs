@@ -200,5 +200,31 @@ namespace Test_Sqlite.Class
             sqlite_cmd = new SQLiteCommand(str, conn);
             return sqlite_cmd.ExecuteScalar().ToString();
         }
+        // Creter Fex
+        public string creater_fex(string cmd , string str)
+        {
+            cmd = mysqli_ex_data(cmd);
+            int count = cmd.Length;
+            if(count == 1)
+            {
+                return str + "00000" + cmd;
+            }else if(count == 2)
+            {
+                return str + "0000" + cmd;
+            }
+            else if (count == 3)
+            {
+                return str + "000" + cmd;
+            }
+            else if (count == 4)
+            {
+                return str + "00" + cmd;
+            }
+            else if (count == 5)
+            {
+                return str + "0" + cmd;
+            }
+            return null;
+        }
     }
 }

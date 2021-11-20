@@ -20,11 +20,11 @@ namespace App_ThuVien.Console
         }
         //View_InKhachHang fr_rp = new View_InKhachHang();
         App_ThuVien.Report.Rp_TheBanDoc rp = new App_ThuVien.Report.Rp_TheBanDoc();
-        public void add_Val(string hovaten , string diachi)
+        public void add_Val(string hovaten , string diachi, string id_bandoc)
         {
              rp = new App_ThuVien.Report.Rp_TheBanDoc();
             //rp.DataSource = ;
-            rp.add_Val(hovaten,diachi);
+            rp.add_Val(hovaten,diachi,id_bandoc);
         }
         private void View_InKhachHang_Load(object sender, EventArgs e)
         {

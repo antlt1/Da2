@@ -65,16 +65,16 @@ namespace App_ThuVien.Report
             this.lb_diachi,
             this.lb_ngaytao,
             this.lab_tenthuvien});
-            this.Detail.HeightF = 201.2223F;
+            this.Detail.HeightF = 210.389F;
             this.Detail.Name = "Detail";
             this.Detail.AfterPrint += new System.EventHandler(this.Detail_AfterPrint);
             // 
             // barcode
             // 
-            this.barcode.LocationFloat = new DevExpress.Utils.PointFloat(263.6389F, 154.4168F);
+            this.barcode.LocationFloat = new DevExpress.Utils.PointFloat(232.8055F, 147.0277F);
             this.barcode.Name = "barcode";
             this.barcode.Padding = new DevExpress.XtraPrinting.PaddingInfo(10, 10, 0, 0, 100F);
-            this.barcode.SizeF = new System.Drawing.SizeF(142.3611F, 36.80555F);
+            this.barcode.SizeF = new System.Drawing.SizeF(257.1945F, 53.36128F);
             this.barcode.Symbology = code128Generator1;
             // 
             // xrLabel1
@@ -148,7 +148,7 @@ namespace App_ThuVien.Report
             this.Font = new System.Drawing.Font("Arial", 9.75F);
             this.Margins = new System.Drawing.Printing.Margins(0, 0, 0, 0);
             this.PageHeight = 243;
-            this.PageWidth = 416;
+            this.PageWidth = 500;
             this.PaperKind = System.Drawing.Printing.PaperKind.Custom;
             this.PaperName = "Custom";
             this.ScriptsSource = "\r\nprivate void TopMargin_AfterPrint(object sender, System.EventArgs e) {\r\n\r\n}\r\n\r\n" +
