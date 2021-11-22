@@ -1157,7 +1157,7 @@
     </member>
     <member name="M:DevExpress.DataAccess.DataFederation.FederationDataSourceBase.LoadFromXml(System.Xml.Linq.XElement)">
       <summary>
-        <para>Loads the Federation Data Source schema definition from XML.</para>
+        <para>Loads the Federation Data Source schema definition from XML. For internal use.</para>
       </summary>
       <param name="element">A <see cref="T:System.Xml.Linq.XElement"/> value containing an XML definition of the data source schema.</param>
     </member>
@@ -1169,7 +1169,7 @@
     </member>
     <member name="M:DevExpress.DataAccess.DataFederation.FederationDataSourceBase.SaveToXml">
       <summary>
-        <para>Saves the XML definition of the SQL data source schema.</para>
+        <para>Saves the XML definition of the SQL data source schema. For internal use.</para>
       </summary>
       <returns>A <see cref="T:System.Xml.Linq.XElement"/> value containing an XML definition of the data source schema.</returns>
     </member>
@@ -13218,41 +13218,41 @@
     </member>
     <member name="T:DevExpress.DataAccess.Web.IObjectDataSourceConstructorFilterService">
       <summary>
-        <para></para>
+        <para>Provides the list of type constructors to display in the Report Wizard and Data Source Wizard.</para>
       </summary>
     </member>
     <member name="M:DevExpress.DataAccess.Web.IObjectDataSourceConstructorFilterService.Filter(System.Type,System.Collections.Generic.IEnumerable{System.Reflection.ConstructorInfo})">
       <summary>
-        <para></para>
+        <para>Returns the list of type constructors to display in the Report Wizard and Data Source Wizard.</para>
       </summary>
-      <param name="dataSourceType"></param>
-      <param name="constructors"></param>
-      <returns></returns>
+      <param name="dataSourceType">A type that is registered for the Report Wizard and Data Source Wizard.</param>
+      <param name="constructors">The list of constructors declared in the specified type.</param>
+      <returns>A filtered list of constructors to display in the Report Wizard and Data Source Wizard.</returns>
     </member>
     <member name="T:DevExpress.DataAccess.Web.IObjectDataSourceMemberFilterService">
       <summary>
-        <para></para>
+        <para>Provides the list of type members to display in the Report Wizard and Data Source Wizard.</para>
       </summary>
     </member>
     <member name="M:DevExpress.DataAccess.Web.IObjectDataSourceMemberFilterService.Filter(System.Type,System.Collections.Generic.IEnumerable{System.Reflection.MemberInfo})">
       <summary>
-        <para></para>
+        <para>Returns the list of type members to display in the Report Wizard and Data Source Wizard.</para>
       </summary>
-      <param name="dataSourceType"></param>
-      <param name="members"></param>
-      <returns></returns>
+      <param name="dataSourceType">A type that is registered for the Report Wizard and Data Source Wizard.</param>
+      <param name="members">The list of type members that return <see cref="T:System.Collections.Generic.IEnumerable`1"/> values.</param>
+      <returns>The filtered list of type members to display in the Report Wizard and Data Source Wizard.</returns>
     </member>
     <member name="T:DevExpress.DataAccess.Web.IObjectDataSourceWizardTypeProvider">
       <summary>
-        <para></para>
+        <para>Provides the list of types to display in the Report Wizard and Data Source Wizard.</para>
       </summary>
     </member>
     <member name="M:DevExpress.DataAccess.Web.IObjectDataSourceWizardTypeProvider.GetAvailableTypes(System.String)">
       <summary>
-        <para></para>
+        <para>Returns the list of types to display in the Report Wizard and Data Source Wizard.</para>
       </summary>
-      <param name="context"></param>
-      <returns></returns>
+      <param name="context">For internal use.</param>
+      <returns>The list of types to display in the Report Wizard and Data Source Wizard.</returns>
     </member>
     <member name="T:DevExpress.DataAccess.Web.ISqlDataSourceWizardCustomizationService">
       <summary>

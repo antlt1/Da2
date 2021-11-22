@@ -42,16 +42,6 @@ namespace App_ThuVien.BarCode
             Bitmap bmp = (Bitmap)eventArgs.Frame.Clone();
             pic_qr.Image = bmp;
         }
-        void tatcam()
-        {
-            if (videocam.IsRunning)
-            {
-                videocam.Stop();
-            }
-            //pn_droidcam.Hide();
-            //btn_choose_cam.Text = "Chọn";
-            //Choose_Cam.Enabled = true;
-        }
         public string barcode;
         private void stream_NewFrame(object sender, NewFrameEventArgs eventArgs)//  tao frame
         {
@@ -94,22 +84,11 @@ namespace App_ThuVien.BarCode
 
         private void ControlBarCode_FormClosed(object sender, FormClosedEventArgs e)
         {
-            stream.Stop();
             this.Close();
         }
 
         private void thiếtBịVậtLýToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (videocam.IsRunning)
-            {
-                tatcam();
-            }
-            {
-                videocam = new VideoCaptureDevice(fill[cbx_thietbi.SelectedIndex].MonikerString);
-                videocam.NewFrame += stream_NewFrame;
-                videocam.Start();
-                timer1.Start();
-            }
         }
 
         private void droidCamToolStripMenuItem_Click(object sender, EventArgs e)

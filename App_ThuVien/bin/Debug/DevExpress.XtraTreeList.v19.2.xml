@@ -1102,6 +1102,12 @@ This constant is used to initialize the <see cref="P:DevExpress.XtraEditors.Repo
       </summary>
       <returns>A String value that is this <see cref="T:DevExpress.XtraTreeList.Columns.TreeListColumn"/>&#39;s description, assigned by a related data attribute.</returns>
     </member>
+    <member name="M:DevExpress.XtraTreeList.Columns.TreeListColumn.GetHeaderBestWidth">
+      <summary>
+        <para></para>
+      </summary>
+      <returns></returns>
+    </member>
     <member name="M:DevExpress.XtraTreeList.Columns.TreeListColumn.GetTextCaption">
       <summary>
         <para>Returns the column&#39;s plain text caption.</para>
@@ -6270,6 +6276,13 @@ This property is obsolete. Use the <see cref="P:DevExpress.XtraTreeList.TreeList
       </summary>
       <param name="column">A <see cref="T:DevExpress.XtraTreeList.Columns.TreeListColumn"/> object identifying the cell within the focused row.</param>
       <returns>An <see cref="T:DevExpress.XtraEditors.DXErrorProvider.ErrorType"/> value that specifies the type of error.</returns>
+    </member>
+    <member name="M:DevExpress.XtraTreeList.TreeList.GetColumnHeaderBestWidth(DevExpress.XtraTreeList.Columns.TreeListColumn)">
+      <summary>
+        <para></para>
+      </summary>
+      <param name="column"></param>
+      <returns></returns>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.GetCustomNodeCellEdit">
       <summary>

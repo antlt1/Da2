@@ -11390,7 +11390,7 @@
     </member>
     <member name="T:DevExpress.DashboardCommon.JsonConnectionParametersBase">
       <summary>
-        <para></para>
+        <para>Serves as the base class for classes containing parameters used to establish a connection to <see cref="T:DevExpress.DashboardCommon.DashboardJsonDataSource"/>.</para>
       </summary>
     </member>
     <member name="T:DevExpress.DashboardCommon.JsonSourceConnectionParameters">
@@ -12234,7 +12234,7 @@
     </member>
     <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.DataInspectorObjectValue">
       <summary>
-        <para></para>
+        <para>Default value: Object</para>
       </summary>
     </member>
     <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.DataItemsHeader">
@@ -12964,7 +12964,7 @@
     </member>
     <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.EndDate">
       <summary>
-        <para></para>
+        <para>Default value: (End Date)</para>
       </summary>
     </member>
     <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.EntireRangePeriodCaption">
@@ -13174,7 +13174,7 @@
     </member>
     <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.FilterStatePresentation">
       <summary>
-        <para>Default value: Filter State</para>
+        <para>Use the DashboardStringId.DashboardStatePosition property instead.</para>
       </summary>
     </member>
     <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.FilterStatePresentationAfter">
@@ -14872,7 +14872,7 @@ Returns the biased variance of the expression within the window.</para>
     </member>
     <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.ScaleModeAutoFitToPageWidth">
       <summary>
-        <para>Default value: Auto Fit To Page Width</para>
+        <para>Use the DashboardStringId.ScaleModeAutoFitToPagesWidth property instead.</para>
       </summary>
     </member>
     <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.ScaleModeNone">
@@ -14987,7 +14987,7 @@ Returns the biased variance of the expression within the window.</para>
     </member>
     <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.SeriesTypeOpenHighLowClose">
       <summary>
-        <para>Default value: Open-High-Low-Close</para>
+        <para>Use the DashboardStringId.SeriesTypeCandleStick member instead.</para>
       </summary>
     </member>
     <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.SeriesTypePoint">
@@ -15137,7 +15137,7 @@ Returns the biased variance of the expression within the window.</para>
     </member>
     <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.StartDate">
       <summary>
-        <para></para>
+        <para>Default value: (Start Date)</para>
       </summary>
     </member>
     <member name="F:DevExpress.DashboardCommon.Localization.DashboardStringId.SummaryTypeAverage">
@@ -19084,30 +19084,19 @@ Returns the biased variance of the expression within the window.</para>
     </member>
     <member name="T:DevExpress.DashboardCommon.XpoDataSourceConnectionParameters">
       <summary>
-        <para></para>
+        <para>Contains parameters used to establish a connection to the XPO (eXpress Persistent Objects).</para>
       </summary>
     </member>
     <member name="M:DevExpress.DashboardCommon.XpoDataSourceConnectionParameters.#ctor">
       <summary>
-        <para></para>
+        <para>Initializes a new instance of the <see cref="T:DevExpress.DashboardCommon.XpoDataSourceConnectionParameters"/> class.</para>
       </summary>
     </member>
     <member name="P:DevExpress.DashboardCommon.XpoDataSourceConnectionParameters.ConnectionStringName">
       <summary>
-        <para></para>
+        <para>Gets or sets a name of a connection string used to establish a connection to the XPO (eXpress Persistent Objects).</para>
       </summary>
-      <value></value>
-    </member>
-    <member name="T:DevExpress.DashboardCommon.XpoValidationFunction">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.DashboardCommon.XpoValidationFunction.#ctor(System.String)">
-      <summary>
-        <para></para>
-      </summary>
-      <param name="name"></param>
+      <value>A <see cref="T:System.String"/> object that is a connection name.</value>
     </member>
     <member name="T:DevExpress.DashboardCommon.YearFormat">
       <summary>
