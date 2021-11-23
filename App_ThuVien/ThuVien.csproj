@@ -378,6 +378,15 @@
     <Compile Include="test.Designer.cs">
       <DependentUpon>test.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThongKe\Tk_Sach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongKe\Tk_Sach.Designer.cs">
+      <DependentUpon>Tk_Sach.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ThongKe\Tk_Sach.resx">
+      <DependentUpon>Tk_Sach.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Resources\actions_zoom.svg" />
     <None Include="Resources\checkbox_16x16.png" />
     <None Include="Resources\apply_16x16.png" />

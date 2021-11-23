@@ -120,18 +120,18 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pic_help.EditValue" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAOdEVYdFRpdGxlAFN1cHBvcnQ7n7Xg9QAAAUJJREFUOE+V080rRFEYx/EpDYmkvMXO3p6FhT+A
-        3eQPUJR/4ErkpdjK7maymtRsppkF2aCwMRZSrCVS3hYoGy+D7+92jh53rmLxqTm/+zzPPd1zJhXkwyRd
-        mEMZD3jFFYrIoAZRbbxRRvGEO9zgDZ8xh+hG1YBW9KPOZGn0YREa6odcos02iwqzOMU9bnGMZfSgCSvw
-        Q7K+sRkFF/7mAyG0uxmXPaq5HkcukBIG0IkODELb9c83oY+4q7UGzOuHoS8/iXWsQTXDsDUjGMK1Hp67
-        MMkqVDNhMtlDC6b0sOLCuDHoBGbx7jJPL61FWgMuXGg9Q2/dMJm1D/VG92DBhZbeMI4Dk1na3feABpzA
-        FmxBW1wymbeNqqvcjnhhkhwa4ft+XGVftAOdu/4DLziDTqMXtj5iF2qeNus/sYt/Nwf5MPUFaKw9aErQ
-        iqMAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAA50RVh0VGl0
+        bGUAU3VwcG9ydDufteD1AAABQklEQVQ4T5XTzStEURjH8SkNiaS8xc7enoWFP4Dd5A9QlH/gSuSl2Mru
+        ZrKa1GymmQXZoLAxFlKsJVLeFigbL4Pv73aOHneuYvGpOb/7PM893XMmFeTDJF2YQxkPeMUVisigBlFt
+        vFFG8YQ73OANnzGH6EbVgFb0o85kafRhERrqh1yizTaLCrM4xT1ucYxl9KAJK/BDsr6xGQUX/uYDIbS7
+        GZc9qrkeRy6QEgbQiQ4MQtv1zzehj7irtQbM64ehLz+JdaxBNcOwNSMYwrUenrswySpUM2Ey2UMLpvSw
+        4sK4MegEZvHuMk8vrUVaAy5caD1Db90wmbUP9Ub3YMGFlt4wjgOTWdrd94AGnMAWbEFbXDKZt42qq9yO
+        eGGSHBrh+35cZV+0A527/gMvOINOoxe2PmIXap426z+xi383B/kw9QVorD1oStCKowAAAABJRU5ErkJg
+        gg==
 </value>
   </data>
   <assembly alias="DevExpress.Data.v19.2" name="DevExpress.Data.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-  <data name="pictureEdit1.Properties.InitialImageOptions.SvgImage" type="DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v19.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pic_help.Properties.InitialImageOptions.SvgImage" type="DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v19.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFlEZXZFeHByZXNzLkRhdGEudjE5LjIsIFZlcnNpb249MTkuMi41
         LjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjg4ZDE3NTRkNzAwZTQ5YQUBAAAAHURl

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 19, 2021 lúc 12:20 PM
+-- Thời gian đã tạo: Th10 23, 2021 lúc 07:20 AM
 -- Phiên bản máy phục vụ: 10.4.21-MariaDB
 -- Phiên bản PHP: 8.0.10
 
@@ -43,11 +43,12 @@ CREATE TABLE `bandoc` (
 --
 
 INSERT INTO `bandoc` (`id_TaiKhoan`, `hoten`, `sdt`, `diachi`, `diem_thanthien`, `solanmuon`, `solandoc`, `trangthai`) VALUES
-(1, 'Nguyễn Văn An', '01283595915', 'トキョ', 0, 0, 1, 'bt'),
+(1, 'Nguyễn Văn An', '01283595915', 'トキョ', 18, 7, 1, 'bt'),
 (2, 'Lê Vĩ  Dark', '938261234', 'Vĩnh Biệt, Hậu Giang', 0, 0, 2, 'bt'),
 (3, 'Quách Hoàng Luân', '0939225182', 'Vĩnh Long', 0, 0, 0, 'bt'),
 (4, 'Nguyễn Minh Hùng', '768680033', 'Long An ', 0, 0, 0, 'bt'),
-(5, 'Lê Quốc Thống', '786803399', 'Hậu Giang , xã trường long tây', 0, 0, 0, 'bt');
+(5, 'Lê Quốc Thống', '786803399', 'Hậu Giang , xã trường long tây', 0, 0, 0, 'bt'),
+(6, 'Lai Thị Đình Nguyên', '7113113', '', 0, 2, 0, 'bt');
 
 -- --------------------------------------------------------
 
@@ -86,6 +87,35 @@ CREATE TABLE `kho` (
 -- --------------------------------------------------------
 
 --
+-- Cấu trúc bảng cho bảng `phat`
+--
+
+CREATE TABLE `phat` (
+  `id_phat` int(10) NOT NULL,
+  `id_sach` int(10) NOT NULL,
+  `id_bandoc` int(10) NOT NULL,
+  `id_nhanvien` int(10) NOT NULL,
+  `tien_phat` decimal(10,0) NOT NULL,
+  `lydo` text NOT NULL,
+  `ngayphat` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `phat`
+--
+
+INSERT INTO `phat` (`id_phat`, `id_sach`, `id_bandoc`, `id_nhanvien`, `tien_phat`, `lydo`, `ngayphat`) VALUES
+(1, 1, 1, 21, '862000', 'Hư sách', '2021-11-23'),
+(2, 1, 1, 21, '862000', 'Hư sách', '2021-11-23'),
+(3, 4, 1, 21, '214000', 'Mất sách', '2021-11-23'),
+(4, 1, 1, 21, '862000', 'Mất sách', '2021-11-23'),
+(5, 5, 6, 21, '0', 'Mất sách', '2021-11-23'),
+(6, 5, 6, 21, '0', 'Mất sách', '2021-11-23'),
+(7, 3, 1, 21, '174000', 'Mất sách', '2021-11-23');
+
+-- --------------------------------------------------------
+
+--
 -- Cấu trúc bảng cho bảng `phieu_muonsach`
 --
 
@@ -103,7 +133,9 @@ CREATE TABLE `phieu_muonsach` (
 INSERT INTO `phieu_muonsach` (`id_muonsach`, `id_tt_muonsach`, `id_taikhoan_lap`, `id_ngmuon`) VALUES
 (9, 1, 21, 1),
 (10, 2, 21, 1),
-(11, 5, 21, 5);
+(11, 5, 21, 5),
+(12, 3, 21, 6),
+(13, 4, 21, 4);
 
 -- --------------------------------------------------------
 
@@ -130,9 +162,9 @@ CREATE TABLE `sach` (
 --
 
 INSERT INTO `sach` (`id_sach`, `id_taikhoan`, `vitri`, `id_theloai`, `tacgia`, `ten_sach`, `src_img`, `ngaysx`, `gia`, `soluong`, `trangthai`) VALUES
-(1, 21, 'Nhà trọ )) ccccl', 6, 'NVA', 'Cửu dương thần công', 'null', '2021-02-24', 1000000, 0, ''),
-(2, 21, 'Kệ 1. Ngăng 2', 1, 'Cương Nhã Thành', 'Luyện ngữ pháp anh văn cơ bản', '', '2021-09-01', 90000, 47, 'Bình thường'),
-(3, 21, 'Kệ 1. Ngăng 1', 1, 'Mr.Justin Nana', 'English for Job', '', '2021-09-01', 150000, 19, 'Ngừng cấp'),
+(1, 21, 'Nhà trọ )) ccccl', 6, 'NVA', 'Cửu dương thần công', 'null', '2021-02-24', 1000000, 4, ''),
+(2, 21, 'Kệ 1. Ngăng 2', 1, 'Cương Nhã Thành', 'Luyện ngữ pháp anh văn cơ bản', '', '2021-09-01', 90000, 46, 'Bình thường'),
+(3, 21, 'Kệ 1. Ngăng 1', 1, 'Mr.Justin Nana', 'English for Job', '', '2021-09-01', 150000, 21, 'Ngừng cấp'),
 (4, 21, 'Kệ Ngôn ngữ nhật', 5, 'アンさん', '日本語 Bài Mina Ngữ Pháp', 'null', '2021-10-26', 200000, 15, 'Nguyên Vẹn'),
 (5, 21, 'null', 5, 'null', 'a1', 'null', '2021-11-13', 0, 0, 'null');
 
@@ -150,21 +182,22 @@ CREATE TABLE `taikhoan` (
   `hoten` varchar(255) NOT NULL,
   `diachi` text NOT NULL,
   `sdt` int(10) NOT NULL,
-  `email` varchar(255) NOT NULL
+  `email` varchar(255) NOT NULL,
+  `trangthai` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Đang đổ dữ liệu cho bảng `taikhoan`
 --
 
-INSERT INTO `taikhoan` (`id_TaiKhoan`, `id_chucvu`, `ten_taikhoan`, `matkhau`, `hoten`, `diachi`, `sdt`, `email`) VALUES
-(1, 1, 'antlt1', '012210', 'Nguyễn Văn An', 'Vị Thanh', 763836005, 'qcgunnyvip2@gmail.com'),
-(16, 1, 'NgoThiMinhChau', 'C1234567', 'Ngô thị Minh Châu', '', 982527982, 'tranthuy.nute@gmail.com'),
-(17, 1, 'DangNguyen1', 'DangNguyen1', 'Nguyễn Đăng', '', 973776072, 'manhhachkt08@gmail.com'),
-(18, 1, 'TTK01', 'Trantrungkien', 'Trần Trung Kiên', '', 917749254, 'tienlapspktnd@gmail.com'),
-(19, 1, 'TranTung1', 'TranTung', 'Trần Thanh Tùng', '', 904770053, 'tungtunfg@gmail.ocm'),
-(20, 1, 'TTH01', 'NTTH', 'Nguyễn Thị Thu Hằng', '', 974880788, 'nvt.isst.nute@gmail.com'),
-(21, 2, 'admin', 'admin', 'Nguyễn Văn Admin', '', 763836005, 'qcgunnyvip@gmail.com');
+INSERT INTO `taikhoan` (`id_TaiKhoan`, `id_chucvu`, `ten_taikhoan`, `matkhau`, `hoten`, `diachi`, `sdt`, `email`, `trangthai`) VALUES
+(1, 1, 'antlt1', '012210', 'Nguyễn Văn An', 'Vị Thanh', 763836005, 'qcgunnyvip2@gmail.com', 1),
+(16, 1, 'NgoThiMinhChau', 'C1234567', 'Ngô thị Minh Châu', 'Cân thơ , Phong điền', 982527982, 'tranthuy.nute@gmail.com', 1),
+(17, 1, 'DangNguyen1', 'DangNguyen1', 'Nguyễn Đăng', '', 973776072, 'manhhachkt08@gmail.com', 1),
+(18, 1, 'TTK01', 'Trantrungkien', 'Trần Trung Kiên', '', 917749254, 'tienlapspktnd@gmail.com', 0),
+(19, 1, 'TranTung1', 'TranTung', 'Trần Thanh Tùng', '', 904770053, 'tungtunfg@gmail.ocm', 0),
+(20, 1, 'TTH01', 'NTTH', 'Nguyễn Thị Thu Hằng', '', 974880788, 'nvt.isst.nute@gmail.com', 1),
+(21, 2, 'admin', 'admin', 'Nguyễn Admin', 'Hậu Giang Châu thành a', 763836005, 'qcgunnyvip@gmail.com', 1);
 
 -- --------------------------------------------------------
 
@@ -211,11 +244,15 @@ CREATE TABLE `thongtin_muon` (
 --
 
 INSERT INTO `thongtin_muon` (`id_tt_muon`, `id_sach`, `ngaymuon`, `ngaytra`, `tien`, `trangthai`) VALUES
-(1, 1, '2021-10-23', '2021-11-15', '25000', 'Quá Hạn'),
-(1, 3, '2021-10-27', '2021-11-20', '21000', 'Quá Hạn'),
-(1, 4, '2021-10-27', '2021-10-30', '0', 'Đã trả'),
-(2, 1, '2021-10-28', '2021-10-28', '0', 'Đã trả'),
-(5, 3, '2021-11-08', '2021-11-13', '0', 'Đã trả');
+(1, 1, '2021-10-23', '2021-11-15', '31000', 'Đã trả'),
+(1, 3, '2021-10-27', '2021-11-20', '27000', 'Đã trả'),
+(1, 4, '2021-10-27', '2021-10-30', '27000', 'Đã trả'),
+(2, 1, '2021-10-28', '2021-10-28', '2000', 'Đã trả'),
+(3, 5, '2021-11-23', '2021-11-10', '0', 'Đã trả'),
+(4, 2, '2021-11-23', '2021-11-27', '0', 'Quá Hạn'),
+(4, 4, '2021-11-23', '2021-11-27', '0', 'Quá Hạn'),
+(4, 5, '2021-11-23', '2021-11-27', '0', 'Quá Hạn'),
+(5, 3, '2021-11-08', '2021-11-13', '1000', 'Đã trả');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -238,6 +275,15 @@ ALTER TABLE `chucvu`
 --
 ALTER TABLE `kho`
   ADD PRIMARY KEY (`id_kho`);
+
+--
+-- Chỉ mục cho bảng `phat`
+--
+ALTER TABLE `phat`
+  ADD PRIMARY KEY (`id_phat`),
+  ADD KEY `fk_SachHu` (`id_sach`),
+  ADD KEY `fk_Bandoc_LmHu` (`id_bandoc`),
+  ADD KEY `fk_nguoiphat` (`id_nhanvien`);
 
 --
 -- Chỉ mục cho bảng `phieu_muonsach`
@@ -302,10 +348,16 @@ ALTER TABLE `kho`
   MODIFY `id_kho` int(10) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT cho bảng `phat`
+--
+ALTER TABLE `phat`
+  MODIFY `id_phat` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
 -- AUTO_INCREMENT cho bảng `phieu_muonsach`
 --
 ALTER TABLE `phieu_muonsach`
-  MODIFY `id_muonsach` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_muonsach` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT cho bảng `sach`
@@ -317,7 +369,7 @@ ALTER TABLE `sach`
 -- AUTO_INCREMENT cho bảng `taikhoan`
 --
 ALTER TABLE `taikhoan`
-  MODIFY `id_TaiKhoan` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id_TaiKhoan` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT cho bảng `theloai`
@@ -328,6 +380,14 @@ ALTER TABLE `theloai`
 --
 -- Các ràng buộc cho các bảng đã đổ
 --
+
+--
+-- Các ràng buộc cho bảng `phat`
+--
+ALTER TABLE `phat`
+  ADD CONSTRAINT `fk_Bandoc_LmHu` FOREIGN KEY (`id_bandoc`) REFERENCES `phieu_muonsach` (`id_ngmuon`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_SachHu` FOREIGN KEY (`id_sach`) REFERENCES `thongtin_muon` (`id_sach`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_nguoiphat` FOREIGN KEY (`id_nhanvien`) REFERENCES `taikhoan` (`id_TaiKhoan`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Các ràng buộc cho bảng `phieu_muonsach`
