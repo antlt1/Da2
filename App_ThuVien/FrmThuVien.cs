@@ -351,5 +351,19 @@ namespace App_ThuVien
         {
            
         }
+
+        private void tk_sach_Click(object sender, EventArgs e)
+        {
+            var frm = new ThongKe.Tk_Sach();
+            frm.choose_tk("Sach");
+            act_frm(frm, "Thống kê sách", "Tk_Sach");
+        }
+
+        private void tk_nguoidung_Click(object sender, EventArgs e)
+        {
+            var frm = new ThongKe.Tk_Sach();
+            frm.choose_tk("NguoiDung");
+            act_frm(frm, "Thống kê người dùng", "Tk_Sach");
+        }
     }
 }

@@ -110,7 +110,7 @@ namespace App_ThuVien.Form
                     {
                         if (l_int.IndexOf(i) < 0)
                         {
-                            G_U.ex_cmd(string.Format("insert into thongtin_muon values ({0},{1},'{2}','{3}','Đang mượn')",
+                            G_U.ex_cmd(string.Format("insert into thongtin_muon values ({0},{1},'{2}','{3}',0,'Đang mượn')",
                                 i.ToString(),
                                 dr["id_sach"].ToString(),
                                 dr["ngaymuon"].ToString(),
