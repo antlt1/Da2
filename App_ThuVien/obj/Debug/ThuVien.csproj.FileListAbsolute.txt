@@ -1146,3 +1146,7 @@ E:\Da2\App_ThuVien\obj\Debug\App_ThuVien.Database.Choose_Database.resources
 E:\Da2\App_ThuVien\obj\Debug\App_ThuVien.Report.Rp_Phat.resources
 E:\Da2\App_ThuVien\obj\Debug\App_ThuVien.Form.Frm_NhanVien.resources
 E:\Da2\App_ThuVien\obj\Debug\App_ThuVien.Console.In_PhieuPhat.resources
+D:\Code\C#\WF\Da2\App_ThuVien\obj\Debug\App_ThuVien.Console.In_PhieuPhat.resources
+D:\Code\C#\WF\Da2\App_ThuVien\obj\Debug\App_ThuVien.Database.Choose_Database.resources
+D:\Code\C#\WF\Da2\App_ThuVien\obj\Debug\App_ThuVien.Form.Frm_NhanVien.resources
+D:\Code\C#\WF\Da2\App_ThuVien\obj\Debug\ThuVien.csproj.CopyComplete

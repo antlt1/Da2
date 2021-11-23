@@ -407,6 +407,8 @@
     <None Include="Resources\portrait.svg" />
     <None Include="Resources\show_16x161.png" />
     <None Include="Resources\show_32x32.png" />
+    <None Include="Resources\walking_16x16.png" />
+    <None Include="Resources\apply_16x162.png" />
     <Content Include="SRC\Icon\Books.ico" />
     <Content Include="SRC\Icon\Iconsmind-Outline-Key.ico" />
     <Content Include="SRC\Icon\search.ico" />

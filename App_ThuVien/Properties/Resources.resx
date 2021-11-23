@@ -151,6 +151,12 @@
   <data name="actions_zoom" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\actions_zoom.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="walking_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\walking_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="show_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\show_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="customer_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\customer_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -202,7 +208,7 @@
   <data name="apply_16x161" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\apply_16x161.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="show_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\show_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="apply_16x162" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\apply_16x162.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

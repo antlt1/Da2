@@ -111,6 +111,16 @@ namespace App_ThuVien.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap apply_16x162 {
+            get {
+                object obj = ResourceManager.GetObject("apply_16x162", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
         /// </summary>
         internal static DevExpress.Utils.Svg.SvgImage bo_document {
@@ -347,6 +357,16 @@ namespace App_ThuVien.Properties {
             get {
                 object obj = ResourceManager.GetObject("text", resourceCulture);
                 return ((DevExpress.Utils.Svg.SvgImage)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap walking_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("walking_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

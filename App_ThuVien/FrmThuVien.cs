@@ -315,20 +315,11 @@ namespace App_ThuVien
         {
 
         }
-        bool btn_click_kh;
         App_ThuVien.BarCode.Frm_KhRaVao frm_kh = new App_ThuVien.BarCode.Frm_KhRaVao();
         private void btn_soluot_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if(btn_click_kh == false)
-            {
-                frm_kh.Show();
-                btn_click_kh = true;
-            }
-            else
-            {
-                frm_kh.Hide();
-                btn_click_kh = false;
-            }
+
+            if(frm_kh.Visible == false){ frm_kh.Show(); } else { frm_kh.Hide(); }
             time_barcode.Start();
         }
 
@@ -348,6 +339,15 @@ namespace App_ThuVien
         }
 
         private void mdi_fr_PageRemoved(object sender, DevExpress.XtraTabbedMdi.MdiTabPageEventArgs e)
+        {
+           
+        }
+      
+        private void FrmThuVien_KeyDown(object sender, KeyEventArgs e)
+        {
+        }
+
+        private void termToolStripMenuItem_Click(object sender, EventArgs e)
         {
            
         }
