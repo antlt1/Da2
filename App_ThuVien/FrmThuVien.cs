@@ -58,7 +58,11 @@ namespace App_ThuVien
         // quét barcode 
         private void time_barcode_Tick(object sender, EventArgs e)
         {
-         //   btn_soluot.Caption = 
+           if(frm_kh.count_num > 0)
+            {
+                btn_soluot.Caption = frm_kh.count_num.ToString();
+            }
+         //   
         }
         void fr_barcode()
         {

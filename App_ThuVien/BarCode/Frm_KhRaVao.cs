@@ -48,6 +48,10 @@ namespace App_ThuVien.BarCode
         }
         private void Frm_KhRaVao_Load(object sender, EventArgs e)
         {
+             dt = new DataTable();
+            dt.Columns.Add("id_taikhoan", typeof(String));
+            dt.Columns.Add("ten", typeof(String));
+            dt.Columns.Add("thoigian", typeof(String));
             timer1.Start();
             // frm bar code
             set_barcode();
@@ -70,14 +74,12 @@ namespace App_ThuVien.BarCode
             add_val = false;
         }
         Getting_UI G_U = new Getting_UI();
+        DataTable dt;
         public DataTable add_kh(string str)
         {
 
-            DataTable dt = new DataTable();
-            dt.Columns.Add("id_taikhoan", typeof(String));
-            dt.Columns.Add("ten", typeof(String));
-            dt.Columns.Add("thoigian", typeof(String));
-            DataRow dr = null;
+           
+            DataRow dr = dt.NewRow();
             dr = dt.NewRow();
             dr["id_taikhoan"] = str;
             dr["ten"] = G_U.mysqli_ex_data(string.Format("select hoten from bandoc where id_taikhoan = {0}", str));
@@ -125,6 +127,7 @@ namespace App_ThuVien.BarCode
         }
 
         List<string> list_kh = new List<string>();
+        public int count_num;
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (list_kh.IndexOf(barcode.barcode) < 0 && barcode.barcode != " " && barcode.barcode != null )
@@ -133,6 +136,7 @@ namespace App_ThuVien.BarCode
                 gc_list_kh.DataSource = add_kh(makh);
                 SystemSounds.Question.Play();
                 list_kh.Add(makh);
+                count_num++;
             }
             else
             {
