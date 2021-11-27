@@ -253,6 +253,7 @@
             DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupBoxPlot chartControlCommandGalleryItemGroupBoxPlot2 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupBoxPlot();
             DevExpress.XtraCharts.UI.CreateBoxPlotChartItem createBoxPlotChartItem2 = new DevExpress.XtraCharts.UI.CreateBoxPlotChartItem();
             this.fluentDesignFormContainer1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
+            this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
@@ -275,8 +276,8 @@
             this.commandBarGalleryDropDown6 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
             this.commandBarGalleryDropDown7 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
             this.commandBarGalleryDropDown8 = new DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(this.components);
-            this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             this.fluentDesignFormContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown9)).BeginInit();
@@ -295,24 +296,35 @@
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
             this.SuspendLayout();
             // 
             // fluentDesignFormContainer1
             // 
             this.fluentDesignFormContainer1.Controls.Add(this.chartControl1);
             this.fluentDesignFormContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fluentDesignFormContainer1.Location = new System.Drawing.Point(0, 53);
+            this.fluentDesignFormContainer1.Location = new System.Drawing.Point(0, 41);
+            this.fluentDesignFormContainer1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.fluentDesignFormContainer1.Name = "fluentDesignFormContainer1";
-            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(1212, 322);
+            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(943, 387);
             this.fluentDesignFormContainer1.TabIndex = 0;
+            // 
+            // chartControl1
+            // 
+            this.chartControl1.Legend.Name = "Default Legend";
+            this.chartControl1.Location = new System.Drawing.Point(11, 95);
+            this.chartControl1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.chartControl1.Name = "chartControl1";
+            this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
+            this.chartControl1.Size = new System.Drawing.Size(943, 271);
+            this.chartControl1.TabIndex = 0;
             // 
             // fluentDesignFormControl1
             // 
             this.fluentDesignFormControl1.FluentDesignForm = this;
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
+            this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1212, 53);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(943, 41);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             // 
@@ -329,33 +341,37 @@
             // 
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(0, 53);
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 41);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1212, 0);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.barDockControlTop.Size = new System.Drawing.Size(943, 0);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 375);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 428);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1212, 0);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.barDockControlBottom.Size = new System.Drawing.Size(943, 0);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 53);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 41);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 322);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 387);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1212, 53);
+            this.barDockControlRight.Location = new System.Drawing.Point(943, 41);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 322);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 387);
             // 
             // commandBarGalleryDropDown9
             // 
@@ -1648,21 +1664,11 @@
             this.commandBarGalleryDropDown8.Manager = this.barManager1;
             this.commandBarGalleryDropDown8.Name = "commandBarGalleryDropDown8";
             // 
-            // chartControl1
-            // 
-            this.chartControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chartControl1.Legend.Name = "Default Legend";
-            this.chartControl1.Location = new System.Drawing.Point(0, 0);
-            this.chartControl1.Name = "chartControl1";
-            this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
-            this.chartControl1.Size = new System.Drawing.Size(1212, 322);
-            this.chartControl1.TabIndex = 0;
-            // 
             // Frm_ThongKe
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1212, 375);
+            this.ClientSize = new System.Drawing.Size(943, 428);
             this.ControlContainer = this.fluentDesignFormContainer1;
             this.Controls.Add(this.fluentDesignFormContainer1);
             this.Controls.Add(this.barDockControlLeft);
@@ -1671,10 +1677,12 @@
             this.Controls.Add(this.barDockControlTop);
             this.Controls.Add(this.fluentDesignFormControl1);
             this.FluentDesignFormControl = this.fluentDesignFormControl1;
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "Frm_ThongKe";
             this.Text = "Frm_ThongKe";
             this.Load += new System.EventHandler(this.Frm_ThongKe_Load);
             this.fluentDesignFormContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown9)).EndInit();
@@ -1693,7 +1701,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
