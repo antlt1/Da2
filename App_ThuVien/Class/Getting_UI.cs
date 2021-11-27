@@ -49,7 +49,7 @@ namespace Test_Sqlite.Class
                     s3 = "Server=26.9.216.208;Database=thuvien;port=;User Id=root;password=";
 
             string str = s2,str1=s1;
-            MySqlConnection conn = new MySqlConnection(s2);
+            MySqlConnection conn = new MySqlConnection(s3);
             return conn;
         }
         // login

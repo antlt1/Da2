@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraCharts;
 using Test_Sqlite.Class;
+using DevExpress.XtraBars.Navigation;
 
 namespace App_ThuVien.Form
 {
@@ -22,145 +23,71 @@ namespace App_ThuVien.Form
       
         Getting_UI G_U = new Getting_UI();
         // hàm thống kê theo tháng
-        DataTable Thong_Ke() {
-            DataTable tb,tb_val;
-            tb_val = G_U.mysqli_ex_value_tb("SELECT s.id_sach , s.ten_sach , s.ngaysx , s.soluong  FROM sach s");
-            tb = new DataTable("ThongKe");
-            tb.Columns.Add("Tên Sách", typeof(String));
-            for (int i = 1 ; i <= 12; i++)
-            {
-                tb.Columns.Add(string.Format("Tháng {0}",i.ToString()),typeof(Int32));
-            }
-            if (tb_val != null)
-            {
+     
 
-                foreach (DataRow dr in tb_val.Rows)
-                {
-                    DataRow rw_val = null;
-                    if (DateTime.Parse(dr["ngaysx"].ToString()).ToString("yyyy") == "2021")
-                    {
-                        string thang = DateTime.Parse(dr["ngaysx"].ToString()).ToString("MM");
-                        rw_val = tb.NewRow();
-                        rw_val["Tên Sách"] = dr["ten_sach"].ToString();
-                        switch (thang)
-                        {
-                            case "01":
-                                {
-                                    rw_val["Tháng 1"] = int.Parse(dr["soluong"].ToString());
-                                    tb.Rows.Add(rw_val);
-                                    break;
-                                }
-                            case "02":
-                                {
-                                    rw_val["Tháng 2"] = int.Parse(dr["soluong"].ToString());
-                                    tb.Rows.Add(rw_val);
-                                    break;
-                                }
-                            case "03":
-                                {
-                                    rw_val["Tháng 3"] = int.Parse(dr["soluong"].ToString());
-                                    tb.Rows.Add(rw_val);
-                                    break;
-                                }
-                            case "04":
-                                {
-                                    rw_val["Tháng 4"] = int.Parse(dr["soluong"].ToString());
-                                    tb.Rows.Add(rw_val);
-                                    break;
-                                }
-                            case "05":
-                                {
-                                    rw_val["Tháng 5"] = int.Parse(dr["soluong"].ToString());
-                                    tb.Rows.Add(rw_val);
-                                    break;
-                                }
-                            case "06":
-                                {
-                                    rw_val["Tháng 6"] = int.Parse(dr["soluong"].ToString());
-                                    tb.Rows.Add(rw_val);
-                                    break;
-                                }
-                            case "07":
-                                {
-                                    rw_val["Tháng 7"] = int.Parse(dr["soluong"].ToString());
-                                    tb.Rows.Add(rw_val);
-                                    break;
-                                }
-                            case "08":
-                                {
-                                    rw_val["Tháng 8"] = int.Parse(dr["soluong"].ToString());
-                                    tb.Rows.Add(rw_val);
-                                    break;
-                                }
-                            case "09":
-                                {
-                                    rw_val["Tháng 9"] = int.Parse(dr["soluong"].ToString());
-                                    tb.Rows.Add(rw_val);
-                                    break;
-                                }
-                            case "10":
-                                {
-                                    rw_val["Tháng 10"] = int.Parse(dr["soluong"].ToString());
-                                    tb.Rows.Add(rw_val);
-                                    break;
-                                }
-                            case "11":
-                                {
-                                    rw_val["Tháng 11"] = int.Parse(dr["soluong"].ToString());
-                                    tb.Rows.Add(rw_val);
-                                    break;
-                                }
-                            case "12":
-                                {
-                                    rw_val["Tháng 12"] = int.Parse(dr["soluong"].ToString());
-                                    tb.Rows.Add(rw_val);
-                                    break;
-                                }
-
-                        }
-                        //XtraMessageBox.Show(dr["ten_sach"].ToString()+DateTime.Parse(dr["ngaysx"].ToString()).ToString("MM"));
-                    }
-
-                }
-            }
-            return tb;
-        }
-        
-        DataTable Thong_Ke_Val()
+        void BieuDoLine(DateTime dt_start, DateTime dt_finelly, TabNavigationPage tab) // 12 - 11
         {
-            DataTable tb, tb_val;
-            tb_val = G_U.mysqli_ex_value_tb("SELECT s.id_sach , s.ten_sach , s.ngaysx , s.soluong  FROM sach s");
-            tb = new DataTable("ThongKe");
-            tb.Columns.Add("Tên Sách", typeof(String));
-            for (int i = 1; i <= 12; i++)
-            {
-                tb.Columns.Add(string.Format("Tháng {0}", i.ToString()), typeof(Int32));
+            ChartControl lineChart = new ChartControl();
+            // Create a line series.
+            Series series1 = new Series("Sách mượn đã trả", ViewType.Line);
+            Series series2 = new Series("Sách mượn chưa chả", ViewType.Line);
+            int result_time = dt_finelly.Month - dt_start.Month;
+            for (int i = dt_start.Month; i <= dt_finelly.Month; i++)
+            {          
+                string cmd1 = G_U.mysqli_ex_data(string.Format(
+            "select count(*) as 'time' from thongtin_muon where month(ngaytra) = {0} and trangthai = 'Đả trả'", i));
+                string cmd2 = G_U.mysqli_ex_data(string.Format(
+            "select count(*) as 'time' from thongtin_muon where month(ngaytra) = {0} and trangthai != 'Đả trả'", i));
+                series1.Points.Add(new SeriesPoint(i, int.Parse(cmd1))); ;
+                series2.Points.Add(new SeriesPoint(i, int.Parse(cmd2)));
             }
-            // set val tháng
-            
-            return tb_val;
+            lineChart.Series.Add(series1);
+            lineChart.Series.Add(series2);
+            series1.ArgumentScaleType = ScaleType.Numerical;
+            // Access the view-type-specific options of the series.
+            ((LineSeriesView)series1.View).MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
+            ((LineSeriesView)series1.View).LineMarkerOptions.Kind = MarkerKind.Triangle;
+            ((LineSeriesView)series1.View).LineStyle.DashStyle = DashStyle.Dash;
+            ((LineSeriesView)series2.View).MarkerVisibility = DevExpress.Utils.DefaultBoolean.True;
+            ((LineSeriesView)series2.View).LineMarkerOptions.Kind = MarkerKind.Triangle;
+            ((LineSeriesView)series2.View).LineStyle.DashStyle = DashStyle.Dash;
+            // Access the type-specific options of the diagram.
+            ((XYDiagram)lineChart.Diagram).EnableAxisXZooming = true;
+
+            // Hide the legend (if necessary).
+            lineChart.Legend.Visibility = DevExpress.Utils.DefaultBoolean.True;
+
+            // Add a title to the chart (if necessary).
+            lineChart.Titles.Add(new ChartTitle());
+            lineChart.Titles[0].Text = "A Line Chart";
+
+            // Add the chart to the form.
+            lineChart.Dock = DockStyle.Fill;
+            // panelControl1.Controls.Add(lineChart);
+            if (!tab_thongke.Controls.Contains(tab))
+            {
+                tab_thongke.Controls.Add(tab);
+                tab_thongke.SelectedPage = tab;
+            }
+            else
+            {
+                tab_thongke.SelectedPage = tab;
+            }
         }
         private void Frm_ThongKe_Load(object sender, EventArgs e)
         {
            
-            //dgv.DataSource = Thong_Ke();
-            //dgv_val.DataSource = Thong_Ke_Val();
-            //foreach(DataRow i in charbar(0).Rows)
-            //{
-            //    XtraMessageBox.Show(i["date"].ToString());
-            //}
-            Getting_UI G_U = new Getting_UI();
-            Series se = new Series("Sach Viet", ViewType.Bar);
-            Series se1 = new Series("Sach AV", ViewType.Bar);
-            se.ArgumentDataMember = "Tên Sách";
-        //    se.ValueDataMembers = 9;
+           
+        }
 
-            se.DataSource = Thong_Ke();
-            //se1.DataSource = charbar(60);
-            //se.ValueScaleType = ScaleType.Numerical;
-            //se.ValueDataMembers.AddRange(new string[] { "ten_theloai" });
-            chartControl1.Series.Add(se);
-            chartControl1.Series.Add(se1);
+        private void tab_thongke_SelectedPageChanged(object sender, DevExpress.XtraBars.Navigation.SelectedPageChangedEventArgs e)
+        {
+            //e.Page
+        }
+
+        private void tab_sach_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
