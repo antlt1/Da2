@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.fluentDesignFormContainer1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
@@ -91,9 +91,8 @@
             // 
             this.toolbarFormControl1.Location = new System.Drawing.Point(0, 0);
             this.toolbarFormControl1.Manager = this.toolbarFormManager1;
-            this.toolbarFormControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.toolbarFormControl1.Name = "toolbarFormControl1";
-            this.toolbarFormControl1.Size = new System.Drawing.Size(1119, 46);
+            this.toolbarFormControl1.Size = new System.Drawing.Size(1007, 23);
             this.toolbarFormControl1.TabIndex = 4;
             this.toolbarFormControl1.TabStop = false;
             this.toolbarFormControl1.ToolbarForm = this;
@@ -110,49 +109,43 @@
             // 
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(0, 46);
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 23);
             this.barDockControlTop.Manager = this.toolbarFormManager1;
-            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlTop.Size = new System.Drawing.Size(1119, 0);
+            this.barDockControlTop.Size = new System.Drawing.Size(1007, 0);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 516);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 377);
             this.barDockControlBottom.Manager = this.toolbarFormManager1;
-            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1119, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1007, 0);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 46);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 23);
             this.barDockControlLeft.Manager = this.toolbarFormManager1;
-            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 470);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 354);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1119, 46);
+            this.barDockControlRight.Location = new System.Drawing.Point(1007, 23);
             this.barDockControlRight.Manager = this.toolbarFormManager1;
-            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 470);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 354);
             // 
             // guser
             // 
-            this.guser.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guser.Location = new System.Drawing.Point(0, 148);
+            this.guser.Location = new System.Drawing.Point(0, 108);
             this.guser.MainView = this.gvuser;
-            this.guser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guser.MenuManager = this.toolbarFormManager1;
             this.guser.Name = "guser";
             this.guser.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btn_choose});
-            this.guser.Size = new System.Drawing.Size(1119, 369);
+            this.guser.Size = new System.Drawing.Size(1007, 270);
             this.guser.TabIndex = 5;
             this.guser.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvuser});
@@ -165,8 +158,6 @@
             this.gridColumn4,
             this.gridColumn5,
             this.gridColumn6});
-            this.gvuser.DetailHeight = 479;
-            this.gvuser.FixedLineWidth = 3;
             this.gvuser.GridControl = this.guser;
             this.gvuser.Name = "gvuser";
             this.gvuser.OptionsBehavior.AutoSelectAllInEditor = false;
@@ -178,18 +169,18 @@
             // 
             this.gridColumn1.Caption = "Chọn";
             this.gridColumn1.ColumnEdit = this.btn_choose;
-            this.gridColumn1.MinWidth = 33;
+            this.gridColumn1.MinWidth = 30;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 1;
-            this.gridColumn1.Width = 60;
+            this.gridColumn1.Width = 54;
             // 
             // btn_choose
             // 
             this.btn_choose.AutoHeight = false;
-            editorButtonImageOptions2.Image = global::App_ThuVien.Properties.Resources.apply_16x16;
+            editorButtonImageOptions1.Image = global::App_ThuVien.Properties.Resources.apply_16x16;
             this.btn_choose.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btn_choose.Name = "btn_choose";
             this.btn_choose.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btn_choose.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btn_choose_ButtonClick);
@@ -198,57 +189,58 @@
             // 
             this.gridColumn3.Caption = "Họ Và Tên";
             this.gridColumn3.FieldName = "hoten";
-            this.gridColumn3.MinWidth = 33;
+            this.gridColumn3.MinWidth = 30;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 210;
+            this.gridColumn3.Width = 189;
             // 
             // gridColumn4
             // 
             this.gridColumn4.Caption = "Số Điện Thoại";
             this.gridColumn4.FieldName = "sdt";
-            this.gridColumn4.MinWidth = 33;
+            this.gridColumn4.MinWidth = 30;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
-            this.gridColumn4.Width = 210;
+            this.gridColumn4.Width = 189;
             // 
             // gridColumn5
             // 
             this.gridColumn5.Caption = "Địa Chỉ";
             this.gridColumn5.FieldName = "diachi";
-            this.gridColumn5.MinWidth = 33;
+            this.gridColumn5.MinWidth = 30;
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 4;
-            this.gridColumn5.Width = 218;
+            this.gridColumn5.Width = 196;
             // 
             // gridColumn6
             // 
             this.gridColumn6.Caption = "Mã tài khoản";
             this.gridColumn6.FieldName = "id_taikhoan";
-            this.gridColumn6.MinWidth = 33;
+            this.gridColumn6.MinWidth = 30;
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 0;
-            this.gridColumn6.Width = 181;
+            this.gridColumn6.Width = 163;
             // 
             // btn_search
             // 
-            this.btn_search.Location = new System.Drawing.Point(13, 81);
-            this.btn_search.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_search.Location = new System.Drawing.Point(12, 38);
             this.btn_search.Name = "btn_search";
-            this.btn_search.Size = new System.Drawing.Size(124, 47);
+            this.btn_search.Size = new System.Drawing.Size(112, 34);
             this.btn_search.TabIndex = 10;
             this.btn_search.Text = "Tìm";
             this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
             // ChooseNguoiMuon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 26F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1119, 516);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(1007, 377);
+            this.ControlBox = false;
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.guser);
             this.Controls.Add(this.barDockControlLeft);
@@ -259,7 +251,6 @@
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.None;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.IconOptions.ShowIcon = false;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ChooseNguoiMuon";

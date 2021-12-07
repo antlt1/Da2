@@ -60,5 +60,11 @@ namespace App_ThuVien.Form
                 Inf_User_Load(sender, e);
             }
         }
+
+        private void lb_changer_password_Click(object sender, EventArgs e)
+        {
+            var frm_doipass = new App_ThuVien.Console.PickDoiPass();
+            frm_doipass.ShowDialog();
+        }
     }
 }

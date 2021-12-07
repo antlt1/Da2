@@ -35,7 +35,7 @@ namespace App_ThuVien.Console
             DataTable dt_t = new DataTable("pick_status");
             dt_t.Columns.Add("pick",typeof(String));
             DataRow dr = null;
-            foreach (char i in "Trả sách,Gia hạn,Phạt,")
+            foreach (char i in "Gia hạn,Phạt,")
             {
                 if (i != ',')
                 {

@@ -31,7 +31,12 @@ namespace App_ThuVien.Console
         
         private void btn_create_Click_1(object sender, EventArgs e)
         {
-            G_U.ex_cmd(string.Format("update sach set id_theloai = {0} where id_sach = {1}",lTheLoai.EditValue,App_ThuVien.Form.Frm_Sach.masach_old));
+           
+        }
+
+        private void lTheLoai_Closed(object sender, DevExpress.XtraEditors.Controls.ClosedEventArgs e)
+        {
+            G_U.ex_cmd(string.Format("update sach set id_theloai = {0} where id_sach = {1}", lTheLoai.EditValue, App_ThuVien.Form.Frm_Sach.masach_old));
             Frm_Sach.time_set_tl = true;
             this.Close();
         }

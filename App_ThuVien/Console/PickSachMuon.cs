@@ -19,10 +19,21 @@ namespace App_ThuVien.Console
             InitializeComponent();
         }
         Getting_UI G_U = new Getting_UI();
-        private void PickSachMuon_Load(object sender, EventArgs e)
+        void load_lupTL()
+        {
+            lupTL.Properties.ValueMember = "id_theloai";
+            lupTL.Properties.DisplayMember = "ten_theloai";
+            lupTL.Properties.DataSource = G_U.mysqli_ex_value_tb("select id_theloai , ten_theloai from theloai where id_theloai != 3 ");
+        }
+        void load_gv(string sk)
         {
             gsach.DataSource =
-G_U.mysqli_ex_value_tb("select s.id_sach as 'id_sach',ten_sach,tl.ten_theloai as 'tl', s.tacgia, s.vitri , ngaysx, gia, soluong, trangthai from sach s , theloai tl  where s.id_theloai = tl.id_theloai");
+G_U.mysqli_ex_value_tb(string.Format("select s.id_sach as 'id_sach',ten_sach,tl.ten_theloai as 'tl', s.tacgia, s.vitri , ngaysx, gia, soluong, trangthai from sach s , theloai tl  where s.id_theloai = tl.id_theloai {0}",sk));
+        }
+        private void PickSachMuon_Load(object sender, EventArgs e)
+        {
+            load_gv("");
+            load_lupTL();
         }
 
         private void gsach_Click(object sender, EventArgs e)
@@ -41,12 +52,17 @@ G_U.mysqli_ex_value_tb("select s.id_sach as 'id_sach',ten_sach,tl.ten_theloai as
                     tensach = gvsach.GetRowCellValue(e.RowHandle, "ten_sach").ToString();
                     ngaymuon =  string.Format("{0:yyyy/MM/dd}", DateTime.Now);
                     App_ThuVien.Form.Frm_muon.id_sach.Add(int.Parse(id_sach)); // thêm vô list
-                    if (btime_pickdate == false) // bắt đầu chọn datatime
-                    {
-                        PickDateMuon fr_picdatemuon = new PickDateMuon();
-                        fr_picdatemuon.Show();
-                        timer1.Start();
-                    }
+                    DataRow dr;
+                    dr = App_ThuVien.Form.Frm_muon.dt.NewRow();
+                    dr["id_sach"] = id_sach;
+                    dr["tensach"] = tensach;
+                    dr["ngaymuon"] = ngaymuon;
+                    dr["trangthai"] = "Đang Mượn";
+                    dr["ngaytra"] = App_ThuVien.Form.Frm_muon.ngmuon;
+                    App_ThuVien.Form.Frm_muon.dt.Rows.Add(dr);
+                    App_ThuVien.Form.Frm_muon.btimebook = true;
+                    App_ThuVien.Form.Frm_muon.id_sach.Add(int.Parse(id_sach));
+                    this.Close();
                 }
                 else // có trong list rồi thì (:
                 {
@@ -61,27 +77,27 @@ G_U.mysqli_ex_value_tb("select s.id_sach as 'id_sach',ten_sach,tl.ten_theloai as
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if(btime_pickdate == true)
-            {
-                DataRow dr;
-                dr = App_ThuVien.Form.Frm_muon.dt.NewRow();
-                dr["id_sach"] = id_sach;
-                dr["tensach"] = tensach;
-                dr["ngaymuon"] = ngaymuon;
-                dr["trangthai"] = "Đang Mượn";
-                dr["ngaytra"] = datemuon;
-                App_ThuVien.Form.Frm_muon.dt.Rows.Add(dr);
-                btime_pickdate = false;
-                timer1.Stop();
-                App_ThuVien.Form.Frm_muon.btimebook = true;
-                App_ThuVien.Form.Frm_muon.id_sach.Add(int.Parse(id_sach));
-                this.Close();
-            }
+            
         }
 
         private void gvsach_RowCellClick(object sender, EventArgs e)
         {
             throw new NotImplementedException();
+        }
+
+        private void btn_reset_Click(object sender, EventArgs e)
+        {
+            load_gv("");
+            load_lupTL();
+        }
+
+        private void lupTL_Closed(object sender, DevExpress.XtraEditors.Controls.ClosedEventArgs e)
+        {
+            if (lupTL.EditValue != "")
+            {
+                load_gv(string.Format("and tl.id_theloai = {0}", lupTL.EditValue));
+            }
+           
         }
     }
 }

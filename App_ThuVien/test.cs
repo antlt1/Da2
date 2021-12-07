@@ -1,4 +1,5 @@
 ﻿using App_ThuVien.Form;
+using DevExpress.XtraCharts;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid;
 using System;
@@ -12,6 +13,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Test_Sqlite.Class;
+using MySql.Data.MySqlClient;
 
 namespace App_ThuVien
 {
@@ -33,14 +36,19 @@ namespace App_ThuVien
         {
             //XtraMessageBox.Show("app : " + Process.GetProcessesByName(Path.GetFileNameWithoutExtension(textEdit1.Text)).Length.ToString());
             //int RootProcessId = Process.GetCurrentProcess().Id;
-            
-           
+
+
         }
+        Getting_UI G_U = new Getting_UI();
 
         private void test_Load(object sender, EventArgs e)
         {
-          //  rbcontrol1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
-//;           rbcontrol1.Hide();
+           
         }
+
+        //private void fluentDesignFormContainer1_Click(object sender, EventArgs e)
+        //{
+
+        //}
     }
 }

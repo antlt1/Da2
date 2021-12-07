@@ -40,9 +40,6 @@ namespace App_ThuVien
             this.tab_left_muon = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.tab_left_QlMuon = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.Tk = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.tk_sach = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.tk_nguoidung = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.tk_phieumuon = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.bar_left_user = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.left_bar_qlkh = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.left_bar_nv = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -94,25 +91,28 @@ namespace App_ThuVien
             this.btn_lappm = new DevExpress.XtraBars.BarButtonItem();
             this.btn_qlpm = new DevExpress.XtraBars.BarButtonItem();
             this.skinDropDownButtonItem1 = new DevExpress.XtraBars.SkinDropDownButtonItem();
-            this.btn_thongke_sach = new DevExpress.XtraBars.BarButtonItem();
-            this.btn_muon = new DevExpress.XtraBars.BarButtonItem();
-            this.btn_thongke_nguoidung = new DevExpress.XtraBars.BarButtonItem();
-            this.btn_nhanvien = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_qlkh = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_ql_nv = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_tk = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_xemdocquyen = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_suathanthien = new DevExpress.XtraBars.BarButtonItem();
             this.rb_sach = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribon_qlmuon = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.rb_qlmuon = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.rb_nguoimuon = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rb_thongke = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.time_barcode = new System.Windows.Forms.Timer(this.components);
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.timeClose = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.left_bar)).BeginInit();
             this.left_bar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormControl1)).BeginInit();
@@ -127,18 +127,26 @@ namespace App_ThuVien
             // left_bar
             // 
             this.left_bar.Appearance.AccordionControl.BackColor = System.Drawing.Color.White;
+            this.left_bar.Appearance.AccordionControl.Font = new System.Drawing.Font("Tahoma", 1F);
             this.left_bar.Appearance.AccordionControl.Options.UseBackColor = true;
+            this.left_bar.Appearance.AccordionControl.Options.UseFont = true;
             this.left_bar.Appearance.Group.Disabled.BackColor = System.Drawing.Color.White;
+            this.left_bar.Appearance.Group.Disabled.Font = new System.Drawing.Font("Tahoma", 10F);
             this.left_bar.Appearance.Group.Disabled.Options.UseBackColor = true;
-            this.left_bar.Appearance.Group.Hovered.BackColor = System.Drawing.Color.White;
-            this.left_bar.Appearance.Group.Hovered.ForeColor = System.Drawing.Color.Black;
+            this.left_bar.Appearance.Group.Disabled.Options.UseFont = true;
+            this.left_bar.Appearance.Group.Hovered.BackColor = System.Drawing.Color.Black;
+            this.left_bar.Appearance.Group.Hovered.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.left_bar.Appearance.Group.Hovered.ForeColor = System.Drawing.Color.White;
             this.left_bar.Appearance.Group.Hovered.Options.UseBackColor = true;
+            this.left_bar.Appearance.Group.Hovered.Options.UseFont = true;
             this.left_bar.Appearance.Group.Hovered.Options.UseForeColor = true;
             this.left_bar.Appearance.Group.Normal.BackColor = System.Drawing.Color.WhiteSmoke;
             this.left_bar.Appearance.Group.Normal.BorderColor = System.Drawing.Color.White;
+            this.left_bar.Appearance.Group.Normal.Font = new System.Drawing.Font("Tahoma", 10F);
             this.left_bar.Appearance.Group.Normal.ForeColor = System.Drawing.Color.Black;
             this.left_bar.Appearance.Group.Normal.Options.UseBackColor = true;
             this.left_bar.Appearance.Group.Normal.Options.UseBorderColor = true;
+            this.left_bar.Appearance.Group.Normal.Options.UseFont = true;
             this.left_bar.Appearance.Group.Normal.Options.UseForeColor = true;
             this.left_bar.Appearance.Hint.BorderColor = System.Drawing.Color.Transparent;
             this.left_bar.Appearance.Hint.Options.UseBorderColor = true;
@@ -165,12 +173,12 @@ namespace App_ThuVien
             this.accordionControlElement8,
             this.Tk,
             this.bar_left_user});
-            this.left_bar.Location = new System.Drawing.Point(0, 67);
+            this.left_bar.Location = new System.Drawing.Point(0, 61);
             this.left_bar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.left_bar.Name = "left_bar";
             this.left_bar.OptionsMinimizing.AllowMinimizeMode = DevExpress.Utils.DefaultBoolean.True;
             this.left_bar.ScaleImages = DevExpress.Utils.DefaultBoolean.False;
-            this.left_bar.Size = new System.Drawing.Size(401, 545);
+            this.left_bar.Size = new System.Drawing.Size(375, 552);
             this.left_bar.TabIndex = 3;
             this.left_bar.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -178,7 +186,7 @@ namespace App_ThuVien
             // 
             this.accordionContentContainer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.accordionContentContainer1.Name = "accordionContentContainer1";
-            this.accordionContentContainer1.Size = new System.Drawing.Size(374, 76);
+            this.accordionContentContainer1.Size = new System.Drawing.Size(375, 76);
             this.accordionContentContainer1.TabIndex = 2;
             // 
             // accordionControlElement1
@@ -234,35 +242,11 @@ namespace App_ThuVien
             // 
             // Tk
             // 
-            this.Tk.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.tk_sach,
-            this.tk_nguoidung,
-            this.tk_phieumuon});
             this.Tk.Expanded = true;
             this.Tk.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Tk.ImageOptions.Image")));
             this.Tk.Name = "Tk";
             this.Tk.Text = "Thống Kê";
             this.Tk.Click += new System.EventHandler(this.accordionControlElement6_Click);
-            // 
-            // tk_sach
-            // 
-            this.tk_sach.Name = "tk_sach";
-            this.tk_sach.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.tk_sach.Text = "Sách";
-            this.tk_sach.Click += new System.EventHandler(this.tk_sach_Click);
-            // 
-            // tk_nguoidung
-            // 
-            this.tk_nguoidung.Name = "tk_nguoidung";
-            this.tk_nguoidung.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.tk_nguoidung.Text = "Người Dùng";
-            this.tk_nguoidung.Click += new System.EventHandler(this.tk_nguoidung_Click);
-            // 
-            // tk_phieumuon
-            // 
-            this.tk_phieumuon.Name = "tk_phieumuon";
-            this.tk_phieumuon.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.tk_phieumuon.Text = "Phiếu Mượn";
             // 
             // bar_left_user
             // 
@@ -276,6 +260,7 @@ namespace App_ThuVien
             // 
             // left_bar_qlkh
             // 
+            this.left_bar_qlkh.ImageOptions.Image = global::App_ThuVien.Properties.Resources.boperson_16x16;
             this.left_bar_qlkh.Name = "left_bar_qlkh";
             this.left_bar_qlkh.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.left_bar_qlkh.Text = "QL Khách Hàng";
@@ -283,6 +268,7 @@ namespace App_ThuVien
             // 
             // left_bar_nv
             // 
+            this.left_bar_nv.ImageOptions.Image = global::App_ThuVien.Properties.Resources.boposition2_16x16;
             this.left_bar_nv.Name = "left_bar_nv";
             this.left_bar_nv.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.left_bar_nv.Text = "QL Nhân Viên";
@@ -298,7 +284,7 @@ namespace App_ThuVien
             this.toolbarFormControl1.Manager = this.toolbarFormManager1;
             this.toolbarFormControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.toolbarFormControl1.Name = "toolbarFormControl1";
-            this.toolbarFormControl1.Size = new System.Drawing.Size(1511, 34);
+            this.toolbarFormControl1.Size = new System.Drawing.Size(1513, 28);
             this.toolbarFormControl1.TabIndex = 4;
             this.toolbarFormControl1.TabStop = false;
             this.toolbarFormControl1.TitleItemLinks.Add(this.bar_list);
@@ -331,37 +317,37 @@ namespace App_ThuVien
             // 
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(0, 34);
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 28);
             this.barDockControlTop.Manager = this.toolbarFormManager1;
             this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlTop.Size = new System.Drawing.Size(1511, 0);
+            this.barDockControlTop.Size = new System.Drawing.Size(1513, 0);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 612);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 613);
             this.barDockControlBottom.Manager = this.toolbarFormManager1;
             this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1511, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1513, 0);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 34);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 28);
             this.barDockControlLeft.Manager = this.toolbarFormManager1;
             this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 578);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 585);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1511, 34);
+            this.barDockControlRight.Location = new System.Drawing.Point(1513, 28);
             this.barDockControlRight.Manager = this.toolbarFormManager1;
             this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 578);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 585);
             // 
             // barButtonItem1
             // 
@@ -461,7 +447,6 @@ namespace App_ThuVien
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(242)))));
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.systemToolStripMenuItem,
@@ -469,10 +454,9 @@ namespace App_ThuVien
             this.viewToolStripMenuItem,
             this.helpToolStripMenuItem,
             this.termToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 34);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 28);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1511, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1513, 33);
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -483,25 +467,25 @@ namespace App_ThuVien
             this.viewaccountToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.systemToolStripMenuItem.Name = "systemToolStripMenuItem";
-            this.systemToolStripMenuItem.Size = new System.Drawing.Size(106, 29);
+            this.systemToolStripMenuItem.Size = new System.Drawing.Size(102, 29);
             this.systemToolStripMenuItem.Text = "Hệ Thống";
             // 
             // changerpasswordToolStripMenuItem
             // 
             this.changerpasswordToolStripMenuItem.Name = "changerpasswordToolStripMenuItem";
-            this.changerpasswordToolStripMenuItem.Size = new System.Drawing.Size(261, 34);
+            this.changerpasswordToolStripMenuItem.Size = new System.Drawing.Size(243, 30);
             this.changerpasswordToolStripMenuItem.Text = "changer_password";
             // 
             // viewaccountToolStripMenuItem
             // 
             this.viewaccountToolStripMenuItem.Name = "viewaccountToolStripMenuItem";
-            this.viewaccountToolStripMenuItem.Size = new System.Drawing.Size(261, 34);
+            this.viewaccountToolStripMenuItem.Size = new System.Drawing.Size(243, 30);
             this.viewaccountToolStripMenuItem.Text = "view_account";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(261, 34);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(243, 30);
             this.exitToolStripMenuItem.Text = "exit";
             // 
             // toolToolStripMenuItem
@@ -509,7 +493,7 @@ namespace App_ThuVien
             this.toolToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.banDocToolStripMenuItem});
             this.toolToolStripMenuItem.Name = "toolToolStripMenuItem";
-            this.toolToolStripMenuItem.Size = new System.Drawing.Size(97, 29);
+            this.toolToolStripMenuItem.Size = new System.Drawing.Size(93, 29);
             this.toolToolStripMenuItem.Text = "Công Cụ";
             // 
             // banDocToolStripMenuItem
@@ -517,13 +501,13 @@ namespace App_ThuVien
             this.banDocToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sửaĐiểmThânThiệnToolStripMenuItem});
             this.banDocToolStripMenuItem.Name = "banDocToolStripMenuItem";
-            this.banDocToolStripMenuItem.Size = new System.Drawing.Size(178, 34);
+            this.banDocToolStripMenuItem.Size = new System.Drawing.Size(160, 30);
             this.banDocToolStripMenuItem.Text = "Bạn đọc";
             // 
             // sửaĐiểmThânThiệnToolStripMenuItem
             // 
             this.sửaĐiểmThânThiệnToolStripMenuItem.Name = "sửaĐiểmThânThiệnToolStripMenuItem";
-            this.sửaĐiểmThânThiệnToolStripMenuItem.Size = new System.Drawing.Size(273, 34);
+            this.sửaĐiểmThânThiệnToolStripMenuItem.Size = new System.Drawing.Size(255, 30);
             this.sửaĐiểmThânThiệnToolStripMenuItem.Text = "Sửa điểm thân thiện";
             this.sửaĐiểmThânThiệnToolStripMenuItem.Click += new System.EventHandler(this.sửaĐiểmThânThiệnToolStripMenuItem_Click);
             // 
@@ -534,7 +518,7 @@ namespace App_ThuVien
             this.backgroundToolStripMenuItem,
             this.fontToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(64, 29);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(60, 29);
             this.viewToolStripMenuItem.Text = "Xem";
             // 
             // themeToolStripMenuItem
@@ -543,8 +527,8 @@ namespace App_ThuVien
             this.leftbarToolStripMenuItem,
             this.navbarToolStripMenuItem});
             this.themeToolStripMenuItem.Name = "themeToolStripMenuItem";
-            this.themeToolStripMenuItem.Size = new System.Drawing.Size(210, 34);
-            this.themeToolStripMenuItem.Text = "theme";
+            this.themeToolStripMenuItem.Size = new System.Drawing.Size(182, 30);
+            this.themeToolStripMenuItem.Text = "Giao diện";
             // 
             // leftbarToolStripMenuItem
             // 
@@ -552,22 +536,23 @@ namespace App_ThuVien
             this.on_left_bar,
             this.off_left_bar});
             this.leftbarToolStripMenuItem.Name = "leftbarToolStripMenuItem";
-            this.leftbarToolStripMenuItem.Size = new System.Drawing.Size(175, 34);
-            this.leftbarToolStripMenuItem.Text = "left_bar";
+            this.leftbarToolStripMenuItem.Size = new System.Drawing.Size(259, 30);
+            this.leftbarToolStripMenuItem.Text = "Thanh menu bên trái";
+            this.leftbarToolStripMenuItem.Click += new System.EventHandler(this.leftbarToolStripMenuItem_Click);
             // 
             // on_left_bar
             // 
             this.on_left_bar.Name = "on_left_bar";
-            this.on_left_bar.Size = new System.Drawing.Size(137, 34);
+            this.on_left_bar.Size = new System.Drawing.Size(119, 30);
             this.on_left_bar.Text = "on";
-            this.on_left_bar.Click += new System.EventHandler(this.on_left_bar_Click);
+            this.on_left_bar.Click += new System.EventHandler(this.leftbarToolStripMenuItem_Click);
             // 
             // off_left_bar
             // 
             this.off_left_bar.Name = "off_left_bar";
-            this.off_left_bar.Size = new System.Drawing.Size(137, 34);
+            this.off_left_bar.Size = new System.Drawing.Size(119, 30);
             this.off_left_bar.Text = "off";
-            this.off_left_bar.Click += new System.EventHandler(this.off_left_bar_Click);
+            this.off_left_bar.Click += new System.EventHandler(this.leftbarToolStripMenuItem_Click);
             // 
             // navbarToolStripMenuItem
             // 
@@ -575,34 +560,34 @@ namespace App_ThuVien
             this.on_nav_bar,
             this.off_nav_bar});
             this.navbarToolStripMenuItem.Name = "navbarToolStripMenuItem";
-            this.navbarToolStripMenuItem.Size = new System.Drawing.Size(175, 34);
-            this.navbarToolStripMenuItem.Text = "nav_bar";
+            this.navbarToolStripMenuItem.Size = new System.Drawing.Size(259, 30);
+            this.navbarToolStripMenuItem.Text = "Thanh Menu trên";
             // 
             // on_nav_bar
             // 
             this.on_nav_bar.Name = "on_nav_bar";
-            this.on_nav_bar.Size = new System.Drawing.Size(137, 34);
+            this.on_nav_bar.Size = new System.Drawing.Size(119, 30);
             this.on_nav_bar.Text = "on";
-            this.on_nav_bar.Click += new System.EventHandler(this.on_nav_bar_Click);
+            this.on_nav_bar.Click += new System.EventHandler(this.on_nav_bar_Click_1);
             // 
             // off_nav_bar
             // 
             this.off_nav_bar.Name = "off_nav_bar";
-            this.off_nav_bar.Size = new System.Drawing.Size(137, 34);
+            this.off_nav_bar.Size = new System.Drawing.Size(119, 30);
             this.off_nav_bar.Text = "off";
-            this.off_nav_bar.Click += new System.EventHandler(this.off_nav_bar_Click);
+            this.off_nav_bar.Click += new System.EventHandler(this.on_nav_bar_Click_1);
             // 
             // backgroundToolStripMenuItem
             // 
             this.backgroundToolStripMenuItem.Name = "backgroundToolStripMenuItem";
-            this.backgroundToolStripMenuItem.Size = new System.Drawing.Size(210, 34);
-            this.backgroundToolStripMenuItem.Text = "background";
+            this.backgroundToolStripMenuItem.Size = new System.Drawing.Size(182, 30);
+            this.backgroundToolStripMenuItem.Text = "Hình nền";
             // 
             // fontToolStripMenuItem
             // 
             this.fontToolStripMenuItem.Name = "fontToolStripMenuItem";
-            this.fontToolStripMenuItem.Size = new System.Drawing.Size(210, 34);
-            this.fontToolStripMenuItem.Text = "font";
+            this.fontToolStripMenuItem.Size = new System.Drawing.Size(182, 30);
+            this.fontToolStripMenuItem.Text = "Phông chữ";
             // 
             // helpToolStripMenuItem
             // 
@@ -610,7 +595,7 @@ namespace App_ThuVien
             this.thôngTinAppToolStripMenuItem,
             this.senderrorToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(81, 29);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(77, 29);
             this.helpToolStripMenuItem.Text = "Hỗ Trợ";
             // 
             // thôngTinAppToolStripMenuItem
@@ -619,32 +604,32 @@ namespace App_ThuVien
             this.phiênBản10ToolStripMenuItem,
             this.nhàSángLậpToolStripMenuItem});
             this.thôngTinAppToolStripMenuItem.Name = "thôngTinAppToolStripMenuItem";
-            this.thôngTinAppToolStripMenuItem.Size = new System.Drawing.Size(226, 34);
+            this.thôngTinAppToolStripMenuItem.Size = new System.Drawing.Size(208, 30);
             this.thôngTinAppToolStripMenuItem.Text = "Thông tin app";
             // 
             // phiênBản10ToolStripMenuItem
             // 
             this.phiênBản10ToolStripMenuItem.Name = "phiênBản10ToolStripMenuItem";
-            this.phiênBản10ToolStripMenuItem.Size = new System.Drawing.Size(221, 34);
+            this.phiênBản10ToolStripMenuItem.Size = new System.Drawing.Size(203, 30);
             this.phiênBản10ToolStripMenuItem.Text = "Phiên bản 1.0";
             // 
             // nhàSángLậpToolStripMenuItem
             // 
             this.nhàSángLậpToolStripMenuItem.Name = "nhàSángLậpToolStripMenuItem";
-            this.nhàSángLậpToolStripMenuItem.Size = new System.Drawing.Size(221, 34);
+            this.nhàSángLậpToolStripMenuItem.Size = new System.Drawing.Size(203, 30);
             this.nhàSángLậpToolStripMenuItem.Text = "Nhà sáng lập";
             this.nhàSángLậpToolStripMenuItem.Click += new System.EventHandler(this.nhàSángLậpToolStripMenuItem_Click);
             // 
             // senderrorToolStripMenuItem
             // 
             this.senderrorToolStripMenuItem.Name = "senderrorToolStripMenuItem";
-            this.senderrorToolStripMenuItem.Size = new System.Drawing.Size(226, 34);
+            this.senderrorToolStripMenuItem.Size = new System.Drawing.Size(208, 30);
             this.senderrorToolStripMenuItem.Text = "send_error";
             // 
             // termToolStripMenuItem
             // 
             this.termToolStripMenuItem.Name = "termToolStripMenuItem";
-            this.termToolStripMenuItem.Size = new System.Drawing.Size(65, 29);
+            this.termToolStripMenuItem.Size = new System.Drawing.Size(61, 29);
             this.termToolStripMenuItem.Text = "term";
             this.termToolStripMenuItem.Click += new System.EventHandler(this.termToolStripMenuItem_Click);
             // 
@@ -660,21 +645,22 @@ namespace App_ThuVien
             this.btn_lappm,
             this.btn_qlpm,
             this.skinDropDownButtonItem1,
-            this.btn_thongke_sach,
-            this.btn_muon,
-            this.btn_thongke_nguoidung,
-            this.btn_nhanvien});
-            this.ribbonControl1.Location = new System.Drawing.Point(401, 67);
+            this.btn_qlkh,
+            this.btn_ql_nv,
+            this.btn_tk,
+            this.btn_xemdocquyen,
+            this.btn_suathanthien});
+            this.ribbonControl1.Location = new System.Drawing.Point(375, 61);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ribbonControl1.MaxItemId = 12;
+            this.ribbonControl1.MaxItemId = 18;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rb_sach,
-            this.ribon_qlmuon,
-            this.ribbonPage2,
-            this.ribbonPage3,
+            this.rb_qlmuon,
+            this.rb_nguoimuon,
+            this.rb_thongke,
             this.ribbonPage1});
-            this.ribbonControl1.Size = new System.Drawing.Size(1110, 202);
+            this.ribbonControl1.Size = new System.Drawing.Size(1138, 188);
             // 
             // btn_sach
             // 
@@ -690,6 +676,7 @@ namespace App_ThuVien
             this.btn_theloai.Id = 2;
             this.btn_theloai.ImageOptions.SvgImage = global::App_ThuVien.Properties.Resources.actions_list;
             this.btn_theloai.Name = "btn_theloai";
+            this.btn_theloai.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_theloai_ItemClick);
             // 
             // btn_lappm
             // 
@@ -697,6 +684,7 @@ namespace App_ThuVien
             this.btn_lappm.Id = 3;
             this.btn_lappm.ImageOptions.SvgImage = global::App_ThuVien.Properties.Resources.bo_document;
             this.btn_lappm.Name = "btn_lappm";
+            this.btn_lappm.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_lappm_ItemClick);
             // 
             // btn_qlpm
             // 
@@ -704,43 +692,53 @@ namespace App_ThuVien
             this.btn_qlpm.Id = 4;
             this.btn_qlpm.ImageOptions.SvgImage = global::App_ThuVien.Properties.Resources.portrait;
             this.btn_qlpm.Name = "btn_qlpm";
+            this.btn_qlpm.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_qlpm_ItemClick);
             // 
             // skinDropDownButtonItem1
             // 
             this.skinDropDownButtonItem1.Id = 7;
             this.skinDropDownButtonItem1.Name = "skinDropDownButtonItem1";
             // 
-            // btn_thongke_sach
+            // btn_qlkh
             // 
-            this.btn_thongke_sach.Caption = "Sách";
-            this.btn_thongke_sach.Id = 8;
-            this.btn_thongke_sach.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_thongke_sach.ImageOptions.Image")));
-            this.btn_thongke_sach.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_thongke_sach.ImageOptions.LargeImage")));
-            this.btn_thongke_sach.Name = "btn_thongke_sach";
+            this.btn_qlkh.Caption = "Quản lý bạn đọc";
+            this.btn_qlkh.Id = 12;
+            this.btn_qlkh.ImageOptions.Image = global::App_ThuVien.Properties.Resources.customer_16x162;
+            this.btn_qlkh.ImageOptions.LargeImage = global::App_ThuVien.Properties.Resources.customer_32x322;
+            this.btn_qlkh.Name = "btn_qlkh";
+            this.btn_qlkh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_qlkh_ItemClick);
             // 
-            // btn_muon
+            // btn_ql_nv
             // 
-            this.btn_muon.Caption = "Mượn";
-            this.btn_muon.Id = 9;
-            this.btn_muon.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_muon.ImageOptions.Image")));
-            this.btn_muon.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_muon.ImageOptions.LargeImage")));
-            this.btn_muon.Name = "btn_muon";
+            this.btn_ql_nv.Caption = "Quản lý nhân viên";
+            this.btn_ql_nv.Id = 13;
+            this.btn_ql_nv.ImageOptions.Image = global::App_ThuVien.Properties.Resources.user_16x16;
+            this.btn_ql_nv.ImageOptions.LargeImage = global::App_ThuVien.Properties.Resources.user_32x32;
+            this.btn_ql_nv.Name = "btn_ql_nv";
+            this.btn_ql_nv.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_ql_nv_ItemClick);
             // 
-            // btn_thongke_nguoidung
+            // btn_tk
             // 
-            this.btn_thongke_nguoidung.Caption = "Độc giả";
-            this.btn_thongke_nguoidung.Id = 10;
-            this.btn_thongke_nguoidung.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_thongke_nguoidung.ImageOptions.Image")));
-            this.btn_thongke_nguoidung.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_thongke_nguoidung.ImageOptions.LargeImage")));
-            this.btn_thongke_nguoidung.Name = "btn_thongke_nguoidung";
+            this.btn_tk.Caption = "Thống kê";
+            this.btn_tk.Id = 15;
+            this.btn_tk.ImageOptions.Image = global::App_ThuVien.Properties.Resources._3dcylinder_16x16;
+            this.btn_tk.ImageOptions.LargeImage = global::App_ThuVien.Properties.Resources._3dcylinder_32x32;
+            this.btn_tk.Name = "btn_tk";
+            this.btn_tk.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_tk_ItemClick);
             // 
-            // btn_nhanvien
+            // btn_xemdocquyen
             // 
-            this.btn_nhanvien.Caption = "Nhân viên";
-            this.btn_nhanvien.Id = 11;
-            this.btn_nhanvien.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_nhanvien.ImageOptions.Image")));
-            this.btn_nhanvien.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_nhanvien.ImageOptions.LargeImage")));
-            this.btn_nhanvien.Name = "btn_nhanvien";
+            this.btn_xemdocquyen.Caption = "Độc quyền";
+            this.btn_xemdocquyen.Id = 16;
+            this.btn_xemdocquyen.ImageOptions.Image = global::App_ThuVien.Properties.Resources.meeting_16x16;
+            this.btn_xemdocquyen.ImageOptions.LargeImage = global::App_ThuVien.Properties.Resources.meeting_32x32;
+            this.btn_xemdocquyen.Name = "btn_xemdocquyen";
+            // 
+            // btn_suathanthien
+            // 
+            this.btn_suathanthien.Caption = "Sửa điểm thân thiện";
+            this.btn_suathanthien.Id = 17;
+            this.btn_suathanthien.Name = "btn_suathanthien";
             // 
             // rb_sach
             // 
@@ -760,13 +758,13 @@ namespace App_ThuVien
             this.ribbonPageGroup2.ItemLinks.Add(this.btn_theloai);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             // 
-            // ribon_qlmuon
+            // rb_qlmuon
             // 
-            this.ribon_qlmuon.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.rb_qlmuon.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup3,
             this.ribbonPageGroup6});
-            this.ribon_qlmuon.Name = "ribon_qlmuon";
-            this.ribon_qlmuon.Text = "Quản lý mượn";
+            this.rb_qlmuon.Name = "rb_qlmuon";
+            this.rb_qlmuon.Text = "Quản lý mượn";
             // 
             // ribbonPageGroup3
             // 
@@ -778,68 +776,78 @@ namespace App_ThuVien
             this.ribbonPageGroup6.ItemLinks.Add(this.btn_qlpm);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             // 
-            // ribbonPage2
+            // rb_nguoimuon
             // 
-            this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.rb_nguoimuon.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup5,
             this.ribbonPageGroup4});
-            this.ribbonPage2.Name = "ribbonPage2";
-            this.ribbonPage2.Text = "Thống kê";
-            // 
-            // ribbonPageGroup4
-            // 
-            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
-            this.ribbonPageGroup4.Text = "ribbonPageGroup4";
-            // 
-            // ribbonPage3
-            // 
-            this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup5});
-            this.ribbonPage3.Name = "ribbonPage3";
-            this.ribbonPage3.Text = "Quản lý người mượn";
+            this.rb_nguoimuon.Name = "rb_nguoimuon";
+            this.rb_nguoimuon.Text = "Quản lý người dùng";
             // 
             // ribbonPageGroup5
             // 
+            this.ribbonPageGroup5.ItemLinks.Add(this.btn_qlkh);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
-            this.ribbonPageGroup5.Text = "ribbonPageGroup5";
+            // 
+            // ribbonPageGroup4
+            // 
+            this.ribbonPageGroup4.ItemLinks.Add(this.btn_ql_nv);
+            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
+            // 
+            // rb_thongke
+            // 
+            this.rb_thongke.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup7});
+            this.rb_thongke.Name = "rb_thongke";
+            this.rb_thongke.Text = "Thống kê";
+            // 
+            // ribbonPageGroup7
+            // 
+            this.ribbonPageGroup7.ItemLinks.Add(this.btn_tk);
+            this.ribbonPageGroup7.Name = "ribbonPageGroup7";
             // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup7,
-            this.ribbonPageGroup8,
-            this.ribbonPageGroup9});
+            this.ribbonPageGroup10,
+            this.ribbonPageGroup8});
             this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "Thống kê";
+            this.ribbonPage1.Text = "Đặc quyền độc giả thân thiện";
             // 
-            // ribbonPageGroup7
+            // ribbonPageGroup10
             // 
-            this.ribbonPageGroup7.ItemLinks.Add(this.btn_thongke_sach);
-            this.ribbonPageGroup7.Name = "ribbonPageGroup7";
-            this.ribbonPageGroup7.Text = "ribbonPageGroup7";
+            this.ribbonPageGroup10.ItemLinks.Add(this.btn_xemdocquyen);
+            this.ribbonPageGroup10.Name = "ribbonPageGroup10";
             // 
             // ribbonPageGroup8
             // 
-            this.ribbonPageGroup8.ItemLinks.Add(this.btn_muon);
+            this.ribbonPageGroup8.ItemLinks.Add(this.btn_suathanthien);
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
-            this.ribbonPageGroup8.Text = "ribbonPageGroup8";
-            // 
-            // ribbonPageGroup9
-            // 
-            this.ribbonPageGroup9.ItemLinks.Add(this.btn_thongke_nguoidung);
-            this.ribbonPageGroup9.ItemLinks.Add(this.btn_nhanvien);
-            this.ribbonPageGroup9.Name = "ribbonPageGroup9";
-            this.ribbonPageGroup9.Text = "ribbonPageGroup9";
             // 
             // time_barcode
             // 
             this.time_barcode.Tick += new System.EventHandler(this.time_barcode_Tick);
+            // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.notifyIcon1.BalloonTipText = "Ấn dúp chuột để hiện form";
+            this.notifyIcon1.BalloonTipTitle = "Thư viện";
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "Thư viện";
+            this.notifyIcon1.Visible = true;
+            this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
+            // 
+            // timeClose
+            // 
+            this.timeClose.Tick += new System.EventHandler(this.timeClose_Tick);
             // 
             // FrmThuVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1511, 612);
+            this.ClientSize = new System.Drawing.Size(1513, 613);
             this.Controls.Add(this.ribbonControl1);
             this.Controls.Add(this.left_bar);
             this.Controls.Add(this.menuStrip1);
@@ -885,9 +893,6 @@ namespace App_ThuVien
         private DevExpress.XtraBars.Navigation.AccordionControlElement tab_left_muon;
         private DevExpress.XtraBars.Navigation.AccordionControlElement tab_left_QlMuon;
         private DevExpress.XtraBars.Navigation.AccordionControlElement Tk;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement tk_sach;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement tk_nguoidung;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement tk_phieumuon;
         protected internal System.Windows.Forms.Timer timer1;
         private DevExpress.XtraBars.ToolbarForm.ToolbarFormControl toolbarFormControl1;
         private DevExpress.XtraBars.ToolbarForm.ToolbarFormManager toolbarFormManager1;
@@ -933,12 +938,10 @@ namespace App_ThuVien
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraBars.BarButtonItem btn_lappm;
         private DevExpress.XtraBars.BarButtonItem btn_qlpm;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribon_qlmuon;
+        private DevExpress.XtraBars.Ribbon.RibbonPage rb_qlmuon;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
+        private DevExpress.XtraBars.Ribbon.RibbonPage rb_nguoimuon;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.BarButtonItem btn_soluot;
@@ -949,14 +952,20 @@ namespace App_ThuVien
         private System.Windows.Forms.ToolStripMenuItem banDocToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sửaĐiểmThânThiệnToolStripMenuItem;
         private DevExpress.XtraBars.SkinDropDownButtonItem skinDropDownButtonItem1;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
+        private DevExpress.XtraBars.Ribbon.RibbonPage rb_thongke;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
         private System.Windows.Forms.ToolStripMenuItem termToolStripMenuItem;
-        private DevExpress.XtraBars.BarButtonItem btn_thongke_sach;
-        private DevExpress.XtraBars.BarButtonItem btn_muon;
-        private DevExpress.XtraBars.BarButtonItem btn_thongke_nguoidung;
-        private DevExpress.XtraBars.BarButtonItem btn_nhanvien;
+        public System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.Timer timeClose;
+        private DevExpress.XtraBars.BarButtonItem btn_qlkh;
+        private DevExpress.XtraBars.BarButtonItem btn_ql_nv;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private DevExpress.XtraBars.BarButtonItem btn_tk;
+        private DevExpress.XtraBars.BarButtonItem btn_xemdocquyen;
+        private DevExpress.XtraBars.BarButtonItem btn_suathanthien;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
     }
 }

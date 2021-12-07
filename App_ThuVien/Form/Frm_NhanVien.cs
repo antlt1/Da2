@@ -88,6 +88,7 @@ namespace App_ThuVien.Form
                     ex_nhanvien();
                     load_lab_dk();
                 }
+                else { Frm_NhanVien_Load(sender, e); }
             }
             else  if(column != "trangthai") {
                 G_U.ex_cmd(string.Format("update taikhoan set {0} = '{1}'  where id_taikhoan = {2}", column, new_val, id_taikhoan));

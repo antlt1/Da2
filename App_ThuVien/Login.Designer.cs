@@ -46,6 +46,7 @@
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.fluentDesignFormContainer1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormControl1)).BeginInit();
@@ -98,18 +99,20 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(52, 54);
+            this.label2.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.label2.Location = new System.Drawing.Point(40, 54);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 19);
+            this.label2.Size = new System.Drawing.Size(130, 22);
             this.label2.TabIndex = 18;
             this.label2.Text = "Tên đăng nhập";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(52, 122);
+            this.label3.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.label3.Location = new System.Drawing.Point(40, 122);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 19);
+            this.label3.Size = new System.Drawing.Size(83, 22);
             this.label3.TabIndex = 17;
             this.label3.Text = "Mật khẩu";
             // 
@@ -144,7 +147,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(136, 25);
+            this.label1.Location = new System.Drawing.Point(146, 3);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(161, 29);
             this.label1.TabIndex = 6;
@@ -200,6 +203,12 @@
             this.barDockControlRight.Manager = this.toolbarFormManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 297);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
             // Login
             // 
             this.ActiveGlowColor = System.Drawing.Color.White;
@@ -250,6 +259,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private Design.txt_underline_1 txt_underline__user;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
 
     }
 }

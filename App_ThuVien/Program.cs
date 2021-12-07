@@ -1,4 +1,5 @@
 ﻿using App_ThuVien;
+using App_ThuVien.Console;
 using App_ThuVien.Form;
 using DevExpress.XtraEditors;
 using System;
@@ -33,8 +34,9 @@ namespace Test_Sqlite
             }
             else
             {
-                //Application.Run(new App_ThuVien.ThongKe.Tk_Sach());
+                //Application.Run(new App_ThuVien.Console.PickTheLoai());
                 Application.Run(new FrmThuVien());
+                //Application.Run(new test());
             }
         }
     }

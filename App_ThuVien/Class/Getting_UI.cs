@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
 using System.Data;
+using App_ThuVien.Class;
+using App_ThuVien.Waiting;
 
 namespace Test_Sqlite.Class
 {
@@ -49,8 +51,22 @@ namespace Test_Sqlite.Class
                     s3 = "Server=26.9.216.208;Database=thuvien;port=;User Id=root;password=";
 
             string str = s2,str1=s1;
-            MySqlConnection conn = new MySqlConnection(s3);
-            return conn;
+            MySqlConnection conn = new MySqlConnection(s2);
+            var frmWaiting = new WtForConnectData();
+            frmWaiting.ShowDialog();
+            try
+            {
+                conn.Open();
+                conn.Close();
+                return conn;
+            }
+            catch (Exception)
+            {
+                Setting_sys.mess("Kết nối cơ sở dữ liệu thất bại");
+                Environment.Exit(0);
+            }
+            MySqlConnection con = new MySqlConnection();
+            return con;
         }
         // login
         public int mysqli_ex(string str)
@@ -122,9 +138,9 @@ namespace Test_Sqlite.Class
         {
             using (MySqlConnection conn = connect_mysqli())
             {
-                conn.Open();
-                mysql_cmd = new MySqlCommand(string.Format("select hoten from taikhoan where id_taikhoan = {0} ", id_taikhoan), conn);
-                return mysql_cmd.ExecuteScalar().ToString();
+                   conn.Open();
+                    mysql_cmd = new MySqlCommand(string.Format("select hoten from taikhoan where id_taikhoan = {0} ", id_taikhoan), conn);
+                    return mysql_cmd.ExecuteScalar().ToString();
             }
         }
         // land for sqlite
@@ -176,7 +192,59 @@ namespace Test_Sqlite.Class
                 return sqlite_cmd.ExecuteScalar().ToString();
             }
         }
-        
+        // ex_cmd
+        public void ex_cmd_sqlite(string cmd)
+        {
+            using (SQLiteConnection conn = connect_sqlite())
+            {
+                conn.Open();
+                sqlite_cmd = new SQLiteCommand(cmd,conn);
+                sqlite_cmd.ExecuteNonQuery();
+                conn.Clone();
+            }
+        }
+
+        public string ex_string_sqlite(string cmd)
+        {
+            using (SQLiteConnection conn = connect_sqlite())
+            {
+                conn.Open();
+                sqlite_cmd = new SQLiteCommand(cmd, conn);
+               string term =  sqlite_cmd.ExecuteScalar().ToString();
+                conn.Clone();
+                return term;
+            }
+        }
+          // ẩn hiện lưu close của main
+        public List<int> Loading_hide_close()
+        {
+            List<int> list = new List<int>();
+            using (SQLiteConnection conn = connect_sqlite())
+            {
+                conn.Open();
+                list.Add(int.Parse(ex_string_sqlite("select close from close")));
+                list.Add(int.Parse(ex_string_sqlite("select hide from close")));
+                return list;
+            }
+        }
+        public void Changer_hide_close(string status)
+        {
+            using (SQLiteConnection conn = connect_sqlite())
+            {
+                conn.Open();
+                if (status == "close")
+                {
+                    ex_cmd_sqlite("update close set close = 1");
+                    ex_cmd_sqlite("update close set hide =0");
+                }
+                else
+                {
+                    ex_cmd_sqlite("update close set close = 0");
+                    ex_cmd_sqlite("update close set hide = 1");
+                }
+                conn.Clone();
+            }
+        }
         // Land getting csdl
         int diem;
         public string creater_id(string id, string from)

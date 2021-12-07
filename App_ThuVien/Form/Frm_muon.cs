@@ -32,6 +32,7 @@ namespace App_ThuVien.Form
             {
                 lb_tentk.Text = G_U.mysqli_ex_data(string.Format("SELECT hoten FROM bandoc WHERE id_taikhoan = '{0}'",id_user));
                 btime_user = false;
+                btn_date.Enabled = true;
                 timer1.Stop();
             }
         }
@@ -43,6 +44,8 @@ namespace App_ThuVien.Form
             dt.Clear();
             id_sach.Clear();
             btn_done.Enabled = false;
+            btn_date.Enabled = false;
+            btn_sach.Enabled = false;
         }
 
         private void btn_nguoimuon_Click(object sender, EventArgs e)
@@ -52,9 +55,8 @@ namespace App_ThuVien.Form
             if (btime_user == false)
             {
                 ChooseNguoiMuon choose_kind_user = new ChooseNguoiMuon();
-                choose_kind_user.Show();
+                choose_kind_user.ShowDialog();
                 timer1.Start();
-             
             }
         }
         // check lập phiếu mượn
@@ -67,7 +69,7 @@ namespace App_ThuVien.Form
         }
         private void Frm_muon_Load(object sender, EventArgs e)
         {
-            //gridColumn1.Visible = false;
+            gridColumn1.Visible = false;
             dt = new DataTable();
             dt.Columns.Add("id_sach",typeof(String));
             dt.Columns.Add("tensach", typeof(String));
@@ -128,14 +130,19 @@ namespace App_ThuVien.Form
                         }
                     }
                     }
-                G_U.ex_cmd(string.Format("insert into phieu_muonsach(id_tt_muonsach,id_taikhoan_lap,id_ngmuon) values ({0},{1},{2})",
-                    i.ToString(), FrmThuVien.id_user_name.ToString(),id_user));
+                string id_pm =  G_U.creater_id("id_muonsach","phieu_muonsach");
+                G_U.ex_cmd(string.Format("insert into phieu_muonsach values ({0},{1},{2},{3})",
+                   id_pm,i.ToString(), FrmThuVien.id_user_name.ToString(),id_user));
                 XtraMessageBox.Show("Lập phiếu mượn thành công !");
                 if(XtraMessageBox.Show("Bạn thực Có muốn In phiếu mượn ? ", "Thông báo", 
                     MessageBoxButtons.YesNo,
                  MessageBoxIcon.Question) == DialogResult.No == false){
-                    // in phiếu
+                     var fr_In = new App_ThuVien.Console.In_PhieuMuon();
+                     fr_In.cre_print(id_pm);
+                     fr_In.ShowDialog();
                 }
+                
+                btn_clear_Click(sender,e);
             }
             else
             {
@@ -165,13 +172,34 @@ namespace App_ThuVien.Form
             if(btimebook == false)
             {
                 PickSachMuon fr_picksach = new PickSachMuon();
-                fr_picksach.Show();
+                fr_picksach.ShowDialog();
                 timer2.Start();
                 check_pm();
             }
             
             
 
+        }
+        public static bool btime_pickdate;
+        private void btn_date_Click(object sender, EventArgs e)
+        {
+            if (btime_pickdate == false) // bắt đầu chọn datatime
+            {
+                PickDateMuon fr_picdatemuon = new PickDateMuon();
+                fr_picdatemuon.ShowDialog();
+                timer3.Start();
+            }
+        }
+        public static string ngmuon;
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            if (btime_pickdate == true)
+            {
+                lb_ngmuon.Text = ngmuon;
+                btime_pickdate = false;
+                btn_sach.Enabled = true;
+                timer3.Stop();
+            }
         }
     }
 }

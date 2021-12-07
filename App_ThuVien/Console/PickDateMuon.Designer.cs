@@ -47,7 +47,7 @@
             this.toolbarFormControl1.Location = new System.Drawing.Point(0, 0);
             this.toolbarFormControl1.Manager = this.toolbarFormManager1;
             this.toolbarFormControl1.Name = "toolbarFormControl1";
-            this.toolbarFormControl1.Size = new System.Drawing.Size(555, 30);
+            this.toolbarFormControl1.Size = new System.Drawing.Size(620, 28);
             this.toolbarFormControl1.TabIndex = 0;
             this.toolbarFormControl1.TabStop = false;
             this.toolbarFormControl1.ToolbarForm = this;
@@ -64,46 +64,46 @@
             // 
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(0, 30);
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 28);
             this.barDockControlTop.Manager = this.toolbarFormManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(555, 0);
+            this.barDockControlTop.Size = new System.Drawing.Size(620, 0);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 61);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 65);
             this.barDockControlBottom.Manager = this.toolbarFormManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(555, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(620, 0);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 30);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 28);
             this.barDockControlLeft.Manager = this.toolbarFormManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 31);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 37);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(555, 30);
+            this.barDockControlRight.Location = new System.Drawing.Point(620, 28);
             this.barDockControlRight.Manager = this.toolbarFormManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 31);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 37);
             // 
             // dateEdit1
             // 
             this.dateEdit1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(0, 30);
+            this.dateEdit1.Location = new System.Drawing.Point(0, 28);
             this.dateEdit1.MenuManager = this.toolbarFormManager1;
             this.dateEdit1.Name = "dateEdit1";
             this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Size = new System.Drawing.Size(555, 28);
+            this.dateEdit1.Size = new System.Drawing.Size(620, 28);
             this.dateEdit1.TabIndex = 2;
             this.dateEdit1.DateTimeChanged += new System.EventHandler(this.dateEdit1_DateTimeChanged);
             // 
@@ -111,14 +111,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(555, 61);
+            this.ClientSize = new System.Drawing.Size(620, 65);
             this.Controls.Add(this.dateEdit1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Controls.Add(this.toolbarFormControl1);
-            this.IconOptions.ShowIcon = false;
+            this.IconOptions.Image = global::App_ThuVien.Properties.Resources.adateoccurring_16x162;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "PickDateMuon";

@@ -3,6 +3,7 @@ using App_ThuVien.Console;
 using App_ThuVien.Form;
 using App_ThuVien.Report;
 using DevExpress.XtraEditors;
+using DevExpress.XtraSplashScreen;
 using DevExpress.XtraTabbedMdi;
 using MySql.Data.MySqlClient;
 using System;
@@ -14,6 +15,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Test_Sqlite;
@@ -71,11 +73,22 @@ namespace App_ThuVien
             barcode.ShowDialog();
             time_barcode.Start();
         }
+        // mục form đợi chờ là hành phúc =)) ko phải sai dấu ` đâu =))
+        public void loading(int seconds)
+        {
+            SplashScreenManager.ShowForm(this, typeof(WaitingForMe), true, true, false);
+            for (int i = 1; i <= 100; i++)
+            {
+                SplashScreenManager.Default.SetWaitFormDescription(i.ToString() + "%");
+                Thread.Sleep(seconds);
+            }
+            SplashScreenManager.CloseForm(false);
+        }
         private void FrmThuVien_Load(object sender, EventArgs e)
         {
+          //  notifyIcon1.Icon = null;
+            // waiting for me mannnn (:
             //fr_barcode();
-            
-            
             // getting giao diện
             getting_theme();
             ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
@@ -107,6 +120,10 @@ namespace App_ThuVien
             {
                 setup_login();
             }
+            if (id_user_name == "")
+            {
+                Environment.Exit(0);
+            }
         }
 
         private void lb_inf_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -132,6 +149,7 @@ namespace App_ThuVien
             {
                 frm.MdiParent = this;
                 frm.Text = text_frm;
+                loading(20);
                 frm.Show();
                 list_frm.Add(name_frm);
             }
@@ -274,50 +292,18 @@ namespace App_ThuVien
                 off_left_bar.Text = "✓Off";
             }
         }
-        private void on_left_bar_Click(object sender, EventArgs e)
-        {
-            left_bar.Show();
-            on_left_bar.Enabled = false;
-            off_left_bar.Enabled = true;
-            on_left_bar.Text = "✓On";
-            off_left_bar.Text = "Off";
-        }
+      
 
-        private void off_left_bar_Click(object sender, EventArgs e)
-        {
-            left_bar.Hide();
-            off_left_bar.Enabled = false;
-            on_left_bar.Enabled = true;
-            on_left_bar.Text = "On";
-            off_left_bar.Text = "✓Off";
-        }
-
+  
         private void btn_sach_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             tab_left_sachh_Click(sender, e);
         }
 
-        private void on_nav_bar_Click(object sender, EventArgs e)
-        {
-            on_nav_bar.Text = "✓On";
-            off_nav_bar.Text = "Off";
-            on_nav_bar.Enabled = false;
-            off_nav_bar.Enabled = true;
-            ribbonControl1.Show();
-        }
-
-        private void off_nav_bar_Click(object sender, EventArgs e)
-        {
-            on_nav_bar.Text = "On";
-            off_nav_bar.Text = "✓Off";
-            on_nav_bar.Enabled = true;
-            off_nav_bar.Enabled = false;
-            ribbonControl1.Hide();
-        }
-
         private void accordionControlElement6_Click(object sender, EventArgs e)
         {
-
+            var frm = new ThongKe.Frm_ThongKe();
+            act_frm(frm, frm.Text, frm.Name);
         }
         App_ThuVien.BarCode.Frm_KhRaVao frm_kh = new App_ThuVien.BarCode.Frm_KhRaVao();
         private void btn_soluot_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -332,14 +318,37 @@ namespace App_ThuVien
             var frm_diemthanthien = new App_ThuVien.Console.SuaDiemThanThien();
             frm_diemthanthien.Show();
         }
-
+        // getting hide close chok form
+        List<int> lit = new List<int>();
+        int close, hide;
+        public void hide_Frm(){
+            ShowInTaskbar = false;
+            notifyIcon1.Visible = true;
+            notifyIcon1.ShowBalloonTip(2);
+            this.Hide();
+        }
+        App_ThuVien.Console.Frm_Closing frm_setCloser;
         private void FrmThuVien_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //if (XtraMessageBox.Show("Bạn có chắc thoát ?", "Hệ thống", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            //{
-            //    Environment.Exit(0);
-            //}
-            //    e.Cancel = true;
+            lit = G_U.Loading_hide_close();
+            close = lit[0];
+            hide = lit[1];
+            if (close == 0 && hide == 0)
+            {
+                e.Cancel = true;
+                frm_setCloser = new App_ThuVien.Console.Frm_Closing();
+                frm_setCloser.ShowDialog();
+                timeClose.Start();
+            }
+            else if (close == 1)
+            {
+                notifyIcon1.Icon = null;
+                Environment.Exit(0);
+            }
+            else if (hide == 1)
+            {
+                hide_Frm();
+            }  
         }
 
         private void mdi_fr_PageRemoved(object sender, DevExpress.XtraTabbedMdi.MdiTabPageEventArgs e)
@@ -358,16 +367,134 @@ namespace App_ThuVien
 
         private void tk_sach_Click(object sender, EventArgs e)
         {
-            var frm = new ThongKe.Tk_Sach();
-            frm.choose_tk("Sach");
+            var frm = new ThongKe.Frm_ThongKe();
             act_frm(frm, "Thống kê sách", "Tk_Sach");
         }
 
         private void tk_nguoidung_Click(object sender, EventArgs e)
         {
-            var frm = new ThongKe.Tk_Sach();
-            frm.choose_tk("NguoiDung");
+            var frm = new ThongKe.Frm_ThongKe();
             act_frm(frm, "Thống kê người dùng", "Tk_Sach");
+        }
+
+        private void leftbarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ToolStripMenuItem item = sender as ToolStripMenuItem;
+            string status = "";
+         //   Setting_sys.mess(item.Text);
+            if (item.Text == "Off")
+            {
+                left_bar.Hide();
+                off_left_bar.Enabled = false;
+                on_left_bar.Enabled = true;
+                on_left_bar.Text = "On";
+                off_left_bar.Text = "✓Off";
+                status = "0";
+            }
+            else if(item.Text == "On")
+            {
+                left_bar.Show();
+                on_left_bar.Enabled = false;
+                off_left_bar.Enabled = true;
+                on_left_bar.Text = "✓On";
+                off_left_bar.Text = "Off";
+                status = "1";
+            }
+            if (status != "")
+            {
+                G_U.ex_cmd_sqlite(string.Format("update laucher set left_bar = {0} ", status));
+            }
+        }
+
+        private void on_nav_bar_Click_1(object sender, EventArgs e)
+        {
+            ToolStripMenuItem item = sender as ToolStripMenuItem;
+            string status = "";
+            if (item.Text == "Off")
+            {
+                on_nav_bar.Text = "On";
+                off_nav_bar.Text = "✓Off";
+                on_nav_bar.Enabled = true;
+                off_nav_bar.Enabled = false;
+                ribbonControl1.Hide();
+                status = "0";
+            }
+            else if (item.Text == "On")
+            {
+                on_nav_bar.Text = "✓On";
+                off_nav_bar.Text = "Off";
+                on_nav_bar.Enabled = false;
+                off_nav_bar.Enabled = true;
+                ribbonControl1.Show();
+                status = "1";
+            }
+            if (status != "")
+            {
+                G_U.ex_cmd_sqlite(string.Format("update laucher set header_ribbon = {0} ", status));
+            }
+
+        }
+        public static int hide_time = 0;
+        private void timeClose_Tick(object sender, EventArgs e)
+        {
+            //btn_soluot.Caption = frm_setCloser.stt.ToString();
+            if (frm_setCloser.stt == 1)
+            {
+                hide_Frm();
+                timeClose.Stop();
+                frm_setCloser.stt = 0;
+             //   XtraMessageBox.Show("hihi");
+            }
+            else if (frm_setCloser.stt == 2)
+            {
+                timeClose.Stop();
+                frm_setCloser.stt = 0;
+            }
+        }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            ShowInTaskbar = true;
+            notifyIcon1.Visible = false;
+            WindowState = FormWindowState.Normal;
+        }
+
+        private void btn_ql_nv_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (G_U.gand_admin(id_user_name) == true)
+            {
+                var frm = new Frm_NhanVien();
+                act_frm(frm, "Quản lý nhân viên", "Frm_NhanVien");
+            }
+            else
+            {
+                Setting_sys.mess("Bạn không có quyền chỉnh sửa thông tin này !");
+            }
+        }
+
+        private void btn_qlkh_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            left_bar_qlkh_Click(sender, e);
+        }
+
+        private void btn_theloai_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            tab_left_tlsach_Click(sender, e);
+        }
+
+        private void btn_lappm_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            tab_left_muon_Click(sender, e);
+        }
+
+        private void btn_qlpm_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            tab_left_QlMuon_Click(sender, e);
+        }
+
+        private void btn_tk_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            accordionControlElement6_Click(sender, e);
         }
     }
 }

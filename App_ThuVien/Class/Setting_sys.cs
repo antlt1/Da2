@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data;
 using Test_Sqlite.Class;
+using DevExpress.XtraSplashScreen;
+using System.Threading;
 
 namespace App_ThuVien.Class
 {
@@ -97,6 +99,7 @@ namespace App_ThuVien.Class
                 tw.Write(val);
             }
         }
+      
        
     }
 }

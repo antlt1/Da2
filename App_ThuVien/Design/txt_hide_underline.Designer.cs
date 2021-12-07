@@ -28,33 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.text = new System.Windows.Forms.TextBox();
             this.under_line = new System.Windows.Forms.TextBox();
+            this.text = new DevExpress.XtraEditors.ButtonEdit();
+            ((System.ComponentModel.ISupportInitialize)(this.text.Properties)).BeginInit();
             this.SuspendLayout();
-            // 
-            // text
-            // 
-            this.text.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.text.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.text.Font = new System.Drawing.Font("Sylfaen", 13F);
-            this.text.ForeColor = System.Drawing.Color.Black;
-            this.text.Location = new System.Drawing.Point(0, 2);
-            this.text.Name = "text";
-            this.text.PasswordChar = '*';
-            this.text.Size = new System.Drawing.Size(321, 35);
-            this.text.TabIndex = 7;
-            this.text.TextChanged += new System.EventHandler(this.text_TextChanged);
             // 
             // under_line
             // 
             this.under_line.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.under_line.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.under_line.Font = new System.Drawing.Font("Tahoma", 9.5F);
-            this.under_line.Location = new System.Drawing.Point(0, 37);
+            this.under_line.Location = new System.Drawing.Point(0, 33);
             this.under_line.Multiline = true;
             this.under_line.Name = "under_line";
             this.under_line.Size = new System.Drawing.Size(321, 1);
             this.under_line.TabIndex = 6;
+            // 
+            // text
+            // 
+            this.text.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.text.Location = new System.Drawing.Point(0, 0);
+            this.text.Name = "text";
+            this.text.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.text.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.text.Size = new System.Drawing.Size(321, 26);
+            this.text.TabIndex = 7;
+            this.text.EditValueChanged += new System.EventHandler(this.text_TextChanged);
             // 
             // txt_hide_underline
             // 
@@ -64,7 +64,8 @@
             this.Controls.Add(this.text);
             this.Controls.Add(this.under_line);
             this.Name = "txt_hide_underline";
-            this.Size = new System.Drawing.Size(321, 38);
+            this.Size = new System.Drawing.Size(321, 34);
+            ((System.ComponentModel.ISupportInitialize)(this.text.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -72,7 +73,7 @@
 
         #endregion
 
-        public System.Windows.Forms.TextBox text;
         private System.Windows.Forms.TextBox under_line;
+        public DevExpress.XtraEditors.ButtonEdit text;
     }
 }

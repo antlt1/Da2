@@ -28,9 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.text = new System.Windows.Forms.TextBox();
             this.under_line = new System.Windows.Forms.TextBox();
+            this.text = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
+            // 
+            // under_line
+            // 
+            this.under_line.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.under_line.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.under_line.Font = new System.Drawing.Font("Tahoma", 9.5F);
+            this.under_line.Location = new System.Drawing.Point(0, 29);
+            this.under_line.Multiline = true;
+            this.under_line.Name = "under_line";
+            this.under_line.Size = new System.Drawing.Size(346, 1);
+            this.under_line.TabIndex = 4;
             // 
             // text
             // 
@@ -43,17 +54,6 @@
             this.text.Size = new System.Drawing.Size(346, 35);
             this.text.TabIndex = 5;
             this.text.TextChanged += new System.EventHandler(this.text_TextChanged);
-            // 
-            // under_line
-            // 
-            this.under_line.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.under_line.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.under_line.Font = new System.Drawing.Font("Tahoma", 9.5F);
-            this.under_line.Location = new System.Drawing.Point(0, 29);
-            this.under_line.Multiline = true;
-            this.under_line.Name = "under_line";
-            this.under_line.Size = new System.Drawing.Size(346, 1);
-            this.under_line.TabIndex = 4;
             // 
             // txt_underline_1
             // 

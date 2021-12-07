@@ -127,8 +127,8 @@ namespace App_ThuVien.Form
         private void btn_sl_tl_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             App_ThuVien.Console.PickTheLoai fr_pick = new Console.PickTheLoai();
+            fr_pick.ShowDialog();
             timer1.Start();
-            fr_pick.Show();
         }
         public static bool time_set_tl;
         private void timer1_Tick(object sender, EventArgs e)

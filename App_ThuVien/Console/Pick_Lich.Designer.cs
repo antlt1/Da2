@@ -29,7 +29,6 @@ namespace App_ThuVien.Console
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
@@ -42,7 +41,7 @@ namespace App_ThuVien.Console
             this.fluentDesignFormControl1.FluentDesignForm = this;
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(555, 30);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(555, 50);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             // 
@@ -50,7 +49,7 @@ namespace App_ThuVien.Console
             // 
             this.dateEdit1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(0, 30);
+            this.dateEdit1.Location = new System.Drawing.Point(0, 50);
             this.dateEdit1.Name = "dateEdit1";
             this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -65,7 +64,7 @@ namespace App_ThuVien.Console
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(555, 61);
+            this.ClientSize = new System.Drawing.Size(555, 78);
             this.Controls.Add(this.dateEdit1);
             this.Controls.Add(this.fluentDesignFormControl1);
             this.FluentDesignFormControl = this.fluentDesignFormControl1;

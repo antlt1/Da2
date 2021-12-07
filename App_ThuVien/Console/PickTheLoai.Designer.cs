@@ -38,15 +38,12 @@
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.repositoryItemGridLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
             this.repositoryItemGridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.lTheLoai = new DevExpress.XtraEditors.LookUpEdit();
-            this.btn_create = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormControl1)).BeginInit();
             this.toolbarFormControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).BeginInit();
-            this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lTheLoai.Properties)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +53,7 @@
             this.toolbarFormControl1.Location = new System.Drawing.Point(0, 0);
             this.toolbarFormControl1.Manager = this.toolbarFormManager1;
             this.toolbarFormControl1.Name = "toolbarFormControl1";
-            this.toolbarFormControl1.Size = new System.Drawing.Size(376, 41);
+            this.toolbarFormControl1.Size = new System.Drawing.Size(288, 23);
             this.toolbarFormControl1.TabIndex = 6;
             this.toolbarFormControl1.TabStop = false;
             this.toolbarFormControl1.ToolbarForm = this;
@@ -85,33 +82,33 @@
             // 
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(0, 41);
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 23);
             this.barDockControlTop.Manager = this.toolbarFormManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(376, 0);
+            this.barDockControlTop.Size = new System.Drawing.Size(288, 0);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 65);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 54);
             this.barDockControlBottom.Manager = this.toolbarFormManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(376, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(288, 0);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 41);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 23);
             this.barDockControlLeft.Manager = this.toolbarFormManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 24);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 31);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(376, 41);
+            this.barDockControlRight.Location = new System.Drawing.Point(288, 23);
             this.barDockControlRight.Manager = this.toolbarFormManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 24);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 31);
             // 
             // repositoryItemGridLookUpEdit1
             // 
@@ -128,60 +125,25 @@
             this.repositoryItemGridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.repositoryItemGridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
             // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 82F));
-            this.tableLayoutPanel2.Controls.Add(this.lTheLoai, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btn_create, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 40);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(372, 29);
-            this.tableLayoutPanel2.TabIndex = 7;
-            // 
             // lTheLoai
             // 
-            this.lTheLoai.Location = new System.Drawing.Point(3, 3);
+            this.lTheLoai.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lTheLoai.Location = new System.Drawing.Point(0, 23);
             this.lTheLoai.Name = "lTheLoai";
             this.lTheLoai.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lTheLoai.Properties.NullText = "Chọn thể loại";
             this.lTheLoai.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.lTheLoai.Size = new System.Drawing.Size(284, 22);
+            this.lTheLoai.Size = new System.Drawing.Size(288, 28);
             this.lTheLoai.TabIndex = 9;
-            // 
-            // btn_create
-            // 
-            this.btn_create.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_create.BackColor = System.Drawing.Color.SpringGreen;
-            this.btn_create.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_create.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_create.FlatAppearance.BorderSize = 0;
-            this.btn_create.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SpringGreen;
-            this.btn_create.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btn_create.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_create.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.btn_create.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_create.Location = new System.Drawing.Point(293, 3);
-            this.btn_create.Name = "btn_create";
-            this.btn_create.Size = new System.Drawing.Size(76, 23);
-            this.btn_create.TabIndex = 13;
-            this.btn_create.Text = "Chọn";
-            this.btn_create.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.btn_create.UseVisualStyleBackColor = false;
-            this.btn_create.Click += new System.EventHandler(this.btn_create_Click_1);
+            this.lTheLoai.Closed += new DevExpress.XtraEditors.Controls.ClosedEventHandler(this.lTheLoai_Closed);
             // 
             // PickTheLoai
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(376, 65);
-            this.Controls.Add(this.tableLayoutPanel2);
+            this.ClientSize = new System.Drawing.Size(288, 54);
+            this.Controls.Add(this.lTheLoai);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
@@ -203,7 +165,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).EndInit();
-            this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.lTheLoai.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -229,8 +190,6 @@
         //private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         //private DevExpress.XtraBars.BarEditItem barEditItem1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private DevExpress.XtraEditors.LookUpEdit lTheLoai;
-        public System.Windows.Forms.Button btn_create;
     }
 }

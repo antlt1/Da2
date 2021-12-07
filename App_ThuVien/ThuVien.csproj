@@ -78,6 +78,7 @@
     <Reference Include="DevExpress.Dialogs.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Images.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Map.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Mvvm.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Office.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Pdf.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.PivotGrid.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -184,11 +185,23 @@
     <Compile Include="Console\ChooseNguoiMuon.Designer.cs">
       <DependentUpon>ChooseNguoiMuon.cs</DependentUpon>
     </Compile>
+    <Compile Include="Console\Frm_Closing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Console\Frm_Closing.Designer.cs">
+      <DependentUpon>Frm_Closing.cs</DependentUpon>
+    </Compile>
     <Compile Include="Console\Frm_waiting.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Console\Frm_waiting.Designer.cs">
       <DependentUpon>Frm_waiting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Console\In_PhieuMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Console\In_PhieuMuon.Designer.cs">
+      <DependentUpon>In_PhieuMuon.cs</DependentUpon>
     </Compile>
     <Compile Include="Console\In_PhieuPhat.cs">
       <SubType>Form</SubType>
@@ -202,6 +215,12 @@
     <Compile Include="Console\PickDateMuon.Designer.cs">
       <DependentUpon>PickDateMuon.cs</DependentUpon>
     </Compile>
+    <Compile Include="Console\PickDoiPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Console\PickDoiPass.Designer.cs">
+      <DependentUpon>PickDoiPass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Console\PickSachMuon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +232,12 @@
     </Compile>
     <Compile Include="Console\PickTheLoai.Designer.cs">
       <DependentUpon>PickTheLoai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Pick_Date_MonthandYear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Console\Pick_Date_MonthandYear.Designer.cs">
+      <DependentUpon>Pick_Date_MonthandYear.cs</DependentUpon>
     </Compile>
     <Compile Include="Console\Pick_Lich.cs">
       <SubType>Form</SubType>
@@ -249,6 +274,12 @@
     </Compile>
     <Compile Include="Console\View_InKhachHang.Designer.cs">
       <DependentUpon>View_InKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Console\WaitingForMe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Console\WaitingForMe.Designer.cs">
+      <DependentUpon>WaitingForMe.cs</DependentUpon>
     </Compile>
     <Compile Include="Database\Choose_Database.cs">
       <SubType>Form</SubType>
@@ -328,12 +359,6 @@
     <Compile Include="Form\Frm_Start.Designer.cs">
       <DependentUpon>Frm_Start.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Frm_ThongKe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\Frm_ThongKe.Designer.cs">
-      <DependentUpon>Frm_ThongKe.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form\Inf_User.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -360,6 +385,12 @@
     <Compile Include="Report\Rp_Phat.Designer.cs">
       <DependentUpon>Rp_Phat.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\Rp_PhieuMuon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Rp_PhieuMuon.Designer.cs">
+      <DependentUpon>Rp_PhieuMuon.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report\Rp_ThanhVien.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -378,14 +409,41 @@
     <Compile Include="test.Designer.cs">
       <DependentUpon>test.cs</DependentUpon>
     </Compile>
-    <Compile Include="ThongKe\Tk_Sach.cs">
+    <Compile Include="ThongKe\Frm_ThongKe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ThongKe\Tk_Sach.Designer.cs">
-      <DependentUpon>Tk_Sach.cs</DependentUpon>
+    <Compile Include="ThongKe\Frm_ThongKe.Designer.cs">
+      <DependentUpon>Frm_ThongKe.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ThongKe\Tk_Sach.resx">
-      <DependentUpon>Tk_Sach.cs</DependentUpon>
+    <Compile Include="Waiting\WtForConnectData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Waiting\WtForConnectData.Designer.cs">
+      <DependentUpon>WtForConnectData.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Console\Frm_Closing.resx">
+      <DependentUpon>Frm_Closing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Console\In_PhieuMuon.resx">
+      <DependentUpon>In_PhieuMuon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Console\PickDoiPass.resx">
+      <DependentUpon>PickDoiPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Console\Pick_Date_MonthandYear.resx">
+      <DependentUpon>Pick_Date_MonthandYear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Console\WaitingForMe.resx">
+      <DependentUpon>WaitingForMe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Rp_PhieuMuon.resx">
+      <DependentUpon>Rp_PhieuMuon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongKe\Frm_ThongKe.resx">
+      <DependentUpon>Frm_ThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Waiting\WtForConnectData.resx">
+      <DependentUpon>WtForConnectData.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Resources\actions_zoom.svg" />
     <None Include="Resources\checkbox_16x16.png" />
@@ -409,6 +467,8 @@
     <None Include="Resources\adateoccurring_16x16.png" />
     <None Include="Resources\edit_16x16.png" />
     <None Include="Resources\text.svg" />
+    <None Include="Resources\3dcylinder_32x32.png" />
+    <None Include="Resources\3dcylinder_16x16.png" />
     <Content Include="Resources\actions_list.svg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -418,6 +478,31 @@
     <None Include="Resources\show_32x32.png" />
     <None Include="Resources\walking_16x16.png" />
     <None Include="Resources\apply_16x162.png" />
+    <None Include="Resources\reverssort_16x16.png" />
+    <None Include="Resources\adateoccurring_16x161.png" />
+    <None Include="Resources\show_32x321.png" />
+    <None Include="Resources\show_16x162.png" />
+    <None Include="Resources\apply_16x163.png" />
+    <None Include="Resources\apply_32x32.png" />
+    <None Include="Resources\adateoccurring_16x162.png" />
+    <None Include="Resources\edit_16x161.png" />
+    <None Include="Resources\fullshoppingcart_16x16.png" />
+    <None Include="Resources\content_16x16.png" />
+    <None Include="Resources\warning_16x16.png" />
+    <None Include="Resources\showworktimeonly_16x16.png" />
+    <None Include="Resources\showworktimeonly_16x161.png" />
+    <None Include="Resources\warning_16x161.png" />
+    <None Include="Resources\warning_32x32.png" />
+    <None Include="Resources\boperson_16x16.png" />
+    <None Include="Resources\boposition2_16x16.png" />
+    <None Include="Resources\content_16x161.png" />
+    <None Include="Resources\refresh_16x16.png" />
+    <None Include="Resources\meeting_32x32.png" />
+    <None Include="Resources\meeting_16x16.png" />
+    <None Include="Resources\customer_16x162.png" />
+    <None Include="Resources\customer_32x322.png" />
+    <None Include="Resources\user_32x32.png" />
+    <None Include="Resources\user_16x16.png" />
     <Content Include="SRC\Icon\Books.ico" />
     <Content Include="SRC\Icon\Iconsmind-Outline-Key.ico" />
     <Content Include="SRC\Icon\search.ico" />
@@ -502,9 +587,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Frm_Start.resx">
       <DependentUpon>Frm_Start.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\Frm_ThongKe.resx">
-      <DependentUpon>Frm_ThongKe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Inf_User.resx">
       <DependentUpon>Inf_User.cs</DependentUpon>
