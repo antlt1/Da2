@@ -30,5 +30,15 @@ namespace App_ThuVien.Form
                 lb_exit_Click(sender,e);
             }
         }
+
+        private void Frm_Start_Load(object sender, EventArgs e)
+        {
+            //timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

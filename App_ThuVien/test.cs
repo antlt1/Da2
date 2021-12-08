@@ -13,7 +13,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Test_Sqlite.Class;
+using ThuVien.Class;
 using MySql.Data.MySqlClient;
 
 namespace App_ThuVien

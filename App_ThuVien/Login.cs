@@ -8,7 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using Test_Sqlite.Class;
+using ThuVien.Class;
 using MySql.Data.MySqlClient;
 using System.Data.SQLite;
 using DevExpress.UserSkins;
@@ -16,7 +16,7 @@ using App_ThuVien.Design;
 using App_ThuVien;
 using App_ThuVien.Class;
 
-namespace Test_Sqlite
+namespace ThuVien
 {
     public partial class Login : DevExpress.XtraBars.ToolbarForm.ToolbarForm
     {
@@ -106,14 +106,17 @@ namespace Test_Sqlite
         }
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
-           
-
+            if (FrmThuVien.time == false)
+            {
+                Environment.Exit(0);
+            }
+            this.Hide();
+            e.Cancel = true;
         }
 
         private void Login_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (FrmThuVien.time == false)
-                Environment.Exit(0);
+            
         }
     }
 }

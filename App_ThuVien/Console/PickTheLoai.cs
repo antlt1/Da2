@@ -18,7 +18,7 @@ namespace App_ThuVien.Console
         {
             InitializeComponent();
         }
-        Test_Sqlite.Class.Getting_UI G_U = new Test_Sqlite.Class.Getting_UI();
+        ThuVien.Class.Getting_UI G_U = new ThuVien.Class.Getting_UI();
         private void PickTheLoai_Load(object sender, EventArgs e)
         {
             //changed btn

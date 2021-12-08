@@ -1,4 +1,4 @@
-﻿namespace Test_Sqlite
+﻿namespace ThuVien
 {
     partial class Login
     {
@@ -36,7 +36,7 @@
             this.cBox_log = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txt_underline__user = new Test_Sqlite.Design.txt_underline_1();
+            this.txt_underline__user = new ThuVien.Design.txt_underline_1();
             this.btn_login = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.toolbarFormControl1 = new DevExpress.XtraBars.ToolbarForm.ToolbarFormControl();
@@ -58,9 +58,9 @@
             // 
             this.fluentDesignFormContainer1.Controls.Add(this.panel1);
             this.fluentDesignFormContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fluentDesignFormContainer1.Location = new System.Drawing.Point(0, 50);
+            this.fluentDesignFormContainer1.Location = new System.Drawing.Point(0, 28);
             this.fluentDesignFormContainer1.Name = "fluentDesignFormContainer1";
-            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(466, 297);
+            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(466, 319);
             this.fluentDesignFormContainer1.TabIndex = 0;
             // 
             // panel1
@@ -75,7 +75,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(466, 297);
+            this.panel1.Size = new System.Drawing.Size(466, 319);
             this.panel1.TabIndex = 0;
             // 
             // txt_underline_pass
@@ -83,7 +83,7 @@
             this.txt_underline_pass.BackColor = System.Drawing.SystemColors.Window;
             this.txt_underline_pass.Location = new System.Drawing.Point(44, 144);
             this.txt_underline_pass.Name = "txt_underline_pass";
-            this.txt_underline_pass.Size = new System.Drawing.Size(310, 31);
+            this.txt_underline_pass.Size = new System.Drawing.Size(322, 31);
             this.txt_underline_pass.TabIndex = 20;
             // 
             // cBox_log
@@ -121,7 +121,7 @@
             this.txt_underline__user.BackColor = System.Drawing.SystemColors.Window;
             this.txt_underline__user.Location = new System.Drawing.Point(44, 76);
             this.txt_underline__user.Name = "txt_underline__user";
-            this.txt_underline__user.Size = new System.Drawing.Size(311, 30);
+            this.txt_underline__user.Size = new System.Drawing.Size(322, 30);
             this.txt_underline__user.TabIndex = 16;
             // 
             // btn_login
@@ -158,7 +158,7 @@
             this.toolbarFormControl1.Location = new System.Drawing.Point(0, 0);
             this.toolbarFormControl1.Manager = this.toolbarFormManager1;
             this.toolbarFormControl1.Name = "toolbarFormControl1";
-            this.toolbarFormControl1.Size = new System.Drawing.Size(466, 50);
+            this.toolbarFormControl1.Size = new System.Drawing.Size(466, 28);
             this.toolbarFormControl1.TabIndex = 1;
             this.toolbarFormControl1.TabStop = false;
             this.toolbarFormControl1.ToolbarForm = this;
@@ -175,7 +175,7 @@
             // 
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(0, 50);
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 28);
             this.barDockControlTop.Manager = this.toolbarFormManager1;
             this.barDockControlTop.Size = new System.Drawing.Size(466, 0);
             // 
@@ -191,17 +191,17 @@
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 50);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 28);
             this.barDockControlLeft.Manager = this.toolbarFormManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 297);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 319);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(466, 50);
+            this.barDockControlRight.Location = new System.Drawing.Point(466, 28);
             this.barDockControlRight.Manager = this.toolbarFormManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 297);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 319);
             // 
             // contextMenuStrip1
             // 

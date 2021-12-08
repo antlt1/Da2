@@ -503,6 +503,8 @@
     <None Include="Resources\customer_32x322.png" />
     <None Include="Resources\user_32x32.png" />
     <None Include="Resources\user_16x16.png" />
+    <None Include="Resources\show_16x163.png" />
+    <None Include="Resources\bg-education-library.jpg" />
     <Content Include="SRC\Icon\Books.ico" />
     <Content Include="SRC\Icon\Iconsmind-Outline-Key.ico" />
     <Content Include="SRC\Icon\search.ico" />

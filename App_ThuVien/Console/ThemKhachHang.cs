@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Test_Sqlite.Class;
+using ThuVien.Class;
 
 namespace App_ThuVien.Console // creater by : アン
 {

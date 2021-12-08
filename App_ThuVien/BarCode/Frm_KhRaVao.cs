@@ -9,7 +9,7 @@ using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Test_Sqlite.Class;
+using ThuVien.Class;
 using System.IO;
 using App_ThuVien.Class;
 

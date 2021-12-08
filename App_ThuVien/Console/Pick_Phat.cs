@@ -1,7 +1,7 @@
 ﻿using App_ThuVien.Class;
 using DevExpress.XtraEditors;
 using System;
-using Test_Sqlite.Class;
+using ThuVien.Class;
 
 namespace App_ThuVien.Console
 {

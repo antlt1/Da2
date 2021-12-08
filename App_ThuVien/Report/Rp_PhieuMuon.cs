@@ -4,7 +4,7 @@ using System.Collections;
 using System.ComponentModel;
 using DevExpress.XtraReports.UI;
 using System.Data;
-using Test_Sqlite.Class;
+using ThuVien.Class;
 
 namespace App_ThuVien.Report
 {

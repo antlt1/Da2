@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using App_ThuVien.Console;
-using Test_Sqlite.Class;
-using Test_Sqlite;
+using ThuVien.Class;
+using ThuVien;
 using App_ThuVien.Class;
 
 namespace App_ThuVien.Form
