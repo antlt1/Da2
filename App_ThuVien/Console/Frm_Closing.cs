@@ -29,7 +29,7 @@ namespace App_ThuVien.Console
                 {
                     G_U.Changer_hide_close("close");
                 }
-                Environment.Exit(0);
+                Application.Exit();
             }
             else if (btn.Name == "btn_hide")
             {

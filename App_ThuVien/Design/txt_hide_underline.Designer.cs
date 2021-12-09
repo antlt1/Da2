@@ -51,11 +51,13 @@
             // 
             // text
             // 
-            this.text.Location = new System.Drawing.Point(0, 3);
+            this.text.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.text.Location = new System.Drawing.Point(0, -4);
             this.text.Name = "text";
             this.text.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.text.Properties.UseSystemPasswordChar = true;
-            this.text.Size = new System.Drawing.Size(289, 26);
+            this.text.Size = new System.Drawing.Size(289, 32);
             this.text.TabIndex = 7;
             this.text.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.text_ButtonClick);
             this.text.EditValueChanged += new System.EventHandler(this.text_TextChanged);

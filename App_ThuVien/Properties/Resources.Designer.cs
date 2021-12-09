@@ -383,6 +383,26 @@ namespace App_ThuVien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap errorbarsnone_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("errorbarsnone_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap errorbarsnone_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("errorbarsnone_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fullshoppingcart_16x16 {
             get {
                 object obj = ResourceManager.GetObject("fullshoppingcart_16x16", resourceCulture);

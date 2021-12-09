@@ -104,6 +104,9 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl1.Controls.Add(this.xtraTabControl1);
             this.groupControl1.Location = new System.Drawing.Point(3, 2);
             this.groupControl1.Name = "groupControl1";
@@ -131,7 +134,7 @@
             this.xtraTabPage1.Controls.Add(this.lb_thang_bd);
             this.xtraTabPage1.Controls.Add(this.lb_thang_kt);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(315, 418);
+            this.xtraTabPage1.Size = new System.Drawing.Size(309, 413);
             this.xtraTabPage1.Text = "Tháng";
             // 
             // btn_batdau
@@ -150,7 +153,7 @@
             this.xtraTabPage2.Controls.Add(this.txt_year);
             this.xtraTabPage2.Controls.Add(this.labelControl1);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(315, 418);
+            this.xtraTabPage2.Size = new System.Drawing.Size(309, 413);
             this.xtraTabPage2.Text = "Năm";
             // 
             // btn_year
@@ -190,7 +193,7 @@
             this.xtraTabPage3.Controls.Add(this.labelControl3);
             this.xtraTabPage3.Controls.Add(this.cbox_Tong);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(315, 418);
+            this.xtraTabPage3.Size = new System.Drawing.Size(309, 413);
             this.xtraTabPage3.Text = "Thống kê tổng";
             // 
             // labelControl3
@@ -227,6 +230,9 @@
             // 
             // groupControl2
             // 
+            this.groupControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl2.Controls.Add(this.pn_sach);
             this.groupControl2.Location = new System.Drawing.Point(326, 2);
             this.groupControl2.Name = "groupControl2";

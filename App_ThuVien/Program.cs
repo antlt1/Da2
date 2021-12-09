@@ -36,7 +36,7 @@ namespace ThuVien
             {
                 //Application.Run(new App_ThuVien.Form.Frm_Start());
                 Application.Run(new FrmThuVien());
-                //Application.Run(new test());
+                //Application.Run(new Login());
             }
         }
     }

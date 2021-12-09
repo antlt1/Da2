@@ -86,6 +86,8 @@ namespace App_ThuVien
         }
         private void FrmThuVien_Load(object sender, EventArgs e)
         {
+            var frm_qlmuon = new App_ThuVien.Console.Ex_QlMuon();
+            frm_qlmuon.trangthai();
             // intro bg thư viện
             var frm_intro = new App_ThuVien.Form.Frm_Start();
             act_frm(frm_intro, "Trang chủ", frm_intro.Name);

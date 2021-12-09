@@ -34,7 +34,9 @@ namespace App_ThuVien.Form
        public static string ma_sach , result_frm;
         public static bool check ,  check_time;
         public static char status_char_choose = ' ';
+        DateTime dtnow, dtNgTra, dtNgMuon;
         #endregion
+        #region Các funtion load dl lên grid
         public void ex_data_user()
         {
             // set val chok các grid 
@@ -63,9 +65,9 @@ namespace App_ThuVien.Form
                 "and pm.id_ngmuon = bd.id_TaiKhoan and pm.id_tt_muonsach = ttm.id_tt_muon {0} {1}  order by (s.id_sach) asc", more_query, one_more_query));
             gcmuon.DataSource = dt;
         }
-        DateTime dtnow, dtNgTra,dtNgMuon;
+        #endregion
         //
-        #region Tính phạt quá hạn và cập nhật trạng thái của người mượn
+        #region Tính phạt quá hạn và cập nhật trạng thái của người mượn úi dời ơi lag quá bỏ code r =))))
         void trangthai()
         {
             dt = G_U.mysqli_ex_value_tb("SELECT bd.id_taikhoan as 'id_bandoc', pm.id_muonsach as 'ma_pm' , ttm.tien, pm.id_tt_muonsach as 'id_ttm' , s.id_sach as 'masach'  ,  s.ten_sach as 'Tên sách', ttm.ngaymuon as 'Ngày mượn', " +
@@ -118,9 +120,7 @@ namespace App_ThuVien.Form
         {
             gridColumn7.Visible = false;
             //load phiêu mượn
-           
             load_pm("");
-            trangthai();
             load_ttm("empty", "empty");
             ex_data_user();
         }
@@ -136,6 +136,7 @@ namespace App_ThuVien.Form
         public static bool check_get_time;
         App_ThuVien.Console.Pick_Lich fr1 = new App_ThuVien.Console.Pick_Lich();
         int ii = 0;
+
        public  int get_diem()
         {
 
@@ -161,7 +162,8 @@ namespace App_ThuVien.Form
             }
             return 0;
         }
-        private void timer1_Tick(object sender, EventArgs e)
+       #region Gia hạn sách dùng timer tick
+       private void timer1_Tick(object sender, EventArgs e)
         {
             if(giahan == true)
             {
@@ -189,7 +191,8 @@ namespace App_ThuVien.Form
             }
            
         }
-        string ma_pm, ma_sach_t;
+       #endregion
+       string ma_pm, ma_sach_t;
         #region GV mượn cell click có phạt , mượn trả , gia hạn
         private void gvmuon_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
@@ -261,7 +264,7 @@ namespace App_ThuVien.Form
             }
             return false;
         }
-
+        #region F5 để làm mới form
         private void groupBox1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
             if (Keys.F5 == e.KeyCode)
@@ -280,6 +283,7 @@ namespace App_ThuVien.Form
                 load_ttm("empty", "empty");  
             }
         }
-       
+        #endregion
+
     }
 }

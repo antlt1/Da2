@@ -940,3 +940,4 @@ D:\Code\C#\WF\Da2\App_ThuVien\obj\Debug\App_ThuVien.Report.Rp_PhieuMuon.resource
 D:\Code\C#\WF\Da2\App_ThuVien\obj\Debug\App_ThuVien.Console.In_PhieuMuon.resources
 D:\Code\C#\WF\Da2\App_ThuVien\obj\Debug\ThuVien.Design.txt_underline_1.resources
 D:\Code\C#\WF\Da2\App_ThuVien\obj\Debug\ThuVien.Login.resources
+D:\Code\C#\WF\Da2\App_ThuVien\obj\Debug\App_ThuVien.Console.Ex_QlMuon.resources
