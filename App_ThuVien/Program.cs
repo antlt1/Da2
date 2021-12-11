@@ -10,10 +10,10 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Test_Sqlite.Class;
-using Test_Sqlite.Design;
+using ThuVien.Class;
+using ThuVien.Design;
 
-namespace Test_Sqlite
+namespace ThuVien
 {
     static class Program
     {
@@ -34,9 +34,9 @@ namespace Test_Sqlite
             }
             else
             {
-                //Application.Run(new App_ThuVien.Console.PickTheLoai());
+                //Application.Run(new App_ThuVien.Form.Frm_Start());
                 Application.Run(new FrmThuVien());
-                //Application.Run(new test());
+                //Application.Run(new Login());
             }
         }
     }

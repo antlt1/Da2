@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraCharts;
-using Test_Sqlite.Class;
+using ThuVien.Class;
 using App_ThuVien.Class;
 using MySql.Data.MySqlClient;
 

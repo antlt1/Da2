@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Test_Sqlite.Properties
+namespace ThuVien.Properties
 {
 
 

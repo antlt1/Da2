@@ -18,8 +18,8 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Test_Sqlite;
-using Test_Sqlite.Class;
+using ThuVien;
+using ThuVien.Class;
 
 namespace App_ThuVien
 {
@@ -86,6 +86,12 @@ namespace App_ThuVien
         }
         private void FrmThuVien_Load(object sender, EventArgs e)
         {
+            var frm_qlmuon = new App_ThuVien.Console.Ex_QlMuon();
+            frm_qlmuon.trangthai();
+            // intro bg thư viện
+            var frm_intro = new App_ThuVien.Form.Frm_Start();
+            act_frm(frm_intro, "Trang chủ", frm_intro.Name);
+
           //  notifyIcon1.Icon = null;
             // waiting for me mannnn (:
             //fr_barcode();

@@ -26,7 +26,7 @@ namespace App_ThuVien.Console
         }
         private void In_PhieuPhat_Load(object sender, EventArgs e)
         {
-            creater_in("Nguyễn Văn An", "Cữu âm chân kinh", "100000");
+            //creater_in("Nguyễn Văn An", "Cữu âm chân kinh", "100000");
         }
     }
 }

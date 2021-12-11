@@ -1,7 +1,6 @@
-﻿
-namespace App_ThuVien.Form
+﻿namespace App_ThuVien.Console
 {
-    partial class Frm_Start
+    partial class Ex_QlMuon
     {
         /// <summary>
         /// Required designer variable.
@@ -29,33 +28,20 @@ namespace App_ThuVien.Form
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // Frm_Start
+            // Ex_QlMuon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Stretch;
-            this.BackgroundImageStore = global::App_ThuVien.Properties.Resources.bg_education_library;
-            this.ClientSize = new System.Drawing.Size(957, 442);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Frm_Start";
-            this.Text = "Frm_Start";
-            this.Load += new System.EventHandler(this.Frm_Start_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Frm_Start_KeyDown);
+            this.ClientSize = new System.Drawing.Size(278, 244);
+            this.Name = "Ex_QlMuon";
+            this.Text = "Ex_QlMuon";
+            this.Load += new System.EventHandler(this.Ex_QlMuon_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Timer timer1;
-
     }
 }

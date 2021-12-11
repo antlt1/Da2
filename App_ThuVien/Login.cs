@@ -8,15 +8,16 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using Test_Sqlite.Class;
+using ThuVien.Class;
 using MySql.Data.MySqlClient;
 using System.Data.SQLite;
 using DevExpress.UserSkins;
 using App_ThuVien.Design;
 using App_ThuVien;
 using App_ThuVien.Class;
+using DevExpress.Utils.Animation;
 
-namespace Test_Sqlite
+namespace ThuVien
 {
     public partial class Login : DevExpress.XtraBars.ToolbarForm.ToolbarForm
     {
@@ -91,10 +92,15 @@ namespace Test_Sqlite
            
 
         }
-
+        void size_login(bool t)
+        {
+            this.Height = (t == true) ? 260 : 340;
+        }
         private void Login_Load(object sender, EventArgs e)
         {
-            
+            size_login(true);
+            TabControls.SelectedTabPage = tabSignIn;
+            TabControls.ShowTabHeader = DevExpress.Utils.DefaultBoolean.False;
             if (G_U.check_login() != "0")
             {
                 DataTable dt = G_U.sqlite_ex_data();
@@ -106,14 +112,56 @@ namespace Test_Sqlite
         }
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
-           
-
+            if (FrmThuVien.time == false)
+            {
+                Environment.Exit(0);
+            }
+            this.Hide();
+            e.Cancel = true;
         }
 
         private void Login_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (FrmThuVien.time == false)
-                Environment.Exit(0);
+            
+        }
+        private void transitionManager1_CustomTransition(DevExpress.Utils.Animation.ITransition transition, DevExpress.Utils.Animation.CustomTransitionEventArgs e)
+        {
+            e.Regions = new Rectangle[] { TabControls.Bounds };
+
+        }
+        private void btn_openDk_Click(object sender, EventArgs e)
+        {
+            TabControls.SelectedTabPage = tabSignUp;
+            size_login(false);
+        }
+        private void btn_openLoginIn_Click(object sender, EventArgs e)
+        {
+            TabControls.SelectedTabPage = tabSignIn;
+            size_login(true);
+        }
+
+        private void btn_userSignUp_Click(object sender, EventArgs e)
+        {
+            if (txt_userSignUp.text.Text == null || txt_passSignUp.text.Text == null || txt_passSignUp1.text.Text == null)
+            {
+                Setting_sys.mess("Tên hoặc mật khẩu không được bỏ trống !"); return;
+            }
+            if (txt_fullName.text.Text == null || txt_email.text.Text == null)
+            {
+                Setting_sys.mess("Họ tên và email không được bỏ trống !"); return;
+            }
+            string cmd = string.Format("insert into taikhoan values({0},{1},'{2}','{3}','{4}','{5}',{6},'{7}','0')", G_U.creater_id("id_taikhoan", "taikhoan"),
+                    1, txt_userSignUp.text.Text, txt_passSignUp.text.Text, txt_fullName.text.Text, "null", 0, txt_email.text.Text);
+            try
+            {
+                G_U.ex_cmd(cmd);
+                Setting_sys.mess("Đăng ký thành công !");
+                TabControls.SelectedTabPage = tabSignIn;
+                size_login(true);
+                txt_underline__user.text.Text = txt_userSignUp.text.Text;
+                txt_underline_pass.text.Text = txt_passSignUp.text.Text;
+            }
+            catch (Exception) { Setting_sys.mess("Đăng ký thành công cc !"); /*txt_email.text.Text = cmd; */}
         }
     }
 }

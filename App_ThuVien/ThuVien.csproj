@@ -185,6 +185,12 @@
     <Compile Include="Console\ChooseNguoiMuon.Designer.cs">
       <DependentUpon>ChooseNguoiMuon.cs</DependentUpon>
     </Compile>
+    <Compile Include="Console\Ex_QlMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Console\Ex_QlMuon.Designer.cs">
+      <DependentUpon>Ex_QlMuon.cs</DependentUpon>
+    </Compile>
     <Compile Include="Console\Frm_Closing.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -421,6 +427,9 @@
     <Compile Include="Waiting\WtForConnectData.Designer.cs">
       <DependentUpon>WtForConnectData.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Console\Ex_QlMuon.resx">
+      <DependentUpon>Ex_QlMuon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Console\Frm_Closing.resx">
       <DependentUpon>Frm_Closing.cs</DependentUpon>
     </EmbeddedResource>
@@ -503,6 +512,10 @@
     <None Include="Resources\customer_32x322.png" />
     <None Include="Resources\user_32x32.png" />
     <None Include="Resources\user_16x16.png" />
+    <None Include="Resources\show_16x163.png" />
+    <None Include="Resources\bg-education-library.jpg" />
+    <None Include="Resources\errorbarsnone_16x16.png" />
+    <None Include="Resources\errorbarsnone_32x32.png" />
     <Content Include="SRC\Icon\Books.ico" />
     <Content Include="SRC\Icon\Iconsmind-Outline-Key.ico" />
     <Content Include="SRC\Icon\search.ico" />

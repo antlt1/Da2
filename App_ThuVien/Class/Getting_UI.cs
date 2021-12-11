@@ -12,7 +12,7 @@ using System.Data;
 using App_ThuVien.Class;
 using App_ThuVien.Waiting;
 
-namespace Test_Sqlite.Class
+namespace ThuVien.Class
 {
       class Getting_UI
     {

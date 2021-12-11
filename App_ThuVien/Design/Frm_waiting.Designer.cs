@@ -41,13 +41,15 @@
             this.progressPanel1.AppearanceCaption.Options.UseFont = true;
             this.progressPanel1.AppearanceDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.progressPanel1.AppearanceDescription.Options.UseFont = true;
-            this.progressPanel1.Caption = "Vui lòng đợi !";
-            this.progressPanel1.Description = "Chỉ mất vài giây (:";
+            this.progressPanel1.Caption = "";
+            this.progressPanel1.Description = "";
             this.progressPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.progressPanel1.ImageHorzOffset = 20;
             this.progressPanel1.Location = new System.Drawing.Point(0, 27);
             this.progressPanel1.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.progressPanel1.Name = "progressPanel1";
+            this.progressPanel1.ShowCaption = false;
+            this.progressPanel1.ShowDescription = false;
             this.progressPanel1.Size = new System.Drawing.Size(369, 58);
             this.progressPanel1.TabIndex = 0;
             this.progressPanel1.Text = "progressPanel1";

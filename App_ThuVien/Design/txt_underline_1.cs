@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Test_Sqlite.Design
+namespace ThuVien.Design
 {
     public partial class txt_underline_1 : UserControl
     {

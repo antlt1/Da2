@@ -859,7 +859,6 @@ D:\Code\C#\WF\Da2\App_ThuVien\obj\Debug\App_ThuVien.Design.btn_style_1.resources
 D:\Code\C#\WF\Da2\App_ThuVien\obj\Debug\App_ThuVien.Design.dgv_style.resources
 D:\Code\C#\WF\Da2\App_ThuVien\obj\Debug\App_ThuVien.Design.Frm_waiting.resources
 D:\Code\C#\WF\Da2\App_ThuVien\obj\Debug\App_ThuVien.Design.txt_hide_underline.resources
-D:\Code\C#\WF\Da2\App_ThuVien\obj\Debug\Test_Sqlite.Design.txt_underline_1.resources
 D:\Code\C#\WF\Da2\App_ThuVien\obj\Debug\App_ThuVien.Form.Frm_Loaisach.resources
 D:\Code\C#\WF\Da2\App_ThuVien\obj\Debug\App_ThuVien.Form.Frm_muon.resources
 D:\Code\C#\WF\Da2\App_ThuVien\obj\Debug\App_ThuVien.Form.Frm_QlKhachHang.resources
@@ -868,7 +867,6 @@ D:\Code\C#\WF\Da2\App_ThuVien\obj\Debug\App_ThuVien.Form.Frm_Sach.resources
 D:\Code\C#\WF\Da2\App_ThuVien\obj\Debug\App_ThuVien.Form.Frm_Start.resources
 D:\Code\C#\WF\Da2\App_ThuVien\obj\Debug\App_ThuVien.Form.Inf_User.resources
 D:\Code\C#\WF\Da2\App_ThuVien\obj\Debug\App_ThuVien.FrmThuVien.resources
-D:\Code\C#\WF\Da2\App_ThuVien\obj\Debug\Test_Sqlite.Login.resources
 D:\Code\C#\WF\Da2\App_ThuVien\obj\Debug\App_ThuVien.Properties.Resources.resources
 D:\Code\C#\WF\Da2\App_ThuVien\obj\Debug\App_ThuVien.Report.Rp_ThanhVien.resources
 D:\Code\C#\WF\Da2\App_ThuVien\obj\Debug\App_ThuVien.Report.Rp_TheBanDoc.resources
@@ -940,3 +938,6 @@ D:\Code\C#\WF\Da2\App_ThuVien\obj\Debug\App_ThuVien.Waiting.WtForConnectData.res
 D:\Code\C#\WF\Da2\App_ThuVien\obj\Debug\ThuVien.csprojResolveAssemblyReference.cache
 D:\Code\C#\WF\Da2\App_ThuVien\obj\Debug\App_ThuVien.Report.Rp_PhieuMuon.resources
 D:\Code\C#\WF\Da2\App_ThuVien\obj\Debug\App_ThuVien.Console.In_PhieuMuon.resources
+D:\Code\C#\WF\Da2\App_ThuVien\obj\Debug\ThuVien.Design.txt_underline_1.resources
+D:\Code\C#\WF\Da2\App_ThuVien\obj\Debug\ThuVien.Login.resources
+D:\Code\C#\WF\Da2\App_ThuVien\obj\Debug\App_ThuVien.Console.Ex_QlMuon.resources

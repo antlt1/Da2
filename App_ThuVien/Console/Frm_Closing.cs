@@ -9,7 +9,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using Test_Sqlite.Class;
+using ThuVien.Class;
 
 namespace App_ThuVien.Console
 {
@@ -29,7 +29,7 @@ namespace App_ThuVien.Console
                 {
                     G_U.Changer_hide_close("close");
                 }
-                Environment.Exit(0);
+                Application.Exit();
             }
             else if (btn.Name == "btn_hide")
             {

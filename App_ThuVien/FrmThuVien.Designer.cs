@@ -96,12 +96,14 @@ namespace App_ThuVien
             this.btn_tk = new DevExpress.XtraBars.BarButtonItem();
             this.btn_xemdocquyen = new DevExpress.XtraBars.BarButtonItem();
             this.btn_suathanthien = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_rb_phat = new DevExpress.XtraBars.BarButtonItem();
             this.rb_sach = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rb_qlmuon = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rb_nguoimuon = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -649,10 +651,11 @@ namespace App_ThuVien
             this.btn_ql_nv,
             this.btn_tk,
             this.btn_xemdocquyen,
-            this.btn_suathanthien});
+            this.btn_suathanthien,
+            this.btn_rb_phat});
             this.ribbonControl1.Location = new System.Drawing.Point(375, 61);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ribbonControl1.MaxItemId = 18;
+            this.ribbonControl1.MaxItemId = 20;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rb_sach,
@@ -740,6 +743,14 @@ namespace App_ThuVien
             this.btn_suathanthien.Id = 17;
             this.btn_suathanthien.Name = "btn_suathanthien";
             // 
+            // btn_rb_phat
+            // 
+            this.btn_rb_phat.Caption = "Quản lý phạt";
+            this.btn_rb_phat.Id = 18;
+            this.btn_rb_phat.ImageOptions.Image = global::App_ThuVien.Properties.Resources.errorbarsnone_16x16;
+            this.btn_rb_phat.ImageOptions.LargeImage = global::App_ThuVien.Properties.Resources.errorbarsnone_32x32;
+            this.btn_rb_phat.Name = "btn_rb_phat";
+            // 
             // rb_sach
             // 
             this.rb_sach.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -762,7 +773,8 @@ namespace App_ThuVien
             // 
             this.rb_qlmuon.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup3,
-            this.ribbonPageGroup6});
+            this.ribbonPageGroup6,
+            this.ribbonPageGroup9});
             this.rb_qlmuon.Name = "rb_qlmuon";
             this.rb_qlmuon.Text = "Quản lý mượn";
             // 
@@ -775,6 +787,12 @@ namespace App_ThuVien
             // 
             this.ribbonPageGroup6.ItemLinks.Add(this.btn_qlpm);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
+            // 
+            // ribbonPageGroup9
+            // 
+            this.ribbonPageGroup9.ItemLinks.Add(this.btn_rb_phat);
+            this.ribbonPageGroup9.Name = "ribbonPageGroup9";
+            this.ribbonPageGroup9.Text = "ribbonPageGroup9";
             // 
             // rb_nguoimuon
             // 
@@ -967,5 +985,7 @@ namespace App_ThuVien
         private DevExpress.XtraBars.BarButtonItem btn_xemdocquyen;
         private DevExpress.XtraBars.BarButtonItem btn_suathanthien;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
+        private DevExpress.XtraBars.BarButtonItem btn_rb_phat;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
     }
 }

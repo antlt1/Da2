@@ -8,8 +8,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using Test_Sqlite.Class;
-using Test_Sqlite;
+using ThuVien.Class;
+using ThuVien;
 
 namespace App_ThuVien.Form
 {

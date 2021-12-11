@@ -181,6 +181,16 @@ namespace App_ThuVien.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bg_education_library {
+            get {
+                object obj = ResourceManager.GetObject("bg-education-library", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
         /// </summary>
         internal static DevExpress.Utils.Svg.SvgImage bo_document {
@@ -373,6 +383,26 @@ namespace App_ThuVien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap errorbarsnone_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("errorbarsnone_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap errorbarsnone_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("errorbarsnone_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fullshoppingcart_16x16 {
             get {
                 object obj = ResourceManager.GetObject("fullshoppingcart_16x16", resourceCulture);
@@ -526,6 +556,16 @@ namespace App_ThuVien.Properties {
         internal static System.Drawing.Bitmap show_16x162 {
             get {
                 object obj = ResourceManager.GetObject("show_16x162", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap show_16x163 {
+            get {
+                object obj = ResourceManager.GetObject("show_16x163", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -1,4 +1,4 @@
-﻿namespace Test_Sqlite.Design
+﻿namespace ThuVien.Design
 {
     partial class txt_underline_1
     {
