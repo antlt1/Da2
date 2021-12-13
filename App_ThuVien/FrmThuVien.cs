@@ -30,6 +30,7 @@ namespace App_ThuVien
             InitializeComponent();
 
         }
+        #region Khai báo biến
         // getting bool login
         public static bool login;
         // connection another class cre by : Anz :V
@@ -44,6 +45,8 @@ namespace App_ThuVien
         public List<string> list_tb = new List<string>();
         //
         public static bool time; // set bool cho time 
+        #endregion
+
         void setup_login()
         {
             // set id_user (: khi login
@@ -60,9 +63,9 @@ namespace App_ThuVien
         // quét barcode 
         private void time_barcode_Tick(object sender, EventArgs e)
         {
-           if(frm_kh.count_num > 0)
+           if(App_ThuVien.BarCode.ControlBarCode.count_kh > 0)
             {
-                btn_soluot.Caption = frm_kh.count_num.ToString();
+                btn_soluot.Caption = App_ThuVien.BarCode.ControlBarCode.count_kh.ToString();
             }
          //   
         }
@@ -73,28 +76,27 @@ namespace App_ThuVien
             barcode.ShowDialog();
             time_barcode.Start();
         }
-        // mục form đợi chờ là hành phúc =)) ko phải sai dấu ` đâu =))
+        #region mục form đợi chờ là hành phúc =)) ko phải sai dấu ` đâu =))
         public void loading(int seconds)
         {
-            SplashScreenManager.ShowForm(this, typeof(WaitingForMe), true, true, false);
+            splashScreenManager1.ShowWaitForm();
+
             for (int i = 1; i <= 100; i++)
             {
-                SplashScreenManager.Default.SetWaitFormDescription(i.ToString() + "%");
+                splashScreenManager1.SetWaitFormDescription(i.ToString() + "%");
                 Thread.Sleep(seconds);
             }
-            SplashScreenManager.CloseForm(false);
+           
+            splashScreenManager1.CloseWaitForm();
         }
+        #endregion
+
         private void FrmThuVien_Load(object sender, EventArgs e)
         {
-            var frm_qlmuon = new App_ThuVien.Console.Ex_QlMuon();
-            frm_qlmuon.trangthai();
+            var frm_qlmuon = new App_ThuVien.Console.Ex_QlMuon();       
             // intro bg thư viện
             var frm_intro = new App_ThuVien.Form.Frm_Start();
             act_frm(frm_intro, "Trang chủ", frm_intro.Name);
-
-          //  notifyIcon1.Icon = null;
-            // waiting for me mannnn (:
-            //fr_barcode();
             // getting giao diện
             getting_theme();
             ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
@@ -114,22 +116,8 @@ namespace App_ThuVien
             conn_mysql = G_U.connect_mysqli();
             conn_sqlite = G_U.connect_sqlite();
             // check có login chưa
-            if (G_U.check_login() == "0")
-            {
-                if (time == false)
-                    time = true;
-                timer1.Start();
-                this.Hide();
-                fr_lg.ShowDialog();
-            }
-            else
-            {
-                setup_login();
-            }
-            if (id_user_name == "")
-            {
-                Environment.Exit(0);
-            }
+            setup_login();
+            frm_qlmuon.trangthai();
         }
 
         private void lb_inf_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -221,7 +209,7 @@ namespace App_ThuVien
         // sự kiện chọn icon account trên thanh nav bar
         private void bar_list_ListItemClick(object sender, DevExpress.XtraBars.ListItemClickEventArgs e)
         {
-            //MessageBox.Show(bar_list.ItemIndex.ToString());
+           
             if (bar_list.ItemIndex == 0)
             {
                 if (list_tb.IndexOf("Inf_User") < 0)
@@ -311,7 +299,7 @@ namespace App_ThuVien
             var frm = new ThongKe.Frm_ThongKe();
             act_frm(frm, frm.Text, frm.Name);
         }
-        App_ThuVien.BarCode.Frm_KhRaVao frm_kh = new App_ThuVien.BarCode.Frm_KhRaVao();
+        App_ThuVien.BarCode.ControlBarCode frm_kh = new App_ThuVien.BarCode.ControlBarCode();
         private void btn_soluot_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
@@ -329,8 +317,6 @@ namespace App_ThuVien
         int close, hide;
         public void hide_Frm(){
             ShowInTaskbar = false;
-            notifyIcon1.Visible = true;
-            notifyIcon1.ShowBalloonTip(2);
             this.Hide();
         }
         App_ThuVien.Console.Frm_Closing frm_setCloser;
@@ -348,7 +334,6 @@ namespace App_ThuVien
             }
             else if (close == 1)
             {
-                notifyIcon1.Icon = null;
                 Environment.Exit(0);
             }
             else if (hide == 1)
@@ -458,12 +443,6 @@ namespace App_ThuVien
             }
         }
 
-        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            ShowInTaskbar = true;
-            notifyIcon1.Visible = false;
-            WindowState = FormWindowState.Normal;
-        }
 
         private void btn_ql_nv_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {

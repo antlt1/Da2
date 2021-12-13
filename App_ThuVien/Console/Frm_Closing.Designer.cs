@@ -32,7 +32,6 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.btn_close = new DevExpress.XtraEditors.SimpleButton();
             this.checker = new DevExpress.XtraEditors.CheckEdit();
-            this.btn_hide = new DevExpress.XtraEditors.SimpleButton();
             this.btn_cancel = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checker.Properties)).BeginInit();
@@ -43,7 +42,7 @@
             this.fluentDesignFormControl1.FluentDesignForm = this;
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(683, 50);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(683, 28);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             // 
@@ -53,9 +52,9 @@
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Location = new System.Drawing.Point(60, 66);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(555, 24);
+            this.labelControl1.Size = new System.Drawing.Size(546, 24);
             this.labelControl1.TabIndex = 3;
-            this.labelControl1.Text = "Thiết lập thoát cho hệ thống bạn có muốn ẩn hay đóng ngay ?";
+            this.labelControl1.Text = "Thiết lập thoát cho hệ thống bạn có đóng ngay cho  lần sau ?";
             // 
             // btn_close
             // 
@@ -68,21 +67,12 @@
             // 
             // checker
             // 
-            this.checker.Location = new System.Drawing.Point(42, 108);
+            this.checker.Location = new System.Drawing.Point(12, 108);
             this.checker.Name = "checker";
             this.checker.Properties.Caption = "Lưu cho lần sau";
             this.checker.Size = new System.Drawing.Size(142, 25);
             this.checker.TabIndex = 5;
             this.checker.CheckedChanged += new System.EventHandler(this.checker_CheckedChanged);
-            // 
-            // btn_hide
-            // 
-            this.btn_hide.Location = new System.Drawing.Point(314, 103);
-            this.btn_hide.Name = "btn_hide";
-            this.btn_hide.Size = new System.Drawing.Size(118, 34);
-            this.btn_hide.TabIndex = 6;
-            this.btn_hide.Text = "Ẩn";
-            this.btn_hide.Click += new System.EventHandler(this.btn_hide_Click);
             // 
             // btn_cancel
             // 
@@ -99,7 +89,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(683, 149);
             this.Controls.Add(this.btn_cancel);
-            this.Controls.Add(this.btn_hide);
             this.Controls.Add(this.checker);
             this.Controls.Add(this.btn_close);
             this.Controls.Add(this.labelControl1);
@@ -124,7 +113,6 @@
         #endregion
 
         private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl fluentDesignFormControl1;
-        private DevExpress.XtraEditors.SimpleButton btn_hide;
         private DevExpress.XtraEditors.CheckEdit checker;
         private DevExpress.XtraEditors.SimpleButton btn_close;
         private DevExpress.XtraEditors.LabelControl labelControl1;

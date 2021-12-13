@@ -36,6 +36,7 @@ namespace ThuVien
             Setting_sys.mess(txt_underline__user.text_vl);
         }
         bool check;
+        public bool check_log;
         private void btn_login_Click(object sender, EventArgs e)
         {
            // csdl của sql off
@@ -43,11 +44,9 @@ namespace ThuVien
             mysqli_conn.Open();
             //
          string user = txt_underline__user.text_vl,
-                pass = txt_underline_pass.text_vl;
-          //  Setting_sys.mess(cBox_log.CheckState.ToString());
+                pass = txt_underline_pass.text_vl;  
             if (txt_underline__user.text_vl != null && txt_underline_pass.text_vl != null)
             {
-                //Setting_sys.mess(cBox_log.CheckState.ToString());
                if(cBox_log.CheckState.ToString() == "Checked"){
                    check = true; } else { check = false; }
             }
@@ -66,32 +65,52 @@ namespace ThuVien
                 string id_user = G_U.mysqli_ex_data(string.Format("select id_taikhoan from taikhoan where ten_taikhoan = '{0}'",
                             user)).ToString();
                 Setting_sys.mess("Đăng nhập thành công !");
-                App_ThuVien.FrmThuVien.id_user_name = id_user;
+                
                     if (check == true)
                     {
                     //set id_taikhoan
-                    
-                    //Setting_sys.mess("checked");
                     G_U.save_log(id_user,user, pass);
                     }
                     else
                     {
-                        //Setting_sys.mess("unchecked");
                         G_U.save_log("0"," ", " ");
                     }
-                    if (FrmThuVien.time == true)
-                    {
-                    FrmThuVien.login = true;
-                    }
+                    this.Hide();
+                    int count_frm = 0;
+                    App_ThuVien.FrmThuVien.id_user_name = id_user;
+                    //foreach (Form frm in Application.OpenForms)
+                    //{
+                    //    if (frm.Name == "Login")
+                    //    {
+                    //       
+                    //    }
+                    //    else
+                    //    {
+                    //        this.Close();
+                    //    }
+                    //}
+                if(Application.OpenForms.Count > 1){
+                    App_ThuVien.FrmThuVien.login = true;
                     this.Close();
+                }else{
+                    this.Hide();
+                    var main = new FrmThuVien();
+                    main.Show();
+                }
+                /*
+                 login - > main this.close -> 
+                 main -> login -> 
+                 
+                 */
+                    
+                    
+                  //  this.Dispose();
                 }
                 else
                 {
                     Setting_sys.mess("Tài khoản và mật khẩu không chính xác vui lòng thử lại!");
                 }
-           
-
-        }
+        }   
         void size_login(bool t)
         {
             this.Height = (t == true) ? 260 : 340;

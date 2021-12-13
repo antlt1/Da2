@@ -28,7 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::App_ThuVien.Console.WaitingForMe), true, true);
             this.SuspendLayout();
+            // 
+            // splashScreenManager1
+            // 
+            this.splashScreenManager1.ClosingDelay = 500;
             // 
             // Ex_QlMuon
             // 
@@ -43,5 +48,7 @@
         }
 
         #endregion
+
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

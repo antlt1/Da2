@@ -21,8 +21,10 @@ namespace ThuVien
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
+        
         static void Main()
         {
+            Getting_UI G_U = new Getting_UI();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
            
@@ -34,10 +36,17 @@ namespace ThuVien
             }
             else
             {
-                //Application.Run(new App_ThuVien.Form.Frm_Start());
-                Application.Run(new FrmThuVien());
-                //Application.Run(new Login());
+                if (G_U.check_login() == "0")
+                {
+                    Application.Run(new Login());
+                }
+                else
+                {
+                    Application.Run(new FrmThuVien());
+                }
             }
+           // if()
+
         }
     }
     }

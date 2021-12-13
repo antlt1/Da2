@@ -48,11 +48,7 @@ namespace App_ThuVien.BarCode
         }
         private void Frm_KhRaVao_Load(object sender, EventArgs e)
         {
-             dt = new DataTable();
-            dt.Columns.Add("id_taikhoan", typeof(String));
-            dt.Columns.Add("ten", typeof(String));
-            dt.Columns.Add("thoigian", typeof(String));
-            timer1.Start();
+            
             // frm bar code
             set_barcode();
             //set layout
@@ -77,8 +73,6 @@ namespace App_ThuVien.BarCode
         DataTable dt;
         public DataTable add_kh(string str)
         {
-
-           
             DataRow dr = dt.NewRow();
             dr = dt.NewRow();
             dr["id_taikhoan"] = str;

@@ -113,8 +113,8 @@ namespace App_ThuVien
             this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.time_barcode = new System.Windows.Forms.Timer(this.components);
-            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.timeClose = new System.Windows.Forms.Timer(this.components);
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::App_ThuVien.Console.WaitingForMe), true, true);
             ((System.ComponentModel.ISupportInitialize)(this.left_bar)).BeginInit();
             this.left_bar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormControl1)).BeginInit();
@@ -846,19 +846,13 @@ namespace App_ThuVien
             // 
             this.time_barcode.Tick += new System.EventHandler(this.time_barcode_Tick);
             // 
-            // notifyIcon1
-            // 
-            this.notifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.notifyIcon1.BalloonTipText = "Ấn dúp chuột để hiện form";
-            this.notifyIcon1.BalloonTipTitle = "Thư viện";
-            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
-            this.notifyIcon1.Text = "Thư viện";
-            this.notifyIcon1.Visible = true;
-            this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
-            // 
             // timeClose
             // 
             this.timeClose.Tick += new System.EventHandler(this.timeClose_Tick);
+            // 
+            // splashScreenManager1
+            // 
+            this.splashScreenManager1.ClosingDelay = 500;
             // 
             // FrmThuVien
             // 
@@ -973,7 +967,6 @@ namespace App_ThuVien
         private DevExpress.XtraBars.Ribbon.RibbonPage rb_thongke;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
         private System.Windows.Forms.ToolStripMenuItem termToolStripMenuItem;
-        public System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.Timer timeClose;
         private DevExpress.XtraBars.BarButtonItem btn_qlkh;
         private DevExpress.XtraBars.BarButtonItem btn_ql_nv;
@@ -987,5 +980,6 @@ namespace App_ThuVien
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
         private DevExpress.XtraBars.BarButtonItem btn_rb_phat;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }
