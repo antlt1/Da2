@@ -73,8 +73,11 @@ namespace ThuVien.Class
         {
             using (MySqlConnection conn = connect_mysqli())
             {
+                conn.Open();
                 mysql_cmd = new MySqlCommand(str, conn);
-                return int.Parse(mysql_cmd.ExecuteScalar().ToString());
+                int rl =  int.Parse(mysql_cmd.ExecuteScalar().ToString());
+                conn.Close();
+                return rl;
             }
         }
         // return table
@@ -108,12 +111,13 @@ namespace ThuVien.Class
         // truy van csdl
         public void ex_cmd(string str)
         {
-            MySqlConnection conn = connect_mysqli();
-            conn.Open();
-            //
-            mysql_cmd = new MySqlCommand(str,conn);
-            mysql_cmd.ExecuteNonQuery();
-            conn.Close();
+            using (MySqlConnection conn = connect_mysqli())
+            {
+                conn.Open();
+                mysql_cmd = new MySqlCommand(str, conn);
+                mysql_cmd.ExecuteNonQuery();
+                conn.Close();
+            }
         }
         // hàm đếm
         public int count_val(string str)

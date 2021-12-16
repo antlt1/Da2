@@ -71,7 +71,6 @@
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.guser = new DevExpress.XtraGrid.GridControl();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.gc_pm = new DevExpress.XtraGrid.GridControl();
@@ -80,6 +79,7 @@
             this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcmuon)).BeginInit();
@@ -89,13 +89,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_giahan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvuser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guser)).BeginInit();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gc_pm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_pm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
+            this.groupControl3.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolbarFormControl1
@@ -157,7 +158,7 @@
             // 
             this.gcmuon.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcmuon.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gcmuon.Location = new System.Drawing.Point(3, 23);
+            this.gcmuon.Location = new System.Drawing.Point(2, 24);
             this.gcmuon.MainView = this.gvmuon;
             this.gcmuon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gcmuon.MenuManager = this.toolbarFormManager1;
@@ -166,7 +167,7 @@
             this.btn_tool,
             this.btn_trasach,
             this.btn_giahan});
-            this.gcmuon.Size = new System.Drawing.Size(820, 398);
+            this.gcmuon.Size = new System.Drawing.Size(809, 398);
             this.gcmuon.TabIndex = 0;
             this.gcmuon.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvmuon});
@@ -409,20 +410,6 @@
             this.gvuser});
             this.guser.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.groupBox1_PreviewKeyDown);
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.gcmuon);
-            this.groupBox1.Location = new System.Drawing.Point(516, 35);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(826, 424);
-            this.groupBox1.TabIndex = 23;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông Tin Mượn";
-            this.groupBox1.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.groupBox1_PreviewKeyDown);
-            // 
             // groupControl1
             // 
             this.groupControl1.Controls.Add(this.guser);
@@ -507,14 +494,23 @@
             this.gridColumn19.VisibleIndex = 3;
             this.gridColumn19.Width = 90;
             // 
+            // groupControl3
+            // 
+            this.groupControl3.Controls.Add(this.gcmuon);
+            this.groupControl3.Location = new System.Drawing.Point(517, 35);
+            this.groupControl3.Name = "groupControl3";
+            this.groupControl3.Size = new System.Drawing.Size(813, 424);
+            this.groupControl3.TabIndex = 33;
+            this.groupControl3.Text = "Thông Tin Mượn";
+            // 
             // Frm_QlMuon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1342, 461);
+            this.Controls.Add(this.groupControl3);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl1);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
@@ -534,13 +530,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_giahan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvuser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guser)).EndInit();
-            this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gc_pm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_pm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
+            this.groupControl3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -571,7 +568,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private System.Windows.Forms.GroupBox groupBox1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btn_trasach;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn15;
@@ -585,5 +581,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn19;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
+        private DevExpress.XtraEditors.GroupControl groupControl3;
     }
 }

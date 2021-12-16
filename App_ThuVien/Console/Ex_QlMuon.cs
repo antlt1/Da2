@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using ThuVien.Class;
+using System.Threading;
+using MySql.Data.MySqlClient;
 
 namespace App_ThuVien.Console
 {
@@ -21,10 +23,25 @@ namespace App_ThuVien.Console
         DataTable dt = new DataTable();
         Getting_UI G_U = new Getting_UI();
         DateTime dtnow, dtNgTra, dtNgMuon;
+        public void loading(int seconds)
+        {
+            splashScreenManager1.ShowWaitForm();
 
+            for (int i = 1; i <= 100; i++)
+            {
+                splashScreenManager1.SetWaitFormDescription("Đang thực thi lệnh "+i.ToString() + "%");
+                Thread.Sleep(seconds);
+            }
+
+            splashScreenManager1.CloseWaitForm();
+        }
+       MySqlConnection conn;
+        MySqlCommand cmd;
         #region Tính phạt quá hạn và cập nhật trạng thái của người mượn
         public void trangthai()
         {
+            conn = G_U.connect_mysqli();
+            conn.Open();
             dt = G_U.mysqli_ex_value_tb("SELECT bd.id_taikhoan as 'id_bandoc', pm.id_muonsach as 'ma_pm' , ttm.tien, pm.id_tt_muonsach as 'id_ttm' , s.id_sach as 'masach'  ,  s.ten_sach as 'Tên sách', ttm.ngaymuon as 'Ngày mượn', " +
                 "ttm.ngaytra as 'Ngày trả', ttm.trangthai as 'Trạng thái'  FROM thongtin_muon ttm, sach s , phieu_muonsach pm , bandoc bd  WHERE ttm.id_sach = s.id_sach " +
                 "and pm.id_ngmuon = bd.id_TaiKhoan and pm.id_tt_muonsach = ttm.id_tt_muon order by (s.id_sach) asc");
@@ -51,6 +68,7 @@ namespace App_ThuVien.Console
                 }
             }
             dt.Clear();
+            conn.Close();
         }
         void PhiTien(string id_ttm, string id_sach, DateTime dt_muon, DateTime dt_tra, bool quahan)
         {
@@ -63,13 +81,17 @@ namespace App_ThuVien.Console
                 status = "Quá hạn";
                 reslut = (((now - dt_tra).Days + 1) * 2000) + (((dt_tra - dt_muon).Days + 1) * 1000); // quá hạn thì 2k 1 ngày
             }
-            G_U.ex_cmd(string.Format("update thongtin_muon set tien = {0} , trangthai = '{1}' where id_tt_muon = {2} and  id_sach = {3}", reslut, status,
-                               id_ttm, id_sach));
+            loading(10);
+            ex_cmd(string.Format("call uptrangthai({0},{1},'{2}',{3})", id_ttm, id_sach, status, reslut));
         }
         #endregion
+        void ex_cmd(string str)
+        {
+                cmd = new MySqlCommand(str, conn);
+                cmd.ExecuteNonQuery();
+        }
         private void Ex_QlMuon_Load(object sender, EventArgs e)
         {
-            
             this.Close();
         }
     }

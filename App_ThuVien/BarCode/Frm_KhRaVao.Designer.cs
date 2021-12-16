@@ -60,7 +60,7 @@ namespace App_ThuVien.BarCode
             this.fluentDesignFormControl1.FluentDesignForm = this;
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(988, 50);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(988, 28);
             this.fluentDesignFormControl1.TabIndex = 3;
             this.fluentDesignFormControl1.TabStop = false;
             // 
@@ -118,20 +118,19 @@ namespace App_ThuVien.BarCode
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.click_cam});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 50);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 28);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(988, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(988, 33);
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // click_cam
             // 
             this.click_cam.Name = "click_cam";
-            this.click_cam.Size = new System.Drawing.Size(132, 32);
+            this.click_cam.Size = new System.Drawing.Size(128, 29);
             this.click_cam.Text = "Bật quét cam";
             this.click_cam.Click += new System.EventHandler(this.click_cam_Click);
             // 
@@ -218,10 +217,10 @@ namespace App_ThuVien.BarCode
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.ButtonEdit buttonEdit1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem click_cam;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.PanelControl pn_barcode;
+        public DevExpress.XtraEditors.ButtonEdit buttonEdit1;
     }
 }

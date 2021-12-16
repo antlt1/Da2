@@ -118,11 +118,12 @@ namespace App_ThuVien.Form
         // sự kiện  onload 
         private void Frm_QlMuon_Load(object sender, EventArgs e)
         {
-            gridColumn7.Visible = false;
+            
             //load phiêu mượn
             load_pm("");
             load_ttm("empty", "empty");
             ex_data_user();
+            gridColumn7.Visible = false;
         }
         string id_tt_pm;
         private void gvuser_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
