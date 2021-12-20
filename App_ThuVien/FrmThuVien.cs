@@ -67,6 +67,11 @@ namespace App_ThuVien
             {
                 btn_soluot.Caption = App_ThuVien.BarCode.ControlBarCode.count_kh.ToString();
             }
+            if (Console.Setting.setting == true)
+            {
+                getting_theme();
+                Console.Setting.setting = false;
+            }
          //   
         }
         void fr_barcode()
@@ -93,7 +98,6 @@ namespace App_ThuVien
 
         private void FrmThuVien_Load(object sender, EventArgs e)
         {
-            var frm_qlmuon = new App_ThuVien.Console.Ex_QlMuon();       
             // intro bg thư viện
             var frm_intro = new App_ThuVien.Form.Frm_Start();
             act_frm(frm_intro, "Trang chủ", frm_intro.Name);
@@ -109,7 +113,6 @@ namespace App_ThuVien
             //
             this.WindowState = FormWindowState.Maximized;
             // this.StartPosition = FormStartPosition.CenterScreen;
-
             this.Location = new Point(
                     100, 100
                 );
@@ -117,7 +120,7 @@ namespace App_ThuVien
             conn_sqlite = G_U.connect_sqlite();
             // check có login chưa
             setup_login();
-            frm_qlmuon.trangthai();
+          //  frm_qlmuon.trangthai();
         }
 
         private void lb_inf_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -456,7 +459,7 @@ namespace App_ThuVien
                 Setting_sys.mess("Bạn không có quyền chỉnh sửa thông tin này !");
             }
         }
-
+        #region Các sự kiện về giao diện
         private void btn_qlkh_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             left_bar_qlkh_Click(sender, e);
@@ -477,9 +480,23 @@ namespace App_ThuVien
             tab_left_QlMuon_Click(sender, e);
         }
 
+        private void changerpasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm_doiPass = new App_ThuVien.Console.PickDoiPass();
+            frm_doiPass.ShowDialog();
+        }
+
+        private void settingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm_setting = new App_ThuVien.Console.Setting();
+            frm_setting.ShowDialog();
+            time_barcode.Start();
+        }
+
         private void btn_tk_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             accordionControlElement6_Click(sender, e);
         }
+        #endregion
     }
 }

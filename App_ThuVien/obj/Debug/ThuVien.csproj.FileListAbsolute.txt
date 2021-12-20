@@ -1162,3 +1162,4 @@ D:\Code\C#\WF\Da2\App_ThuVien\bin\Debug\ru\DevExpress.Diagram.v19.2.Core.resourc
 D:\Code\C#\WF\Da2\App_ThuVien\obj\Debug\ThuVien.csprojAssemblyReference.cache
 D:\Code\C#\WF\Da2\App_ThuVien\obj\Debug\ThuVien.csproj.CoreCompileInputs.cache
 D:\Code\C#\WF\Da2\App_ThuVien\obj\Debug\ThuVien.csproj.CopyComplete
+D:\Code\C#\WF\Da2\App_ThuVien\obj\Debug\App_ThuVien.Console.Setting.resources

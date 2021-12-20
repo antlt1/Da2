@@ -29,7 +29,8 @@ namespace App_ThuVien.Console
                 {
                     G_U.Changer_hide_close("close");
                 }
-                    Environment.Exit(1);
+                //XtraMessageBox.Show(Environment.ProcessorCount.ToString());
+                Environment.Exit(Environment.ProcessorCount);
             }
             else if (btn.Name == "btn_hide")
             {

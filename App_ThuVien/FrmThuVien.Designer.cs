@@ -63,6 +63,7 @@ namespace App_ThuVien
             this.mdi_fr = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.systemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changerpasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewaccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -84,7 +85,6 @@ namespace App_ThuVien
             this.phiênBản10ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhàSángLậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.senderrorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.termToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btn_sach = new DevExpress.XtraBars.BarButtonItem();
             this.btn_theloai = new DevExpress.XtraBars.BarButtonItem();
@@ -144,7 +144,7 @@ namespace App_ThuVien
             this.left_bar.Appearance.Group.Hovered.Options.UseForeColor = true;
             this.left_bar.Appearance.Group.Normal.BackColor = System.Drawing.Color.WhiteSmoke;
             this.left_bar.Appearance.Group.Normal.BorderColor = System.Drawing.Color.White;
-            this.left_bar.Appearance.Group.Normal.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.left_bar.Appearance.Group.Normal.Font = new System.Drawing.Font("Tahoma", 11F);
             this.left_bar.Appearance.Group.Normal.ForeColor = System.Drawing.Color.Black;
             this.left_bar.Appearance.Group.Normal.Options.UseBackColor = true;
             this.left_bar.Appearance.Group.Normal.Options.UseBorderColor = true;
@@ -159,9 +159,11 @@ namespace App_ThuVien
             this.left_bar.Appearance.Item.Normal.BackColor = System.Drawing.Color.White;
             this.left_bar.Appearance.Item.Normal.BackColor2 = System.Drawing.Color.White;
             this.left_bar.Appearance.Item.Normal.BorderColor = System.Drawing.Color.White;
+            this.left_bar.Appearance.Item.Normal.Font = new System.Drawing.Font("Tahoma", 9.5F);
             this.left_bar.Appearance.Item.Normal.ForeColor = System.Drawing.Color.Black;
             this.left_bar.Appearance.Item.Normal.Options.UseBackColor = true;
             this.left_bar.Appearance.Item.Normal.Options.UseBorderColor = true;
+            this.left_bar.Appearance.Item.Normal.Options.UseFont = true;
             this.left_bar.Appearance.Item.Normal.Options.UseForeColor = true;
             this.left_bar.Appearance.ItemWithContainer.Normal.BackColor = System.Drawing.Color.Black;
             this.left_bar.Appearance.ItemWithContainer.Normal.Options.UseBackColor = true;
@@ -180,7 +182,7 @@ namespace App_ThuVien
             this.left_bar.Name = "left_bar";
             this.left_bar.OptionsMinimizing.AllowMinimizeMode = DevExpress.Utils.DefaultBoolean.True;
             this.left_bar.ScaleImages = DevExpress.Utils.DefaultBoolean.False;
-            this.left_bar.Size = new System.Drawing.Size(375, 552);
+            this.left_bar.Size = new System.Drawing.Size(315, 552);
             this.left_bar.TabIndex = 3;
             this.left_bar.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -448,14 +450,13 @@ namespace App_ThuVien
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(242)))));
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.systemToolStripMenuItem,
             this.toolToolStripMenuItem,
             this.viewToolStripMenuItem,
-            this.helpToolStripMenuItem,
-            this.termToolStripMenuItem});
+            this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 28);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1513, 33);
@@ -465,6 +466,7 @@ namespace App_ThuVien
             // systemToolStripMenuItem
             // 
             this.systemToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.settingToolStripMenuItem,
             this.changerpasswordToolStripMenuItem,
             this.viewaccountToolStripMenuItem,
             this.exitToolStripMenuItem});
@@ -472,23 +474,31 @@ namespace App_ThuVien
             this.systemToolStripMenuItem.Size = new System.Drawing.Size(102, 29);
             this.systemToolStripMenuItem.Text = "Hệ Thống";
             // 
+            // settingToolStripMenuItem
+            // 
+            this.settingToolStripMenuItem.Name = "settingToolStripMenuItem";
+            this.settingToolStripMenuItem.Size = new System.Drawing.Size(250, 30);
+            this.settingToolStripMenuItem.Text = "&Cài đặt";
+            this.settingToolStripMenuItem.Click += new System.EventHandler(this.settingToolStripMenuItem_Click);
+            // 
             // changerpasswordToolStripMenuItem
             // 
             this.changerpasswordToolStripMenuItem.Name = "changerpasswordToolStripMenuItem";
-            this.changerpasswordToolStripMenuItem.Size = new System.Drawing.Size(243, 30);
-            this.changerpasswordToolStripMenuItem.Text = "changer_password";
+            this.changerpasswordToolStripMenuItem.Size = new System.Drawing.Size(250, 30);
+            this.changerpasswordToolStripMenuItem.Text = "&Đổi mật khẩu";
+            this.changerpasswordToolStripMenuItem.Click += new System.EventHandler(this.changerpasswordToolStripMenuItem_Click);
             // 
             // viewaccountToolStripMenuItem
             // 
             this.viewaccountToolStripMenuItem.Name = "viewaccountToolStripMenuItem";
-            this.viewaccountToolStripMenuItem.Size = new System.Drawing.Size(243, 30);
-            this.viewaccountToolStripMenuItem.Text = "view_account";
+            this.viewaccountToolStripMenuItem.Size = new System.Drawing.Size(250, 30);
+            this.viewaccountToolStripMenuItem.Text = "&Thông tin tài khoản";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(243, 30);
-            this.exitToolStripMenuItem.Text = "exit";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(250, 30);
+            this.exitToolStripMenuItem.Text = "&Thoát";
             // 
             // toolToolStripMenuItem
             // 
@@ -626,14 +636,7 @@ namespace App_ThuVien
             // 
             this.senderrorToolStripMenuItem.Name = "senderrorToolStripMenuItem";
             this.senderrorToolStripMenuItem.Size = new System.Drawing.Size(208, 30);
-            this.senderrorToolStripMenuItem.Text = "send_error";
-            // 
-            // termToolStripMenuItem
-            // 
-            this.termToolStripMenuItem.Name = "termToolStripMenuItem";
-            this.termToolStripMenuItem.Size = new System.Drawing.Size(61, 29);
-            this.termToolStripMenuItem.Text = "term";
-            this.termToolStripMenuItem.Click += new System.EventHandler(this.termToolStripMenuItem_Click);
+            this.senderrorToolStripMenuItem.Text = "Báo lỗi";
             // 
             // ribbonControl1
             // 
@@ -653,7 +656,7 @@ namespace App_ThuVien
             this.btn_xemdocquyen,
             this.btn_suathanthien,
             this.btn_rb_phat});
-            this.ribbonControl1.Location = new System.Drawing.Point(375, 61);
+            this.ribbonControl1.Location = new System.Drawing.Point(315, 61);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbonControl1.MaxItemId = 20;
             this.ribbonControl1.Name = "ribbonControl1";
@@ -663,7 +666,7 @@ namespace App_ThuVien
             this.rb_nguoimuon,
             this.rb_thongke,
             this.ribbonPage1});
-            this.ribbonControl1.Size = new System.Drawing.Size(1138, 188);
+            this.ribbonControl1.Size = new System.Drawing.Size(1198, 188);
             // 
             // btn_sach
             // 
@@ -856,6 +859,8 @@ namespace App_ThuVien
             // 
             // FrmThuVien
             // 
+            this.Appearance.BackColor = System.Drawing.Color.White;
+            this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
@@ -874,7 +879,7 @@ namespace App_ThuVien
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmThuVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = " ";
+            this.Text = "Quản lý thư viện";
             this.ToolbarFormControl = this.toolbarFormControl1;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmThuVien_FormClosing);
             this.Load += new System.EventHandler(this.FrmThuVien_Load);
@@ -966,7 +971,6 @@ namespace App_ThuVien
         private DevExpress.XtraBars.SkinDropDownButtonItem skinDropDownButtonItem1;
         private DevExpress.XtraBars.Ribbon.RibbonPage rb_thongke;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
-        private System.Windows.Forms.ToolStripMenuItem termToolStripMenuItem;
         private System.Windows.Forms.Timer timeClose;
         private DevExpress.XtraBars.BarButtonItem btn_qlkh;
         private DevExpress.XtraBars.BarButtonItem btn_ql_nv;
@@ -981,5 +985,6 @@ namespace App_ThuVien
         private DevExpress.XtraBars.BarButtonItem btn_rb_phat;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
+        private System.Windows.Forms.ToolStripMenuItem settingToolStripMenuItem;
     }
 }

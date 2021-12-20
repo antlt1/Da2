@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleTopBottom formatConditionRuleTopBottom1 = new DevExpress.XtraEditors.FormatConditionRuleTopBottom();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -80,6 +82,7 @@
             this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcmuon)).BeginInit();
@@ -175,6 +178,8 @@
             // 
             // gvmuon
             // 
+            this.gvmuon.Appearance.SelectedRow.ForeColor = System.Drawing.Color.Red;
+            this.gvmuon.Appearance.SelectedRow.Options.UseForeColor = true;
             this.gvmuon.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.gvmuon.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn6,
@@ -186,17 +191,24 @@
             this.gridColumn14,
             this.gridColumn15,
             this.gridColumn5,
-            this.gridColumn7});
+            this.gridColumn7,
+            this.gridColumn8});
+            gridFormatRule1.ApplyToRow = true;
+            gridFormatRule1.Name = "Format0";
+            gridFormatRule1.Rule = formatConditionRuleTopBottom1;
+            this.gvmuon.FormatRules.Add(gridFormatRule1);
             this.gvmuon.GridControl = this.gcmuon;
             this.gvmuon.GroupPanelText = " ";
             this.gvmuon.Name = "gvmuon";
+            this.gvmuon.OptionsBehavior.AutoSelectAllInEditor = false;
+            this.gvmuon.OptionsBehavior.Editable = false;
             this.gvmuon.OptionsFind.FindNullPrompt = "Nhập nội dung cần tìm ví dụ : mã , tên sách vv.v";
             this.gvmuon.OptionsFind.FindPanelLocation = DevExpress.XtraGrid.Views.Grid.GridFindPanelLocation.GroupPanel;
             this.gvmuon.OptionsFind.ParserKind = DevExpress.Data.Filtering.FindPanelParserKind.Custom;
             this.gvmuon.OptionsFind.SearchInPreview = true;
             this.gvmuon.OptionsSelection.MultiSelect = true;
-            this.gvmuon.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CellSelect;
             this.gvmuon.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gvmuon_RowCellClick);
+            this.gvmuon.RowStyle += new DevExpress.XtraGrid.Views.Grid.RowStyleEventHandler(this.gvmuon_RowStyle);
             // 
             // gridColumn6
             // 
@@ -242,6 +254,7 @@
             this.gridColumn12.OptionsColumn.AllowEdit = false;
             this.gridColumn12.OptionsColumn.ShowInExpressionEditor = false;
             this.gridColumn12.OptionsEditForm.UseEditorColRowSpan = false;
+            this.gridColumn12.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Like;
             this.gridColumn12.Visible = true;
             this.gridColumn12.VisibleIndex = 6;
             this.gridColumn12.Width = 76;
@@ -373,7 +386,7 @@
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 53;
+            this.gridColumn1.Width = 87;
             // 
             // gridColumn3
             // 
@@ -383,7 +396,7 @@
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 1;
-            this.gridColumn3.Width = 125;
+            this.gridColumn3.Width = 186;
             // 
             // gridColumn4
             // 
@@ -393,11 +406,11 @@
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 2;
-            this.gridColumn4.Width = 130;
+            this.gridColumn4.Width = 236;
             // 
             // guser
             // 
-            this.guser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guser.Dock = System.Windows.Forms.DockStyle.Left;
             this.guser.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guser.Location = new System.Drawing.Point(2, 24);
             this.guser.MainView = this.gvuser;
@@ -452,7 +465,11 @@
             this.gridColumn19});
             this.gv_pm.GridControl = this.gc_pm;
             this.gv_pm.Name = "gv_pm";
+            this.gv_pm.OptionsBehavior.AutoSelectAllInEditor = false;
+            this.gv_pm.OptionsBehavior.Editable = false;
+            this.gv_pm.OptionsSelection.MultiSelect = true;
             this.gv_pm.OptionsView.ShowGroupPanel = false;
+            this.gv_pm.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gv_pm_RowCellClick);
             // 
             // gridColumn16
             // 
@@ -496,12 +513,24 @@
             // 
             // groupControl3
             // 
+            this.groupControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl3.Controls.Add(this.gcmuon);
             this.groupControl3.Location = new System.Drawing.Point(517, 35);
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.Size = new System.Drawing.Size(813, 424);
             this.groupControl3.TabIndex = 33;
             this.groupControl3.Text = "Thông Tin Mượn";
+            // 
+            // gridColumn8
+            // 
+            this.gridColumn8.FieldName = "id_bandoc";
+            this.gridColumn8.MinWidth = 30;
+            this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.Visible = true;
+            this.gridColumn8.VisibleIndex = 10;
+            this.gridColumn8.Width = 112;
             // 
             // Frm_QlMuon
             // 
@@ -582,5 +611,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
         private DevExpress.XtraEditors.GroupControl groupControl3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
     }
 }

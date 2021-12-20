@@ -270,6 +270,12 @@
     <Compile Include="Console\Pick_TrangThai_Muon.Designer.cs">
       <DependentUpon>Pick_TrangThai_Muon.cs</DependentUpon>
     </Compile>
+    <Compile Include="Console\Setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Console\Setting.Designer.cs">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </Compile>
     <Compile Include="Console\SuaDiemThanThien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -449,6 +455,9 @@
     <EmbeddedResource Include="Console\Pick_Date_MonthandYear.resx">
       <DependentUpon>Pick_Date_MonthandYear.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Console\Setting.resx">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Console\WaitingForMe.resx">
       <DependentUpon>WaitingForMe.cs</DependentUpon>
     </EmbeddedResource>
@@ -524,6 +533,7 @@
     <None Include="Resources\errorbarsnone_16x16.png" />
     <None Include="Resources\errorbarsnone_32x32.png" />
     <None Include="Resources\apply_16x164.png" />
+    <None Include="Resources\properties_32x32.png" />
     <Content Include="SRC\Icon\Books.ico" />
     <Content Include="SRC\Icon\Iconsmind-Outline-Key.ico" />
     <Content Include="SRC\Icon\search.ico" />

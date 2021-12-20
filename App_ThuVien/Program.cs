@@ -42,6 +42,8 @@ namespace ThuVien
                 }
                 else
                 {
+                    var frm_traqthai = new App_ThuVien.Console.Ex_QlMuon();
+                    frm_traqthai.trangthai();
                     Application.Run(new FrmThuVien());
                 }
             }

@@ -13,6 +13,7 @@ using App_ThuVien.Class;
 using DevExpress.XtraSplashScreen;
 using System.Threading;
 using App_ThuVien.Console;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace App_ThuVien.Form
 {
@@ -29,19 +30,22 @@ namespace App_ThuVien.Form
         //getting data
         bool giahan, phat;
         App_ThuVien.Console.Pick_Phat frm_phat = new Console.Pick_Phat();
+        App_ThuVien.Console.Pick_Lich fr1 = new App_ThuVien.Console.Pick_Lich();
+        string ma_pm, ma_sach_t;
         DataTable dt;
         // val for table
-       public static string ma_sach , result_frm;
-        public static bool check ,  check_time;
+       public static string ma_sach , result_frm, id_tt_pm;
+        public static bool check , check_time, check_get_time;
         public static char status_char_choose = ' ';
         DateTime dtnow, dtNgTra, dtNgMuon;
         #endregion
         #region Các funtion load dl lên grid
-        public void ex_data_user()
+        public void ex_data_user(string id_ngmuon)
         {
             // set val chok các grid 
-            guser.DataSource = G_U.mysqli_ex_value_tb("select t.id_taikhoan as 'id_tk' , t.sdt as 'sdt'" +
-                ",t.hoten  as 'hovaten' from bandoc t");
+            string more_query = (id_ngmuon != "empty") ? "where t.id_taikhoan = "+id_ngmuon : "";
+            guser.DataSource = G_U.mysqli_ex_value_tb(string.Format("select t.id_taikhoan as 'id_tk' , t.sdt as 'sdt'" +
+                ",t.hoten  as 'hovaten' from bandoc t {0}", more_query));
         }
         private void clear_trash()
         {
@@ -51,7 +55,7 @@ namespace App_ThuVien.Form
         // load pm
         void load_pm(string id_ngmuon)
         { 
-          string  more_query= (id_ngmuon != "")? "and pm.idngmuon = "+id_ngmuon:"";
+          string  more_query= (id_ngmuon != "")? "and pm.id_ngmuon = " + id_ngmuon:"";
             gc_pm.DataSource = G_U.mysqli_ex_value_tb(
                string.Format("select pm.id_muonsach as 'id_muonsach', pm.id_tt_muonsach as 'id_tt_muonsach' , b.hoten as 'ten_bd', t.hoten as 'ten_nv' , pm.id_ngmuon , pm.id_taikhoan_lap  from phieu_muonsach pm , taikhoan t , bandoc b where pm.id_ngmuon = b.id_TaiKhoan and pm.id_taikhoan_lap = t.id_TaiKhoan {0}",more_query));
         }
@@ -115,32 +119,48 @@ namespace App_ThuVien.Form
         // sự  kiện tô màu báo sách quá hạn trả
 
         //
-        // sự kiện  onload 
+        #region  sự kiện  onload 
         private void Frm_QlMuon_Load(object sender, EventArgs e)
         {
             
             //load phiêu mượn
             load_pm("");
             load_ttm("empty", "empty");
-            ex_data_user();
+            groupControl3.Select();
+            ex_data_user("empty");
+            gridColumn1.Visible = false;
+            gridColumn16.Visible = false;
+            gridColumn19.Visible = false;
             gridColumn7.Visible = false;
+            gridColumn8.Visible = false;
         }
-        string id_tt_pm;
+        #endregion
+       
         private void gvuser_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
             load_ttm(gvuser.GetRowCellValue(e.RowHandle, "id_tk").ToString(), "empty");
+            load_pm(gvuser.GetRowCellValue(e.RowHandle, "id_tk").ToString());
+        }
+
+        private void gvmuon_RowStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowStyleEventArgs e)
+        {
+            GridView gv = sender as GridView;
+           for(int i = 0; i < gvmuon.RowCount; i++)
+            {
+                if (gvmuon.GetRowCellValue(i, "Trạng thái").ToString() == "Quá hạn")
+                {
+                    gvmuon.SelectRow(i);
+                }
+            } 
         }
 
         private void btn_changer_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
         }
-        public static bool check_get_time;
-        App_ThuVien.Console.Pick_Lich fr1 = new App_ThuVien.Console.Pick_Lich();
-        int ii = 0;
 
-       public  int get_diem()
+        #region Lấy điểm từ text để tính
+        public  int get_diem()
         {
-
             string diem = Setting_sys.getting_src_file("DiemThanThien.txt");
             string src = "";
             int count = 0;
@@ -163,8 +183,10 @@ namespace App_ThuVien.Form
             }
             return 0;
         }
-       #region Gia hạn sách dùng timer tick
-       private void timer1_Tick(object sender, EventArgs e)
+        #endregion
+
+        #region Gia hạn sách dùng timer tick
+        private void timer1_Tick(object sender, EventArgs e)
         {
             if(giahan == true)
             {
@@ -172,7 +194,7 @@ namespace App_ThuVien.Form
                 {
                     giahan = false;
                     check_get_time = false;      
-                    G_U.ex_cmd(string.Format("update thongtin_muon set ngaytra = '{0}' " +
+                    G_U.ex_cmd(string.Format("update thongtin_muon set ngaytra = '{0}' , trangthai  ='Đang mượn' " +
                         "where id_tt_muon = {1} and id_sach = {2}", fr1.get_dt(),
                         id_tt_pm, ma_sach_t));
                     Setting_sys.mess("Gia hạn thành công !");
@@ -192,61 +214,75 @@ namespace App_ThuVien.Form
             }
            
         }
-       #endregion
-       string ma_pm, ma_sach_t;
-        #region GV mượn cell click có phạt , mượn trả , gia hạn
+        #endregion
+
+        private void gv_pm_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
+        {
+            string get_id_pm = gv_pm.GetRowCellDisplayText(e.RowHandle, gridColumn16.FieldName);
+            load_ttm("empty", get_id_pm);
+        }
+        #region GV mượn cell click có phạt , mượn trả , gia hạ
         private void gvmuon_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
             ma_pm = gvmuon.GetRowCellValue(e.RowHandle, "ma_pm").ToString();
-            id_tt_pm = G_U.mysqli_ex_data(string.Format("select id_tt_muonsach from phieu_muonsach where id_muonsach = {0}", ma_pm)).ToString();
-                        ma_sach_t = gvmuon.GetRowCellValue(e.RowHandle, "masach").ToString();
-                        string check_btn = gvmuon.FocusedColumn.Caption;
-                        if (check_btn == "Phạt")
-                        {
-                            if (check_datra() == true)
-                            {
-                                phat = true;
-                                frm_phat.val(ma_pm, ma_sach_t);
-                                frm_phat.ShowDialog();
-                                timer1.Start();
-                            }
+            ma_sach_t = gvmuon.GetRowCellValue(e.RowHandle, "masach").ToString();
+            ex_data_user(gvmuon.GetRowCellValue(e.RowHandle, "id_bandoc").ToString());
+            string check_btn = gvmuon.FocusedColumn.Caption;
+            if (check_btn == "Phạt" || check_btn == "Trả sách" || check_btn == "Gia hạn"){
+                id_tt_pm = G_U.mysqli_ex_data(string.Format("select id_tt_muonsach from phieu_muonsach where id_muonsach = {0}", ma_pm)).ToString();
+                #region xử lý phạt
+                if (check_btn == "Phạt")
+                {
+                    if (check_datra() == true)
+                    {
+                        phat = true;
+                        frm_phat.val(ma_pm, ma_sach_t);
+                        frm_phat.ShowDialog();
+                        timer1.Start();
+                    }
 
-                        }
-                        else if (check_btn == "Gia hạn")
+                }
+                #endregion
+                #region Gia hạn
+                else if (check_btn == "Gia hạn")
+                {
+                    if (check_datra() == true)
+                    {
+                        timer1.Start();
+                        giahan = true;
+                        fr1.set_min_date(DateTime.Now);
+                        fr1.text = "Chọn ngày trả";
+                        fr1.ShowDialog();
+                    }
+                }
+                #endregion
+                #region Trả sách
+                else if (check_btn == "Trả sách")
+                {
+                    if (check_datra() == true)
+                    {
+                        if (XtraMessageBox.Show("Bạn có chắc trả sách ?", "Hệ thống", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                  == DialogResult.Yes)
                         {
-                            if (check_datra() == true)
-                            {
-                                timer1.Start();
-                                giahan = true;
-                                fr1.set_min_date(DateTime.Now);
-                                fr1.text = "Chọn ngày trả";
-                                fr1.ShowDialog();
-                            }                       
+                            string term_cmd = string.Format("update thongtin_muon set trangthai = '{0}' where id_tt_muon = {1} and id_sach = {2}",
+                             "Đã trả", G_U.mysqli_ex_data(string.Format("select id_tt_muonsach from phieu_muonsach where id_muonsach = {0}", ma_pm)), ma_sach_t);
+                            G_U.ex_cmd(term_cmd);
+                            int soluong = int.Parse(G_U.mysqli_ex_data(
+                               string.Format("select soluong from sach where id_sach = {0}", ma_sach_t))) + 1;
+                            G_U.ex_cmd(string.Format("update sach set soluong = {0} where id_sach = {1}", soluong, ma_sach_t));
+                            Setting_sys.mess("Đã trả thành công !");
+                            // cộng điẻm thân thiện vÀ sô lần mượn
+                            string id_ngmuon = G_U.mysqli_ex_data(string.Format("SELECT id_ngmuon FROM phieu_muonsach WHERE id_muonsach = {0}", ma_pm));
+                            int diem_thanthien = int.Parse(G_U.mysqli_ex_data(string.Format("select diem_thanthien from bandoc where id_taikhoan = {0}", id_ngmuon))) + get_diem();
+                            string so_lan_muon = G_U.mysqli_ex_data(string.Format("select solanmuon from bandoc where id_taikhoan = {0}", id_ngmuon));
+                            G_U.ex_cmd(string.Format("update bandoc set diem_thanthien = {0} , solanmuon = {1} where id_taikhoan = {2}", diem_thanthien, int.Parse(so_lan_muon) + 1, id_ngmuon));
+                            status_char_choose = ' ';
+                            Frm_QlMuon_Load(sender, e);
                         }
-                        else if (check_btn == "Trả sách")
-                        {
-                            if (check_datra() == true)
-                            {
-                                if (XtraMessageBox.Show("Bạn có chắc trả sách ?", "Hệ thống", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-                          == DialogResult.Yes)
-                                {
-                                    string term_cmd = string.Format("update thongtin_muon set trangthai = '{0}' where id_tt_muon = {1} and id_sach = {2}",
-                                     "Đã trả", G_U.mysqli_ex_data(string.Format("select id_tt_muonsach from phieu_muonsach where id_muonsach = {0}", ma_pm)), ma_sach_t);
-                                    G_U.ex_cmd(term_cmd);
-                                    int soluong = int.Parse(G_U.mysqli_ex_data(
-                                       string.Format("select soluong from sach where id_sach = {0}", ma_sach_t))) + 1;
-                                    G_U.ex_cmd(string.Format("update sach set soluong = {0} where id_sach = {1}", soluong, ma_sach_t));
-                                    Setting_sys.mess("Đã trả thành công !");
-                                    // cộng điẻm thân thiện vÀ sô lần mượn
-                                    string id_ngmuon = G_U.mysqli_ex_data(string.Format("SELECT id_ngmuon FROM phieu_muonsach WHERE id_muonsach = {0}", ma_pm));
-                                    int diem_thanthien = int.Parse(G_U.mysqli_ex_data(string.Format("select diem_thanthien from bandoc where id_taikhoan = {0}", id_ngmuon))) + get_diem();
-                                    string so_lan_muon = G_U.mysqli_ex_data(string.Format("select solanmuon from bandoc where id_taikhoan = {0}", id_ngmuon));
-                                    G_U.ex_cmd(string.Format("update bandoc set diem_thanthien = {0} , solanmuon = {1} where id_taikhoan = {2}", diem_thanthien, int.Parse(so_lan_muon) + 1, id_ngmuon));
-                                    status_char_choose = ' ';
-                                    Frm_QlMuon_Load(sender, e);
-                                }
-                            }
-                        }
+                    }
+                }
+                #endregion
+            }
         }
         #endregion kết thúc
 
@@ -271,7 +307,7 @@ namespace App_ThuVien.Form
             if (Keys.F5 == e.KeyCode)
             {
                 load_pm("");
-                ex_data_user();
+                ex_data_user("empty");
             SplashScreenManager.ShowForm(this, typeof(WaitingForMe), true, true, false);
             for (int i = 1; i <= 100; i++)
             {

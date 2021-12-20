@@ -81,7 +81,6 @@ namespace App_ThuVien.Console
                 status = "Quá hạn";
                 reslut = (((now - dt_tra).Days + 1) * 2000) + (((dt_tra - dt_muon).Days + 1) * 1000); // quá hạn thì 2k 1 ngày
             }
-            loading(10);
             ex_cmd(string.Format("call uptrangthai({0},{1},'{2}',{3})", id_ttm, id_sach, status, reslut));
         }
         #endregion
