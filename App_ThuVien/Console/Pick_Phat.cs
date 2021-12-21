@@ -11,8 +11,12 @@ namespace App_ThuVien.Console
         {
             InitializeComponent();
         }
+        #region Khai báo biến
         Getting_UI G_U = new Getting_UI();
-        string ma_pm, ma_sach;
+        string ma_pm, ma_sach,mof_lydo, 
+               id_bandoc, tien_phat, tien_hientai, src, id_tt;
+        #endregion
+
         public void val(string ma_pm_t ,string ma_sach_t)
         {
             ma_pm = ma_pm_t;
@@ -27,7 +31,7 @@ namespace App_ThuVien.Console
         {
 
         }
-       
+        #region Chọn lý do
         private void cbx_lydo_Closed(object sender, DevExpress.XtraEditors.Controls.ClosedEventArgs e)
         {
             string tien = "Số tiền phải trả : ", lydo =  "Lý do : "+cbx_lydo.Text;
@@ -55,7 +59,12 @@ namespace App_ThuVien.Console
             } /// quá hạn
 
         }
-        string mof_lydo, id_bandoc, tien_phat, tien_hientai, src, id_tt;
+        #endregion
+
+       
+
+        #region Lấy điểm thân thiện
+
         public int get_diem(string term)
         {
             int trangthai;
@@ -88,10 +97,11 @@ namespace App_ThuVien.Console
             }
             return 0;
         }
+        #endregion
+
+        #region Sự kiện phạt
         private void btn_phat_Click(object sender, EventArgs e) // btn report in phiếu phạt
         {
-
-            //  Setting_sys.mess(mof_lydo+id_bandoc);
             var frm_in = new App_ThuVien.Console.In_PhieuPhat();
             tien_phat = ( int.Parse(tien_hientai) +  int.Parse(tien_phat)).ToString();
             try
@@ -115,8 +125,6 @@ namespace App_ThuVien.Console
             frm_in.Show();
             this.Close();
             App_ThuVien.Form.Frm_QlMuon.check = false;
-            //Setting_sys.mess("Đã trả thành công !"+ diem_thanthien + " " + get_diem(mof_lydo));
-
             }
             catch (Exception ex)
             {
@@ -124,7 +132,7 @@ namespace App_ThuVien.Console
             }
             
         }
-
+        #endregion
         private void txt_huhong_EditValueChanged(object sender, EventArgs e)
         {
             if(txt_huhong.Text.Length > 0 )
@@ -150,18 +158,37 @@ namespace App_ThuVien.Console
 
         private void Pick_Phat_Load(object sender, EventArgs e)
         {
+            #region Set loading giao diện
             pn_hu_giay.Hide();
-            id_tt = G_U.mysqli_ex_data(string.Format("SELECT pm.id_tt_muonsach FROM phieu_muonsach pm WHERE pm.id_muonsach = {0}",ma_pm));
+            id_tt = G_U.mysqli_ex_data(string.Format("SELECT pm.id_tt_muonsach FROM phieu_muonsach pm WHERE pm.id_muonsach = {0}", ma_pm));
             id_bandoc =
-          G_U.mysqli_ex_data(string.Format(
+            G_U.mysqli_ex_data(string.Format(
                   "SELECT bd.id_taikhoan FROM thongtin_muon tt , phieu_muonsach pm , bandoc bd WHERE tt.id_tt_muon = {0} " +
                   " and tt.id_tt_muon = pm.id_tt_muonsach and pm.id_ngmuon = bd.id_TaiKhoan and tt.id_sach = {1}", id_tt, ma_sach));
-            tien_hientai = G_U.mysqli_ex_data(string.Format("select tien from thongtin_muon where id_tt_muon = {0} and id_sach = {1}",id_tt,ma_sach));            lb_ngayphat.Text = DateTime.Now.ToShortDateString() + "Vào lúc: "+DateTime.Now.ToShortTimeString();
+            tien_hientai = G_U.mysqli_ex_data(string.Format("select tien from thongtin_muon where id_tt_muon = {0} and id_sach = {1}", id_tt, ma_sach)); lb_ngayphat.Text = DateTime.Now.ToShortDateString() + "Vào lúc: " + DateTime.Now.ToShortTimeString();
             lb_ngmuon.Text = G_U.mysqli_ex_data(string.Format(
                 "SELECT bd.hoten FROM thongtin_muon tt , phieu_muonsach pm , bandoc bd WHERE tt.id_tt_muon = {0} " +
                 " and tt.id_tt_muon = pm.id_tt_muonsach and pm.id_ngmuon = bd.id_TaiKhoan and tt.id_sach = {1}", id_tt, ma_sach));
             lb_sach.Text = G_U.mysqli_ex_data(string.Format(
                 "SELECT s.ten_sach FROM thongtin_muon tt , sach s where tt.id_sach = s.id_sach and tt.id_sach = {0}", ma_sach));
+            #endregion
+        }
+        private void pic_tru_Click(object sender, EventArgs e)
+        {
+            int count = int.Parse(txt_huhong.Text);
+            PictureEdit pedit = sender as PictureEdit;
+            if (pedit.Name == pic_cong.Name)
+            {
+                count++;
+            }
+            else
+            {
+                if (count > 1)
+                {
+                    count--;
+                }
+            } 
+            txt_huhong.Text = count.ToString();
         }
     }
 }

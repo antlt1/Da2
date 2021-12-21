@@ -79,7 +79,7 @@ namespace App_ThuVien.Console
             this.toolbarFormControl1.Location = new System.Drawing.Point(0, 0);
             this.toolbarFormControl1.Manager = this.toolbarFormManager1;
             this.toolbarFormControl1.Name = "toolbarFormControl1";
-            this.toolbarFormControl1.Size = new System.Drawing.Size(382, 50);
+            this.toolbarFormControl1.Size = new System.Drawing.Size(382, 28);
             this.toolbarFormControl1.TabIndex = 0;
             this.toolbarFormControl1.TabStop = false;
             this.toolbarFormControl1.ToolbarForm = this;
@@ -96,7 +96,7 @@ namespace App_ThuVien.Console
             // 
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(0, 50);
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 28);
             this.barDockControlTop.Manager = this.toolbarFormManager1;
             this.barDockControlTop.Size = new System.Drawing.Size(382, 0);
             // 
@@ -104,7 +104,7 @@ namespace App_ThuVien.Console
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 81);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 80);
             this.barDockControlBottom.Manager = this.toolbarFormManager1;
             this.barDockControlBottom.Size = new System.Drawing.Size(382, 0);
             // 
@@ -112,23 +112,23 @@ namespace App_ThuVien.Console
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 50);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 28);
             this.barDockControlLeft.Manager = this.toolbarFormManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 31);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 52);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(382, 50);
+            this.barDockControlRight.Location = new System.Drawing.Point(382, 28);
             this.barDockControlRight.Manager = this.toolbarFormManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 31);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 52);
             // 
             // dt_pick
             // 
             this.dt_pick.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dt_pick.EditValue = null;
-            this.dt_pick.Location = new System.Drawing.Point(0, 50);
+            this.dt_pick.Location = new System.Drawing.Point(0, 28);
             this.dt_pick.MenuManager = this.toolbarFormManager1;
             this.dt_pick.Name = "dt_pick";
             this.dt_pick.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -146,7 +146,7 @@ namespace App_ThuVien.Console
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(382, 81);
+            this.ClientSize = new System.Drawing.Size(382, 80);
             this.Controls.Add(this.dt_pick);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);

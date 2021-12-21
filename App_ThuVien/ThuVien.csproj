@@ -539,6 +539,15 @@
     <None Include="Resources\content_16x162.png" />
     <None Include="Resources\template_16x16.png" />
     <None Include="Resources\trash_16x16.png" />
+    <None Include="Resources\convert_16x16.png" />
+    <None Include="Resources\add_16x16.png" />
+    <None Include="Resources\trash_16x161.png" />
+    <None Include="Resources\news_16x16.png" />
+    <None Include="Resources\actions_zoom1.svg" />
+    <None Include="Resources\zoom_16x16.png" />
+    <None Include="Resources\news_16x161.png" />
+    <None Include="Resources\add_16x161.png" />
+    <None Include="Resources\add_32x32.png" />
     <Content Include="SRC\Icon\Books.ico" />
     <Content Include="SRC\Icon\Iconsmind-Outline-Key.ico" />
     <Content Include="SRC\Icon\search.ico" />
