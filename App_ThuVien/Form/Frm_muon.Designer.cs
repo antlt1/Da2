@@ -69,16 +69,18 @@
             // btn_sach
             // 
             this.btn_sach.Enabled = false;
-            this.btn_sach.Location = new System.Drawing.Point(247, 4);
+            this.btn_sach.ImageOptions.Image = global::App_ThuVien.Properties.Resources.content_16x162;
+            this.btn_sach.Location = new System.Drawing.Point(277, 4);
             this.btn_sach.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_sach.Name = "btn_sach";
-            this.btn_sach.Size = new System.Drawing.Size(112, 34);
+            this.btn_sach.Size = new System.Drawing.Size(126, 34);
             this.btn_sach.TabIndex = 3;
             this.btn_sach.Text = "Sách Mượn";
             this.btn_sach.Click += new System.EventHandler(this.btn_sach_Click);
             // 
             // btn_clear
             // 
+            this.btn_clear.ImageOptions.Image = global::App_ThuVien.Properties.Resources.trash_16x16;
             this.btn_clear.Location = new System.Drawing.Point(330, 81);
             this.btn_clear.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_clear.Name = "btn_clear";
@@ -200,10 +202,11 @@
             // btn_date
             // 
             this.btn_date.Enabled = false;
-            this.btn_date.Location = new System.Drawing.Point(130, 4);
+            this.btn_date.ImageOptions.Image = global::App_ThuVien.Properties.Resources.calendar_16x16;
+            this.btn_date.Location = new System.Drawing.Point(145, 4);
             this.btn_date.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_date.Name = "btn_date";
-            this.btn_date.Size = new System.Drawing.Size(112, 34);
+            this.btn_date.Size = new System.Drawing.Size(126, 34);
             this.btn_date.TabIndex = 12;
             this.btn_date.Text = "Ngày mượn";
             this.btn_date.Click += new System.EventHandler(this.btn_date_Click);
@@ -211,20 +214,22 @@
             // btn_done
             // 
             this.btn_done.Enabled = false;
-            this.btn_done.Location = new System.Drawing.Point(365, 4);
+            this.btn_done.ImageOptions.Image = global::App_ThuVien.Properties.Resources.template_16x16;
+            this.btn_done.Location = new System.Drawing.Point(409, 4);
             this.btn_done.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_done.Name = "btn_done";
-            this.btn_done.Size = new System.Drawing.Size(112, 34);
+            this.btn_done.Size = new System.Drawing.Size(126, 34);
             this.btn_done.TabIndex = 11;
             this.btn_done.Text = "Lập Phiếu";
             this.btn_done.Click += new System.EventHandler(this.btn_done_Click);
             // 
             // btn_nguoimuon
             // 
+            this.btn_nguoimuon.ImageOptions.Image = global::App_ThuVien.Properties.Resources.usergroup_16x16;
             this.btn_nguoimuon.Location = new System.Drawing.Point(12, 4);
             this.btn_nguoimuon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_nguoimuon.Name = "btn_nguoimuon";
-            this.btn_nguoimuon.Size = new System.Drawing.Size(112, 34);
+            this.btn_nguoimuon.Size = new System.Drawing.Size(126, 34);
             this.btn_nguoimuon.TabIndex = 5;
             this.btn_nguoimuon.Text = "Người Mượn";
             this.btn_nguoimuon.Click += new System.EventHandler(this.btn_nguoimuon_Click);

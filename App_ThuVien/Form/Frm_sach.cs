@@ -34,6 +34,7 @@ namespace App_ThuVien.Form
         public void load_data()
         {
             dgv.DataSource = G_U.mysqli_ex_value_tb("select s.id_sach as 'id_sach',ten_sach,tl.ten_theloai as 'tl', s.tacgia, s.vitri , ngaysx, gia, soluong, trangthai from sach s , theloai tl  where s.id_theloai = tl.id_theloai");
+            gridColumn1.Visible = false;
         }
         private void Frm_sach_Load(object sender, EventArgs e)
         {

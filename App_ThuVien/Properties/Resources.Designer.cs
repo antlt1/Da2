@@ -273,6 +273,16 @@ namespace App_ThuVien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap calendar_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("calendar_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap checkbox_16x16 {
             get {
                 object obj = ResourceManager.GetObject("checkbox_16x16", resourceCulture);
@@ -296,6 +306,16 @@ namespace App_ThuVien.Properties {
         internal static System.Drawing.Bitmap content_16x161 {
             get {
                 object obj = ResourceManager.GetObject("content_16x161", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap content_16x162 {
+            get {
+                object obj = ResourceManager.GetObject("content_16x162", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -631,12 +651,32 @@ namespace App_ThuVien.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap template_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("template_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
         /// </summary>
         internal static DevExpress.Utils.Svg.SvgImage text {
             get {
                 object obj = ResourceManager.GetObject("text", resourceCulture);
                 return ((DevExpress.Utils.Svg.SvgImage)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap trash_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("trash_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -656,6 +696,16 @@ namespace App_ThuVien.Properties {
         internal static System.Drawing.Bitmap user_32x32 {
             get {
                 object obj = ResourceManager.GetObject("user_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap usergroup_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("usergroup_16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
