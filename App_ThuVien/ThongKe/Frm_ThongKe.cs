@@ -22,13 +22,24 @@ namespace App_ThuVien.ThongKe
         {
             InitializeComponent();
         }
+        #region Khai báo biến
         Getting_UI G_U = new Getting_UI();
+        ChartControl chartControl1;
+        DataTable dt = new DataTable();
+        App_ThuVien.Console.Pick_Date_MonthandYear fr_pick = new Console.Pick_Date_MonthandYear();
+        bool thang1, thang2;
         // hàm thống kê theo tháng
         public string result = "Thống kê sách";
+        #endregion
+
+        #region Thống kê
         void Line_ThongKe(DateTime dt_start, DateTime dt_finelly, PanelControl pn)
         {
+            MySqlConnection conn = G_U.connect_mysqli();
+            conn.Open();
+            MySqlCommand cmd;
             pn_sach.Controls.Clear();
-            ChartControl chartControl1 = new ChartControl();
+             chartControl1 = new ChartControl();
             if (result == "Thống kê sách")
             {
                 Series Series1 = new Series("Sách mượn đã trả", ViewType.Line);
@@ -37,12 +48,15 @@ namespace App_ThuVien.ThongKe
                 int result_time = dt_finelly.Month - dt_start.Month;
                 for (int i = dt_start.Month; i <= dt_finelly.Month; i++)
                 {
-                    string cmd1 = G_U.mysqli_ex_data(string.Format(
-                "select count(*) as 'time' from thongtin_muon where month(ngaytra) = {0} and trangthai = 'Đả trả'", i));
-                    string cmd2 = G_U.mysqli_ex_data(string.Format(
-                "select count(*) as 'time' from thongtin_muon where month(ngaytra) = {0} and trangthai != 'Đả trả'", i));
-                    string cmd3 = G_U.mysqli_ex_data(string.Format(
-                "select count(*) from phat where month(ngayphat) = {0}", i));
+                    cmd = new MySqlCommand(string.Format(
+                "select count(*) as 'time' from thongtin_muon where month(ngaytra) = {0} and trangthai = 'Đả trả'", i), conn);
+                    string cmd1 = cmd.ExecuteScalar().ToString();
+                    cmd = new MySqlCommand(string.Format(
+                "select count(*) as 'time' from thongtin_muon where month(ngaytra) = {0} and trangthai != 'Đả trả'", i),conn);
+                    string cmd2 = cmd.ExecuteScalar().ToString();
+                    cmd = new MySqlCommand(string.Format(
+                "select count(*) from phat where month(ngayphat) = {0}", i),conn);
+                    string cmd3 = cmd.ExecuteScalar().ToString();
                     Series1.Points.Add(new SeriesPoint(i, int.Parse(cmd1))); ;
                     Series2.Points.Add(new SeriesPoint(i, int.Parse(cmd2)));
                     Series3.Points.Add(new SeriesPoint(i, int.Parse(cmd3)));
@@ -70,9 +84,11 @@ namespace App_ThuVien.ThongKe
             // Add the chart to the form.
             chartControl1.Dock = DockStyle.Fill;
             pn.Controls.Add(chartControl1);
+            conn.Close();
         }
-        DataTable dt = new DataTable();
-       
+
+        #endregion
+
         private void Tk_Sach_Load(object sender, EventArgs e)
         {
             btn_batdau.Hide();
@@ -99,8 +115,7 @@ namespace App_ThuVien.ThongKe
                 btn_batdau.Text = "Bắt đầu";
             }
         }
-        App_ThuVien.Console.Pick_Date_MonthandYear fr_pick = new Console.Pick_Date_MonthandYear();
-        bool thang1, thang2;
+       
         private void btn_chon_thang_Click(object sender, EventArgs e)
         {
             if (btn_chon_thang.Text == "Chọn tháng bắt đầu")
@@ -151,8 +166,9 @@ namespace App_ThuVien.ThongKe
                      dt_kt = DateTime.Parse(string.Format("12/12/{0}",txt_year.Text));
             Line_ThongKe(dt_bd, dt_kt, pn_sach);
         }
-        // Biểu đồ chòn
-       // Getting_UI G_U = new Getting_UI();
+
+        #region Biểu đồ chòn
+        // Getting_UI G_U = new Getting_UI();
         public class DataPoint
         {
             public string Argument { get; set; }
@@ -179,6 +195,7 @@ namespace App_ThuVien.ThongKe
                 };
             }
         }
+       
         public class DL_Phieu
         {
             public string Argument { get; set; }
@@ -229,6 +246,8 @@ namespace App_ThuVien.ThongKe
                 };
             }
         }
+      
+
         void ThongKe(string choose)
         {
             pn_sach.Controls.Clear();
@@ -292,7 +311,8 @@ namespace App_ThuVien.ThongKe
             pn_sach.Controls.Add(pieChart);
         }
         //
-        
+        #endregion
+
         private void cbox_Tong_Closed(object sender, DevExpress.XtraEditors.Controls.ClosedEventArgs e)
         {
             if (cbox_Tong.EditValue.ToString() == "Sách")
@@ -308,6 +328,12 @@ namespace App_ThuVien.ThongKe
                 //私はアンです！ =))) wà ta shi qua an đê sì```` =))
                 ThongKe("tài khoản");
             }
+        }
+
+        private void btn_print_Click(object sender, EventArgs e)
+        {
+         //   chartControl1.ShowPrintPreview();
+            chartControl1.Print();
         }
        
     }

@@ -48,6 +48,7 @@
             this.pn_sach = new DevExpress.XtraEditors.PanelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btn_print = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
@@ -107,6 +108,7 @@
             this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl1.Controls.Add(this.btn_print);
             this.groupControl1.Controls.Add(this.xtraTabControl1);
             this.groupControl1.Location = new System.Drawing.Point(3, 2);
             this.groupControl1.Name = "groupControl1";
@@ -116,10 +118,10 @@
             // 
             // xtraTabControl1
             // 
-            this.xtraTabControl1.Location = new System.Drawing.Point(0, 27);
+            this.xtraTabControl1.Location = new System.Drawing.Point(0, 66);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(317, 448);
+            this.xtraTabControl1.Size = new System.Drawing.Size(317, 409);
             this.xtraTabControl1.TabIndex = 14;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -153,7 +155,7 @@
             this.xtraTabPage2.Controls.Add(this.txt_year);
             this.xtraTabPage2.Controls.Add(this.labelControl1);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(309, 413);
+            this.xtraTabPage2.Size = new System.Drawing.Size(309, 374);
             this.xtraTabPage2.Text = "Năm";
             // 
             // btn_year
@@ -244,6 +246,15 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // btn_print
+            // 
+            this.btn_print.Location = new System.Drawing.Point(182, 27);
+            this.btn_print.Name = "btn_print";
+            this.btn_print.Size = new System.Drawing.Size(112, 34);
+            this.btn_print.TabIndex = 5;
+            this.btn_print.Text = "In thống kê";
+            this.btn_print.Click += new System.EventHandler(this.btn_print_Click);
+            // 
             // Frm_ThongKe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -296,5 +307,6 @@
         private DevExpress.XtraTab.XtraTabPage xtraTabPage3;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.ComboBoxEdit cbox_Tong;
+        private DevExpress.XtraEditors.SimpleButton btn_print;
     }
 }

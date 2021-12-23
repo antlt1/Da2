@@ -45,7 +45,7 @@ namespace App_ThuVien.BarCode
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txt_link = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.buttonEdit1 = new DevExpress.XtraEditors.ButtonEdit();
+            this.btn_scaner = new DevExpress.XtraEditors.ButtonEdit();
             this.gc_list_kh = new DevExpress.XtraGrid.GridControl();
             this.gv_list_kh = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -56,7 +56,7 @@ namespace App_ThuVien.BarCode
             ((System.ComponentModel.ISupportInitialize)(this.pn_droidcam)).BeginInit();
             this.pn_droidcam.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_link.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_scaner.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gc_list_kh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_list_kh)).BeginInit();
             this.SuspendLayout();
@@ -152,18 +152,19 @@ namespace App_ThuVien.BarCode
             this.labelControl2.TabIndex = 13;
             this.labelControl2.Text = "Mã bạn đọc : ";
             // 
-            // buttonEdit1
+            // btn_scaner
             // 
-            this.buttonEdit1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btn_scaner.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonEdit1.Location = new System.Drawing.Point(115, 69);
-            this.buttonEdit1.Name = "buttonEdit1";
+            this.btn_scaner.Location = new System.Drawing.Point(115, 69);
+            this.btn_scaner.Name = "btn_scaner";
             editorButtonImageOptions1.Image = global::App_ThuVien.Properties.Resources.apply_16x164;
-            this.buttonEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.btn_scaner.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.buttonEdit1.Size = new System.Drawing.Size(122, 28);
-            this.buttonEdit1.TabIndex = 12;
+            this.btn_scaner.Size = new System.Drawing.Size(122, 28);
+            this.btn_scaner.TabIndex = 12;
+            this.btn_scaner.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btn_scaner_ButtonClick);
             // 
             // gc_list_kh
             // 
@@ -223,7 +224,7 @@ namespace App_ThuVien.BarCode
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(903, 373);
             this.Controls.Add(this.labelControl2);
-            this.Controls.Add(this.buttonEdit1);
+            this.Controls.Add(this.btn_scaner);
             this.Controls.Add(this.gc_list_kh);
             this.Controls.Add(this.pn_droidcam);
             this.Controls.Add(this.pic_qr);
@@ -241,7 +242,7 @@ namespace App_ThuVien.BarCode
             this.pn_droidcam.ResumeLayout(false);
             this.pn_droidcam.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_link.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_scaner.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gc_list_kh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_list_kh)).EndInit();
             this.ResumeLayout(false);
@@ -260,7 +261,7 @@ namespace App_ThuVien.BarCode
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.TextEdit txt_link;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.ButtonEdit buttonEdit1;
+        private DevExpress.XtraEditors.ButtonEdit btn_scaner;
         private DevExpress.XtraGrid.GridControl gc_list_kh;
         private DevExpress.XtraGrid.Views.Grid.GridView gv_list_kh;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
