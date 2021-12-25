@@ -227,6 +227,7 @@
             // 
             // btn_search
             // 
+            this.btn_search.ImageOptions.Image = global::App_ThuVien.Properties.Resources.zoom_16x16;
             this.btn_search.Location = new System.Drawing.Point(12, 38);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(112, 34);

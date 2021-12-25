@@ -56,7 +56,10 @@ namespace App_ThuVien.BarCode
         private void stream_NewFrame(object sender, NewFrameEventArgs eventArgs)//  tao frame
         {      
                 Bitmap bmp = (Bitmap)eventArgs.Frame.Clone();
-                pic_qr.Image = bmp;
+                if (bmp != null)
+                {
+                    pic_qr.Image = bmp;
+                }
         }
         ZXing.BarcodeReader Reader = new ZXing.BarcodeReader();
        public static int count_kh;
@@ -147,6 +150,29 @@ namespace App_ThuVien.BarCode
         {
             this.Hide();
             e.Cancel = true;
+        }
+
+        private void btn_scaner_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+          
+            try
+            {
+                if (G_U.mysqli_ex_data(string.Format("select count(*) from bandoc where id_taikhoan = {0}", btn_scaner.Text)) != "0")
+                {
+                    list_kh.Add(int.Parse(btn_scaner.Text));
+                    gc_list_kh.DataSource = add_kh(btn_scaner.Text);
+                    count_kh++;
+                }
+                else
+                {
+                    Setting_sys.mess("Mã bạn đọc không tồn tại !");
+                }
+              
+            }
+            catch (Exception)
+            {
+             
+            }
         }
     }
 }

@@ -112,9 +112,9 @@ namespace App_ThuVien.Console
             // 
             this.view_rp.Dock = System.Windows.Forms.DockStyle.Fill;
             this.view_rp.IsMetric = false;
-            this.view_rp.Location = new System.Drawing.Point(0, 62);
+            this.view_rp.Location = new System.Drawing.Point(0, 65);
             this.view_rp.Name = "view_rp";
-            this.view_rp.Size = new System.Drawing.Size(751, 279);
+            this.view_rp.Size = new System.Drawing.Size(751, 277);
             this.view_rp.TabIndex = 0;
             // 
             // documentViewerBarManager1
@@ -684,31 +684,31 @@ namespace App_ThuVien.Console
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.documentViewerBarManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(751, 62);
+            this.barDockControlTop.Size = new System.Drawing.Size(751, 65);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 341);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 342);
             this.barDockControlBottom.Manager = this.documentViewerBarManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(751, 30);
+            this.barDockControlBottom.Size = new System.Drawing.Size(751, 29);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 62);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 65);
             this.barDockControlLeft.Manager = this.documentViewerBarManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 279);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 277);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(751, 62);
+            this.barDockControlRight.Location = new System.Drawing.Point(751, 65);
             this.barDockControlRight.Manager = this.documentViewerBarManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 279);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 277);
             // 
             // printPreviewBarCheckItem1
             // 
@@ -914,8 +914,9 @@ namespace App_ThuVien.Console
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.IconOptions.SvgImage = global::App_ThuVien.Properties.Resources.portrait;
             this.Name = "View_InKhachHang";
-            this.Text = "View_InKhachHang";
+            this.Text = "In Thẻ";
             this.Load += new System.EventHandler(this.View_InKhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.documentViewerBarManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.printPreviewRepositoryItemComboBox1)).EndInit();

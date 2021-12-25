@@ -130,7 +130,7 @@ namespace App_ThuVien.Form
             ex_data_user("empty");
             gridColumn1.Visible = false;
             gridColumn16.Visible = false;
-            gridColumn19.Visible = false;
+           // gridColumn19.Visible = false;
             gridColumn7.Visible = false;
             gridColumn8.Visible = false;
         }

@@ -42,7 +42,7 @@
             this.fluentDesignFormControl1.FluentDesignForm = this;
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(683, 28);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(575, 28);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             // 
@@ -50,7 +50,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(60, 66);
+            this.labelControl1.Location = new System.Drawing.Point(12, 45);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(546, 24);
             this.labelControl1.TabIndex = 3;
@@ -58,7 +58,7 @@
             // 
             // btn_close
             // 
-            this.btn_close.Location = new System.Drawing.Point(190, 103);
+            this.btn_close.Location = new System.Drawing.Point(12, 82);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(118, 34);
             this.btn_close.TabIndex = 4;
@@ -67,7 +67,7 @@
             // 
             // checker
             // 
-            this.checker.Location = new System.Drawing.Point(12, 108);
+            this.checker.Location = new System.Drawing.Point(136, 87);
             this.checker.Name = "checker";
             this.checker.Properties.Caption = "Lưu cho lần sau";
             this.checker.Size = new System.Drawing.Size(142, 25);
@@ -76,7 +76,7 @@
             // 
             // btn_cancel
             // 
-            this.btn_cancel.Location = new System.Drawing.Point(438, 103);
+            this.btn_cancel.Location = new System.Drawing.Point(440, 82);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(118, 34);
             this.btn_cancel.TabIndex = 7;
@@ -87,7 +87,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(683, 149);
+            this.ClientSize = new System.Drawing.Size(575, 146);
             this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.checker);
             this.Controls.Add(this.btn_close);

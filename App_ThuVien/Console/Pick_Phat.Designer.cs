@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pick_Phat));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.pn_hu_giay = new DevExpress.XtraEditors.PanelControl();
+            this.pic_tru = new DevExpress.XtraEditors.PictureEdit();
+            this.pic_cong = new DevExpress.XtraEditors.PictureEdit();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txt_huhong = new DevExpress.XtraEditors.TextEdit();
             this.pic_help = new DevExpress.XtraEditors.PictureEdit();
             this.btn_phat = new DevExpress.XtraEditors.SimpleButton();
             this.label4 = new System.Windows.Forms.Label();
@@ -45,16 +50,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.label1 = new System.Windows.Forms.Label();
-            this.pn_hu_giay = new DevExpress.XtraEditors.PanelControl();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txt_huhong = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_help.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbx_lydo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pn_hu_giay)).BeginInit();
             this.pn_hu_giay.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_tru.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_cong.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_huhong.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_help.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbx_lydo.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -75,29 +79,86 @@
             this.panelControl1.Controls.Add(this.label2);
             this.panelControl1.Controls.Add(this.labelControl1);
             this.panelControl1.Controls.Add(this.label1);
-            this.panelControl1.Location = new System.Drawing.Point(12, 12);
+            this.panelControl1.Location = new System.Drawing.Point(15, 14);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(321, 409);
+            this.panelControl1.Size = new System.Drawing.Size(413, 486);
             this.panelControl1.TabIndex = 0;
+            // 
+            // pn_hu_giay
+            // 
+            this.pn_hu_giay.Controls.Add(this.pic_tru);
+            this.pn_hu_giay.Controls.Add(this.pic_cong);
+            this.pn_hu_giay.Controls.Add(this.label5);
+            this.pn_hu_giay.Controls.Add(this.txt_huhong);
+            this.pn_hu_giay.Location = new System.Drawing.Point(6, 138);
+            this.pn_hu_giay.Margin = new System.Windows.Forms.Padding(4);
+            this.pn_hu_giay.Name = "pn_hu_giay";
+            this.pn_hu_giay.Size = new System.Drawing.Size(400, 56);
+            this.pn_hu_giay.TabIndex = 30;
+            // 
+            // pic_tru
+            // 
+            this.pic_tru.EditValue = ((object)(resources.GetObject("pic_tru.EditValue")));
+            this.pic_tru.Location = new System.Drawing.Point(304, 11);
+            this.pic_tru.Name = "pic_tru";
+            this.pic_tru.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pic_tru.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.pic_tru.Size = new System.Drawing.Size(32, 32);
+            this.pic_tru.TabIndex = 35;
+            this.pic_tru.Click += new System.EventHandler(this.pic_tru_Click);
+            // 
+            // pic_cong
+            // 
+            this.pic_cong.EditValue = ((object)(resources.GetObject("pic_cong.EditValue")));
+            this.pic_cong.Location = new System.Drawing.Point(342, 11);
+            this.pic_cong.Name = "pic_cong";
+            this.pic_cong.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pic_cong.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.pic_cong.Size = new System.Drawing.Size(32, 32);
+            this.pic_cong.TabIndex = 34;
+            this.pic_cong.Click += new System.EventHandler(this.pic_tru_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(13, 19);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(103, 19);
+            this.label5.TabIndex = 33;
+            this.label5.Text = "Số tờ hỏng  :";
+            // 
+            // txt_huhong
+            // 
+            this.txt_huhong.EditValue = "1";
+            this.txt_huhong.Enabled = false;
+            this.txt_huhong.Location = new System.Drawing.Point(136, 15);
+            this.txt_huhong.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_huhong.Name = "txt_huhong";
+            this.txt_huhong.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txt_huhong.Size = new System.Drawing.Size(161, 28);
+            this.txt_huhong.TabIndex = 32;
+            this.txt_huhong.EditValueChanged += new System.EventHandler(this.txt_huhong_EditValueChanged);
             // 
             // pic_help
             // 
             this.pic_help.EditValue = ((object)(resources.GetObject("pic_help.EditValue")));
-            this.pic_help.Location = new System.Drawing.Point(285, 86);
-            this.pic_help.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.pic_help.Location = new System.Drawing.Point(366, 102);
+            this.pic_help.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pic_help.Name = "pic_help";
             this.pic_help.Properties.InitialImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("pic_help.Properties.InitialImageOptions.SvgImage")));
             this.pic_help.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pic_help.Size = new System.Drawing.Size(23, 25);
+            this.pic_help.Size = new System.Drawing.Size(30, 30);
             this.pic_help.TabIndex = 29;
             this.pic_help.Click += new System.EventHandler(this.pic_help_Click);
             // 
             // btn_phat
             // 
-            this.btn_phat.Location = new System.Drawing.Point(212, 356);
-            this.btn_phat.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btn_phat.Location = new System.Drawing.Point(273, 423);
+            this.btn_phat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_phat.Name = "btn_phat";
-            this.btn_phat.Size = new System.Drawing.Size(87, 29);
+            this.btn_phat.Size = new System.Drawing.Size(112, 34);
             this.btn_phat.TabIndex = 28;
             this.btn_phat.Text = "Phạt";
             this.btn_phat.Click += new System.EventHandler(this.btn_phat_Click);
@@ -105,48 +166,52 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 219);
+            this.label4.Location = new System.Drawing.Point(15, 260);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 17);
+            this.label4.Size = new System.Drawing.Size(59, 19);
             this.label4.TabIndex = 27;
             this.label4.Text = "Chi tiết";
             // 
             // cbx_lydo
             // 
-            this.cbx_lydo.Location = new System.Drawing.Point(100, 88);
+            this.cbx_lydo.Location = new System.Drawing.Point(129, 104);
+            this.cbx_lydo.Margin = new System.Windows.Forms.Padding(4);
             this.cbx_lydo.Name = "cbx_lydo";
             this.cbx_lydo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbx_lydo.Properties.Items.AddRange(new object[] {
             "Mất sách",
-            "Hư sách",
-            "Quá hạn"});
-            this.cbx_lydo.Size = new System.Drawing.Size(179, 22);
+            "Hư sách"});
+            this.cbx_lydo.Size = new System.Drawing.Size(230, 28);
             this.cbx_lydo.TabIndex = 26;
             this.cbx_lydo.Closed += new DevExpress.XtraEditors.Controls.ClosedEventHandler(this.cbx_lydo_Closed);
             // 
             // lb_sach
             // 
-            this.lb_sach.Location = new System.Drawing.Point(99, 54);
+            this.lb_sach.Location = new System.Drawing.Point(127, 64);
+            this.lb_sach.Margin = new System.Windows.Forms.Padding(4);
             this.lb_sach.Name = "lb_sach";
-            this.lb_sach.Size = new System.Drawing.Size(20, 16);
+            this.lb_sach.Size = new System.Drawing.Size(26, 19);
             this.lb_sach.TabIndex = 25;
             this.lb_sach.Text = "null";
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.Location = new System.Drawing.Point(99, 72);
+            this.panel3.Location = new System.Drawing.Point(127, 86);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 1);
+            this.panel3.Size = new System.Drawing.Size(257, 1);
             this.panel3.TabIndex = 24;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 56);
+            this.label3.Location = new System.Drawing.Point(15, 66);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 17);
+            this.label3.Size = new System.Drawing.Size(53, 19);
             this.label3.TabIndex = 23;
             this.label3.Text = "Sách :";
             // 
@@ -154,103 +219,86 @@
             // 
             this.text_lydo.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.text_lydo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.text_lydo.Location = new System.Drawing.Point(15, 239);
+            this.text_lydo.Location = new System.Drawing.Point(19, 284);
+            this.text_lydo.Margin = new System.Windows.Forms.Padding(4);
             this.text_lydo.Name = "text_lydo";
-            this.text_lydo.Size = new System.Drawing.Size(284, 68);
+            this.text_lydo.Size = new System.Drawing.Size(365, 81);
             this.text_lydo.TabIndex = 22;
             this.text_lydo.Text = "";
             // 
             // lb_ngayphat
             // 
-            this.lb_ngayphat.Location = new System.Drawing.Point(99, 326);
+            this.lb_ngayphat.Location = new System.Drawing.Point(127, 387);
+            this.lb_ngayphat.Margin = new System.Windows.Forms.Padding(4);
             this.lb_ngayphat.Name = "lb_ngayphat";
-            this.lb_ngayphat.Size = new System.Drawing.Size(20, 16);
+            this.lb_ngayphat.Size = new System.Drawing.Size(26, 19);
             this.lb_ngayphat.TabIndex = 21;
             this.lb_ngayphat.Text = "null";
             // 
             // lb_ngmuon
             // 
-            this.lb_ngmuon.Location = new System.Drawing.Point(99, 8);
+            this.lb_ngmuon.Location = new System.Drawing.Point(127, 10);
+            this.lb_ngmuon.Margin = new System.Windows.Forms.Padding(4);
             this.lb_ngmuon.Name = "lb_ngmuon";
-            this.lb_ngmuon.Size = new System.Drawing.Size(20, 16);
+            this.lb_ngmuon.Size = new System.Drawing.Size(26, 19);
             this.lb_ngmuon.TabIndex = 20;
             this.lb_ngmuon.Text = "null";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Location = new System.Drawing.Point(99, 344);
+            this.panel2.Location = new System.Drawing.Point(127, 408);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 1);
+            this.panel2.Size = new System.Drawing.Size(257, 1);
             this.panel2.TabIndex = 19;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(99, 27);
+            this.panel1.Location = new System.Drawing.Point(127, 32);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 1);
+            this.panel1.Size = new System.Drawing.Size(257, 1);
             this.panel1.TabIndex = 18;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 328);
+            this.label2.Location = new System.Drawing.Point(15, 390);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 17);
+            this.label2.Size = new System.Drawing.Size(92, 19);
             this.label2.TabIndex = 17;
             this.label2.Text = "Ngày phạt :";
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(15, 92);
+            this.labelControl1.Location = new System.Drawing.Point(19, 109);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(80, 17);
+            this.labelControl1.Size = new System.Drawing.Size(91, 19);
             this.labelControl1.TabIndex = 16;
             this.labelControl1.Text = "Lý do phạt : ";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 11);
+            this.label1.Location = new System.Drawing.Point(15, 13);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 17);
+            this.label1.Size = new System.Drawing.Size(110, 19);
             this.label1.TabIndex = 15;
             this.label1.Text = "Người mượn: ";
             // 
-            // pn_hu_giay
-            // 
-            this.pn_hu_giay.Controls.Add(this.label5);
-            this.pn_hu_giay.Controls.Add(this.txt_huhong);
-            this.pn_hu_giay.Location = new System.Drawing.Point(5, 116);
-            this.pn_hu_giay.Name = "pn_hu_giay";
-            this.pn_hu_giay.Size = new System.Drawing.Size(311, 47);
-            this.pn_hu_giay.TabIndex = 30;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(10, 16);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 17);
-            this.label5.TabIndex = 33;
-            this.label5.Text = "Số tờ hỏng  :";
-            // 
-            // txt_huhong
-            // 
-            this.txt_huhong.Location = new System.Drawing.Point(106, 13);
-            this.txt_huhong.Name = "txt_huhong";
-            this.txt_huhong.Size = new System.Drawing.Size(125, 22);
-            this.txt_huhong.TabIndex = 32;
-            this.txt_huhong.EditValueChanged += new System.EventHandler(this.txt_huhong_EditValueChanged);
-            // 
             // Pick_Phat
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(345, 432);
+            this.ClientSize = new System.Drawing.Size(444, 513);
             this.Controls.Add(this.panelControl1);
             this.IconOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Pick_Phat.IconOptions.LargeImage")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Pick_Phat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lập phiếu phạt";
@@ -258,12 +306,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_help.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbx_lydo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pn_hu_giay)).EndInit();
             this.pn_hu_giay.ResumeLayout(false);
             this.pn_hu_giay.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_tru.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_cong.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_huhong.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_help.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbx_lydo.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -289,5 +339,7 @@
         private DevExpress.XtraEditors.PanelControl pn_hu_giay;
         private System.Windows.Forms.Label label5;
         private DevExpress.XtraEditors.TextEdit txt_huhong;
+        private DevExpress.XtraEditors.PictureEdit pic_tru;
+        private DevExpress.XtraEditors.PictureEdit pic_cong;
     }
 }

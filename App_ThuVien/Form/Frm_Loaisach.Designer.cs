@@ -44,7 +44,6 @@
             this.barLargeButtonItem3 = new DevExpress.XtraBars.BarLargeButtonItem();
             this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.btn_add = new DevExpress.XtraBars.BarButtonItem();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -62,7 +61,6 @@
             this.lb_stastus = new System.Windows.Forms.Label();
             this.btn_del = new DevExpress.XtraEditors.SimpleButton();
             this.btn_add_data = new DevExpress.XtraEditors.SimpleButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
@@ -168,10 +166,6 @@
             // 
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "ribbonPage2";
-            // 
-            // sqlDataSource1
-            // 
-            this.sqlDataSource1.Name = "sqlDataSource1";
             // 
             // btn_add
             // 
@@ -325,6 +319,7 @@
             // 
             // btn_rs
             // 
+            this.btn_rs.ImageOptions.Image = global::App_ThuVien.Properties.Resources.convert_16x16;
             this.btn_rs.ImageOptions.ImageIndex = 9;
             this.btn_rs.Location = new System.Drawing.Point(11, 45);
             this.btn_rs.Name = "btn_rs";
@@ -344,6 +339,7 @@
             // 
             // btn_del
             // 
+            this.btn_del.ImageOptions.Image = global::App_ThuVien.Properties.Resources.trash_16x161;
             this.btn_del.ImageOptions.ImageIndex = 9;
             this.btn_del.Location = new System.Drawing.Point(231, 45);
             this.btn_del.Name = "btn_del";
@@ -354,6 +350,7 @@
             // 
             // btn_add_data
             // 
+            this.btn_add_data.ImageOptions.Image = global::App_ThuVien.Properties.Resources.add_16x16;
             this.btn_add_data.ImageOptions.ImageIndex = 9;
             this.btn_add_data.Location = new System.Drawing.Point(121, 45);
             this.btn_add_data.Name = "btn_add_data";
@@ -361,13 +358,6 @@
             this.btn_add_data.TabIndex = 102;
             this.btn_add_data.Text = "Thêm";
             this.btn_add_data.Click += new System.EventHandler(this.btn_add_data_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(0, 81);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(1100, 27);
-            this.textBox1.TabIndex = 113;
             // 
             // fluentDesignFormControl1
             // 
@@ -383,7 +373,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1196, 818);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dgv);
             this.Controls.Add(this.btn_rs);
             this.Controls.Add(this.lb_stastus);
@@ -425,7 +414,6 @@
         private DevExpress.XtraBars.BarLargeButtonItem barLargeButtonItem3;
         private DevExpress.XtraBars.BarSubItem barSubItem1;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
-        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
         private DevExpress.XtraBars.BarButtonItem btn_add;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
@@ -441,7 +429,6 @@
         private DevExpress.XtraEditors.SimpleButton btn_del;
         private DevExpress.XtraEditors.SimpleButton btn_add_data;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement1;
-        private System.Windows.Forms.TextBox textBox1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl fluentDesignFormControl1;
         private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox1;
